@@ -1,0 +1,13 @@
+
+1. do the work parallely, using multi-thread, using hashing to do the sorting and clarifying
+
+2. implement a spider queue
+
+3. DNS cache needed , which is to cache the url request for later use in the future 
+
+4. the filter of web pages , cut the repeat 
+
+5. using database to store the data 
+
+6. inter - thread - communication for more efficient work 
+
