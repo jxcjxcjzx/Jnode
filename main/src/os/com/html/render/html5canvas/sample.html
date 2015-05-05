@@ -1,0 +1,30 @@
+<some simple html syntax>
+
+<body area>
+	<canvas id="mycanvas" width = "200" height = "200" style="border:solid 1px #CCC;">
+		<!--
+			add your painting here 
+		-->
+	</canvas>
+<end of body area>
+
+<script area>
+	var cvs=  document.getElementById("mycanvas");
+	var ctx = cvs.getContext("2d");
+	ctx.moveTo(10,10);
+	ctx.lineTo(150,150);
+	ctx.strokeStyle = "red";
+	ctx.stroke();
+	
+	// another example 
+	var grd = ctx.createLinearGradient(0,0,170,0);
+	grd.addColorStop(0,"black");
+	grd.addColorStop(0.5,"red");
+	grd.addColorStop(1,"yellow");
+	ctx.strokeStyle = grd;
+	ctx.stroke();
+	
+	
+<end of script area>
+
+<end of some simple html syntax>

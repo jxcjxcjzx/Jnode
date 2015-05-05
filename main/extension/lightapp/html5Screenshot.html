@@ -1,0 +1,37 @@
+<some simple html syntax>
+
+<script area>
+$(document).ready(function(){
+	
+	$(".example1").on("click",function(event){
+	
+		event.preventDefault();
+		html2canvas(document.body,
+		{
+			allowTaint:true,
+			taintTest:false,
+			onrendered: function(canvas){
+				canvas.id = "mycanvas";
+				var dataurl = canvas.toDataURL();
+				var newImg = document.createElement("img");
+				newImg.src = dataurl;
+				document.body.appendChild(newImg);
+			}
+		})
+	
+	});
+
+});
+
+
+</end of script area>
+
+<body area>
+
+< a simple div>
+< button called example1>
+
+<end of body area>
+
+
+</ end of some simple html syntax>

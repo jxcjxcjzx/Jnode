@@ -1,0 +1,29 @@
+
+
+  a element get tools
+  element.getElementsByTagName
+  element.getElementsByTagName("*"));len
+  
+  
+  time thing
+  (new Date()).getTime()
+  
+  app management
+  this.app.destroy&&this.app.destroy();try{delete this.par[this.id];
+  
+  regex thing
+  var trimer=new RegExp("(^[\\s\\t\\xa0\\u3000]+)|([\\u3000\\xa0\\s\\t]+\x24)","g");baidu.string.trim=function(source){return String(source).replace(trimer,"")
+  
+  
+  guid uuid thing
+  window[baidu.guid]._instances=window[baidu.guid]
+  
+  
+  judge 
+  baidu.lang.isFunction=function(source){return"[object Function]"==Object.prototype.toString.call(source)}
+  
+  baidu.browser.firefox=/firefox\/(\d+\.\d+)/i.test(navigator.userAgent)?+RegExp["\x241"]
+  
+  
+  
+  
