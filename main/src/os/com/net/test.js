@@ -57,7 +57,30 @@ function createXMLHttpRequest(){
 
 function str2Ent(){
 	var output = "";
-	
+	for (int i = 0; i < input.length(); i++) {
+    var ucode = input.codePointAt(i);
+    var tmp = "";
+    
+    if (ucode > 255) {
+      while (ucode >= 1) {
+        tmp = "0123456789".charAt(ucode%10) + tmp;
+        ucode /= 10;
+      }
+      
+      if (tmp == "") {
+        tmp = "0";
+      }
+      
+      tmp = "#" + tmp;
+      tmp = "&" + tmp;
+      tmp = tmp + ";";
+      output += tmp;
+    }else {
+      output += input.charAt(i);
+    }
+  }
+  return output;
 
 }
+
 
