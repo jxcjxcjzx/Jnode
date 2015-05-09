@@ -1,0 +1,57 @@
+{
+  "name": "font-spider",
+  "description": "Webfont optimizer",
+  "version": "0.2.0-beta2",
+  "homepage": "https://github.com/aui/font-spider",
+  "author": {
+    "name": "aui",
+    "email": "sugarpie.tang@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/aui/font-spider.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aui/font-spider/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/aui/font-spider/blob/master/LICENSE-MIT"
+    }
+  ],
+  "bin": {
+    "fs": "bin/font-spider",
+    "font-spider": "bin/font-spider"
+  },
+  "main": "./src/index.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "_remove": "rm -rf release",
+    "_copy": "mkdir release && cp -R test/* release",
+    "test": "npm run _remove && npm run _copy && node release/test.js && node release/spider-http.js"
+  },
+  "dependencies": {
+    "cheerio": "^0.18.0",
+    "commander": "^2.6.0",
+    "css": "^2.2.0",
+    "fontmin": "^0.4.8",
+    "glob": "^4.4.0",
+    "ignore": "^2.2.15",
+    "promise": "^6.1.0"
+  },
+  "keywords": [
+    "font",
+    "fontforge",
+    "font-face",
+    "woff",
+    "ttf",
+    "svg",
+    "eot",
+    "truetype",
+    "css",
+    "webfont"
+  ]
+}

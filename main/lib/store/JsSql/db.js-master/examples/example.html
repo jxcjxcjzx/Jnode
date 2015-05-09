@@ -1,0 +1,617 @@
+<!doctype html>
+<style>
+  body{background:rgb(180,180,190)}
+  body > div{background:rgb(240,240,255);margin:20px;padding:20px;border:8px solid rgb(150,150,180)}
+  h1{margin:-20px -20px 20px -20px;
+
+    color:white;
+    padding:5px 20px;display:block;
+    -moz-box-shadow: 0 0 5px 5px rgb(80,80,100);
+    text-shadow: 0 2px 5px rgb(80,80,100);
+    background-color: rgb(165,165,165);
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.25, rgb(165,165,165)),
+        color-stop(0.63, rgb(198,198,230))
+    );
+    background-image: -moz-linear-gradient(
+        center bottom,
+        rgb(165,165,164) 25%,
+        rgb(190,190,210) 63%
+    );
+
+  }
+  button.toggle{
+    background-color: rgb(198,198,230);
+    padding:5px 10px;
+    margin-right:10px;
+  }
+  p{margin:12px 2px}
+  body{font-family:sans-serif}
+  h2{margin-top:30px;color:#223}
+  table{
+    background:#aaa;
+    border-spacing: 1
+  }
+  td{background: white;padding:5px;vertical-align:top}
+  td span{display:block}
+  td span b{margin-left:20px}
+  .fail > td{background:#fcc}
+  b.fail{background:red;color:white;padding:5px}
+  form{display:inline}
+
+</style>
+<body onload=test()>
+  <div class=test>
+  <h1>Basic Tests</h1>
+  <form>
+    <button id=none class=toggle>No Optimization</button>
+  </form>
+  <form>
+    <input type=hidden name=unsafe value=true>
+    <button id=unsafe class=toggle>Unsafe</button>
+  </form>
+  <p>This is a sanity check to make sure that the library passes basic data manipulation.  It is run automatically.</p>
+  <div id=main>
+  </div>
+</div>
+<div>
+<h1>Performance Test</h1>
+<h2>General Performance</h2>
+<p>
+This <button onclick=doperftest()>Test</button> creates some large evenly distributed data and does a number of standardized tests on it
+</p>
+<pre></pre>
+<h2>Stress Test</h2>
+In order to do the performance test, you need to 
+<ul>
+<li>Run this from a webserver, such as apache or nginx
+<li>Get the file  http://www.census.gov/popest/counties/files/CO-EST2009-ALLDATA.csv and put it in the same directory as the test file
+</ul>
+After all those steps are done, then you can <button onclick=performance()>try</button> it out
+<pre id=stress></pre>
+</div>
+</body>
+<script src="../db.js"></script>
+<script>
+  var db,
+    current,
+    tallyMap = {};
+
+  function showResults() {
+    var 
+      tableHead = [ 
+      '<thead><tr>',
+          '<th>Test Name</th>',
+          '<th>Description</th>',
+          '<th>Result</th>',
+          '</tr></thead>' ].join(''),
+
+      which,
+      tableBody = [],
+      tableRow = [];
+
+    for(var test in tallyMap) {
+      which = tallyMap[test];
+
+      tableRow = [
+        test,
+        which.description,
+          ['<span>',
+            which.fail.join('<b class=fail>Failed</b></span><span>'),
+            which.fail.length ? '<b class=fail>Failed</b>' : '',
+           '</span><span>',
+            which.pass.join('<b class=pass>Passed</b></span><span>'),
+            which.pass.length ? '<b class=pass>Passed</b>' : '',
+           '</span>'
+          ].join('')
+      ];
+
+      tableBody.push([
+        '<tr class=' + (which.fail.length ? 'fail' : 'pass') + '>',
+          '<td>' + tableRow.join('</td><td>') + '</td>',
+        '</tr>'
+      ].join(''));
+    }
+
+    document.getElementById('main').innerHTML += [
+      '<table>',
+      tableHead,
+      tableBody.join(''),
+      '</table>' 
+    ].join('');
+  }
+
+  function assert(test) {
+    current[ eval(test) ? 'pass' : 'fail' ].push(test);
+  }
+
+  function run(list) {
+    if(list.constructor == Array) {
+      var ret = true;
+
+      for(var i = 0; i < list.length; i++) {
+        ret &= run(list[i]);
+      }
+
+      return ret;
+    } else {
+      var which = list;
+
+      if(tallyMap[which].fail.length) {
+        current.fail.push("skipped. required test " + which + " failed.");
+        return false;
+      } else {
+        tallyMap[which]();
+        current.pass = [];
+      }
+
+      return tallyMap[which].fail.length == 0;
+    }
+  }
+
+  function doTest(optList) {
+    var which, obj;
+
+    for (var ix=0; ix < optList.length; ix++) {
+      which = optList[ix];
+
+      if(!which.noreset) {
+        db = DB();
+      }
+
+      obj = which.test;
+      obj.pass = [];
+      obj.fail = [];
+      obj.description = which.description;
+      tallyMap[which.name] = obj;
+
+      current = obj;
+
+      try {
+        obj();
+      } catch(ex) {
+        obj.fail.push(ex.toSource());
+      }
+      obj.done = true;
+    }
+
+    showResults();
+  }
+
+  function test() {
+    var hash = window.location.search.substr(1);
+    if(hash.length > 1) {
+      var which = hash.split('=')[0];
+      if(which == 'unsafe') {
+        DB.unsafe();
+      }
+    } else {
+      which = 'none';
+    }
+    document.getElementById(which).setAttribute('style', [
+      'border-style:solid',
+      'background:silver'
+    ].join(';')); 
+
+    doTest([
+      { name: 'insert-one', 
+        description: 'insert {key: value}', 
+        test: function() {
+          db.insert({key: 'value'});
+          assert('db.__raw__.length == 1');
+          assert('db.__raw__[0].key == "value"');
+        }
+      },
+      { name: 'insert-three', 
+        description: 'insert [{key1: 0}, {key2: value2}, {key1: value3}]',
+        test: function() {
+          db.insert({key1: 0}, {key2: 'value2'}, {key1: 'value3'});
+          assert('db.__raw__.length == 3');
+          assert('db.__raw__[0].key1 == 0');
+          assert('db.__raw__[1].key2 == "value2"');
+          assert('db.__raw__[2].key1 == "value3"');
+        }
+      },
+      { name: 'remove-all',
+        description: 'insert-one then remove all',
+        test: function() {
+          run('insert-one');
+          db.remove();
+          assert('db.__raw__.length == 0');
+        }
+      },
+      { name: 'remove-head',
+        description: 'insert-three then remove {key1: 0}, first element',
+        test: function() {
+          run('insert-three');
+          db.remove({key1: 0});
+          assert('db.__raw__.length == 2');
+          assert('db.__raw__[0].key2 == "value2"');
+        }
+      },
+      { name: 'remove-middle',
+        description: 'insert-three then remove {key2: value2}, middle element',
+        test: function() {
+          run('insert-three');
+          db.remove({key2: 'value2'});
+          assert('db.__raw__.length == 2');
+          assert('db.__raw__[1].key1 == "value3"');
+        }
+      },
+      { name: 'remove-tail',
+        description: 'insert-three then remove {key1: value3}, last element',
+        test: function() {
+          run('insert-three');
+          db.remove({key1: 'value3'});
+          assert('db.__raw__.length == 2');
+        }
+      },
+      { name: 'find-all',
+        description: 'insert-one then find all',
+        test: function() {
+          run('insert-one');
+          assert.res = db.find();
+          assert('assert.res.length == 1');
+        }
+      },
+      { name: 'find-one',
+        description: 'insert-three then find {key1: 0}',
+        test: function() {
+          run('insert-three');
+          assert.res = db.find({key1: 0});
+          assert('assert.res.length == 1');
+          assert('assert.res[0] == db.__raw__[0]');
+        }
+      },
+      { name: 'find-key1',
+        description: 'insert-three then find {key1: *}',
+        test: function() {
+          run('insert-three');
+          assert.res = db.find({key1: db('!== undefined')});
+          assert('assert.res.length == 2');
+        }
+      },
+      { name: 'update-key1',
+        description: 'find-key1, then update all key1 to be value4',
+        test: function() {
+          run('find-key1');
+          assert.res.update({key1: 'value4'});
+          assert('db.__raw__[0].key1 == "value4"');
+          assert('db.__raw__[2].key1 == "value4"');
+        }
+      },
+      { name: 'update-1',
+        description: 'insert-three, then update all records to have key9 = false',
+        test: function() {
+          run('insert-three');
+          db.update({key9: false});
+
+          for(var i = 0; i < 3; i++) {
+            assert('db.__raw__[' + i + '].key9 === false');
+          }
+        }
+      },
+      { name: 'remove-3',
+        description: 'update-1, then remove all records of key9===false and key1=0',
+        test: function() {
+          run('update-1');
+          db.find({
+            key9: false,
+            key1: 0
+          }).remove();
+
+          assert('db.__raw__.length == 2');
+          assert('db.__raw__[0].key2 == "value2"');
+          assert('db.__raw__[1].key1 == "value3"');
+        }
+      },
+      { name: 'sync-1',
+        description: 'insert-3, register a sync, then remove-3',
+        test: function() {
+          run('update-1');
+          var ival = setTimeout(function(){
+            assert(false);
+          }, 1000);
+
+          db.sync(function(){
+            clearTimeout(ival);
+            assert(true);
+          });
+
+          db.find({
+            key9: false,
+            key1: 0
+          }).remove();
+        }
+      }
+    ]);
+  }
+  window.DB.importCSV = function(url) {
+
+    function get(url) {
+      var req = new XMLHttpRequest();
+      req.open('GET', url, false);
+      req.send(null);
+      if(req.status == 200) {
+        return req.responseText;
+      } else {
+        return '';
+      }
+    }
+
+    var 
+      lineList = get(url).split('\n'),
+      db = DB(),
+      re = new RegExp('^(?:(?:"((?:""|[^"])+)"|([^,]*))(?:$|,))+$', "g"),
+      record,
+      match,
+      field = 0,
+      header = [],
+      line = lineList.shift(),
+      len = lineList.length;
+
+    if(len === 0) {
+      return;
+    }
+
+    while( ( match = re.exec(line) ) != null) {
+      header.push(match[0]);
+    }
+
+    for(var ix = 0; ix < len; ix++) {
+      record = {};
+      line = lineList[ix];
+
+      field = 0;
+
+      while( ( match = re.exec(line) ) != null) {
+        if(parseFloat(match[0]).toString() == match[0]) {
+          record[ header[field] ] = parseFloat(match[0]);
+        } else {
+          record[ header[field] ] = match[0];
+        }
+        field ++;
+      }
+
+      if(field > 0) {
+        db.insert(record);
+      }
+    }
+
+    return db;
+  }
+
+  function performance() {
+    function log(str) {
+      document.getElementById('stress').innerHTML += "<div>" + str + "</div>";
+    }
+
+    log("Importing 500K records from US census");
+    var 
+      db = DB.importCSV('CO-EST2009-ALLDATA.csv'),
+      middle;
+
+    function clock(name, callback) {
+      var ret;
+
+      start = new Date();
+      ret = callback();
+      end = new Date();
+
+      log((end.getTime() - start.getTime()) + "ms (" + name + ")");
+
+      return ret; 
+    }
+
+    middle = clock("Finding only the county and city records", function(){
+      return db.find(db('STNAME', ' != record.CTYNAME'));
+    });
+
+    middle = clock('Grouping the records by state', function(){
+      return middle.group('STNAME');
+    });
+
+    middle = clock('Accumulating the population per state', function(){
+      return middle.each(DB.reduceLeft(0, ' += x.POPESTIMATE2000'));
+    });
+
+    var table = "<table><tr><td>state</td><td>2000 pop</td></tr>";
+    for(var state in middle) {
+      table += "<tr><td>" + state + "</td><td>" + middle[state] + "</td></tr>";
+    }
+    table += "</table>";
+    log(table);  
+  }
+(function(){
+var 
+  maxval = 1000,
+  recsize = 20, 
+  reccount = 5 * 1000, 
+  keylist = {}, key, 
+  toInsert = [], 
+  logged = [],
+  cutoff = maxval / 2;
+
+// We try to insert a large amount of evenly distributed schema-free data
+
+
+// poor programmers random number generator from primes is p1 * p2 * c % p3
+// We use this method to control the data to make sure that every test run
+// inserts the same data
+var rand = (function() {
+  var largePrimes = [
+      [99497, 72727, 61463, 24469,100747, 90059, 55903, 40351, 19447, 12553],
+      [12647, 40559, 35251, 27031, 38821, 65101, 51197, 84377, 21017, 19319],
+      [84811, 79777,100291,  1933, 15199, 24509, 31607, 48049, 55511, 65267]
+    ],
+    round = 0,
+    fallover = 500,
+    lastrand = 100,
+    p1,
+    p2;
+
+  return function(){
+    if(round++ % fallover == 0) {
+      p1 = largePrimes[0][Math.floor(round / fallover / 10) % 10]; 
+      p2 = largePrimes[1][Math.floor(round / fallover) % 10]; 
+      lastrand = largePrimes[2][Math.floor(round / fallover) % 10];
+    }
+
+    lastrand = (lastrand * p1 + round) % p2;
+    return lastrand / p2;
+  }
+})();
+
+function log(str) {
+  logged.push(str);
+}
+
+var perfCheck = (function(){
+  var timeList = [], roundTotal = 0, message;
+  var pub = function (callback) {
+    var ret, round;
+
+    start = new Date();
+    ret = callback() || '';
+    end = new Date();
+
+
+    round =  end.getTime() - start.getTime();
+    roundTotal += round;
+    timeList.push(round);
+
+    return ret; 
+  }
+  pub.compute = function(message){
+    var 
+      roundCount = timeList.length,
+      variance = 0,
+      stddiv,
+      mean = roundTotal / roundCount;
+  
+    variance = 0;
+    for(var ix = 0; ix < roundCount; ix++) {
+      variance += Math.pow(timeList[ix] - mean, 2);
+    }
+    variance /= roundCount;
+
+    stddiv = Math.sqrt(variance);
+
+
+    log([
+      '<b title="' + timeList.join(',') + '">' + message + '</b>',
+      '<span> ' + (roundTotal / roundCount) + '</span>',
+      '<span> ' + stddiv + '</span>'
+    ].join(''));
+
+    pub.total += roundTotal;
+    timeList = [];
+    roundTotal = 0;
+  }
+  pub.total = 0;
+  return pub;
+
+})();
+
+function makeKey(num) {
+  return ((num + 4) * 1000).toString(36);
+}
+
+var value;
+for(var ix = 0; ix < reccount; ix++) {
+  toInsert[ix] = {};
+  for(var iy = 0; iy < recsize; iy++) {
+    do { 
+      key = makeKey(Math.floor(rand() * (recsize * 4)));
+    } while(key in toInsert[ix]);
+
+    if(!keylist[key]) {
+      keylist[key] = {low:0, high:0};
+    }
+
+    value = Math.floor(rand() * maxval);
+    if(value < cutoff) {
+      keylist[key].low++;
+    } else {
+      keylist[key].high++;
+    }
+
+    toInsert[ix][key] = value;
+  }
+}
+
+function validate(t1, t2) {
+  if(t1 != t2) {
+    console.log (" fail (" + t1 + " != " + t2 + ")");
+  }
+}
+
+
+var db;
+self.doperftest = function() {
+  var res;
+
+  perfCheck.total = 0;
+
+  perfCheck(function(){ db = DB(); });
+  perfCheck.compute('initializing');
+
+  perfCheck(function(){ res = db.insert(toInsert); });
+  perfCheck.compute('inserting ' + reccount + ' records');
+
+  perfCheck(function(){ res = db.find(); });
+  perfCheck.compute('empty find');
+
+  perfCheck(function(){ res = db.find().select('*'); });
+  perfCheck.compute('empty find select of *');
+
+  for(var key in keylist) {
+    perfCheck(function(){ res = db.find().select(key); });
+  }
+  perfCheck.compute('empty find select of key');
+
+  for(var key in keylist) {
+    perfCheck(function(){ res = db.find(db(key, ' < ' + cutoff)); });
+  }
+  perfCheck.compute('find value < ' + cutoff);
+
+  for(var key in keylist) {
+    perfCheck(function(){ res = db.find(db.isin(key, [3, 9, 11, 12])); });
+  }
+  perfCheck.compute('indexof set find');
+
+  for(var key in keylist) {
+    perfCheck(function(){
+      var len = toInsert.length, res = toInsert.slice(), x,
+          spliceix,
+          end = len;
+
+      for(var ix = len - 1; ix > -1; ix--) {
+        x = res[ix][key];
+        if (x === 3 || x === 9 || x === 11 || x === 12) {
+          
+          spliceix = ix + 1;
+          res.splice(spliceix, end - spliceix);
+          end = ix;
+        }
+      }
+      spliceix = ix + 1;
+
+      if(end - spliceix > 0) {
+        res.splice(spliceix, end - spliceix);
+      }
+      return res.length;
+    });
+  }
+  perfCheck.compute('native set find ');
+
+
+  self.dbBig = db;
+  log("Total of all tests: " + perfCheck.total + 'ms');
+  document.body.getElementsByTagName('pre')[0].innerHTML = '<div>' + logged.join('</div><div>') + '</div>';
+}
+})();
+</script>

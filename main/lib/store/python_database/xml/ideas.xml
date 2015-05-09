@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<root>
+	<ideas>
+		<!--ideas list waiting for realization "id" : [title, detail, create_time]-->
+		{'1': ' &quot;1 : &quot;,&quot;write one GPS watcher&quot;,&quot;this is created incase I forget to turn off the gps switch after finishing using it&quot;,&quot;2015.1.1&quot; ', '2': ' &quot;2 : &quot;,&quot;url_deliver&quot;,&quot;deliver a url information between devices using camera, or picture, auto detect&quot;,&quot;2015.1.2&quot; '}
+	</ideas>
+</root>

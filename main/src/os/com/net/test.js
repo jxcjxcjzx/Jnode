@@ -51,9 +51,23 @@ function doPostRequest(requestUrlAddr,postParams){
 
 
 function createXMLHttpRequest(){
-	
-	
+	// wrap the xmlhttprequest 
+	// can add some control 
+	return new XMLHttpRequest();
 }
+
+function get(url) {
+      var req = createXMLHttpRequest();
+      req.open('GET', url, false);
+      req.send(null);
+      if(req.status == 200) {
+		// well add some handling here 
+        return req.responseText;
+      } else {
+        return '';
+      }
+}
+
 
 function str2Ent(){
 	var output = "";
