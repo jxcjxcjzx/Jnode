@@ -1,0 +1,21 @@
+
+ html5 add watermarks 
+ 
+ text watermark:
+	
+	mark = {
+		padding:5,
+		height:18,
+		text:'test',
+		color:'#000',
+		font:' 400 18px Arial'
+	};
+	
+ pic watermark:
+	
+	mark = {
+		padding:5,
+		data-osrc:'mark.png',
+		width:34,
+		height:45	
+	};

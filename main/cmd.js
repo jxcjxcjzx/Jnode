@@ -1,5 +1,7 @@
 var repl = require("repl");
 
+var main = require(""./main.js);
+
 // tmp added 
 var simpleHandler = require("./tmp/simpleHandler.js")
 
@@ -16,3 +18,4 @@ repl.start({
 		}
 	}		
 });
+
