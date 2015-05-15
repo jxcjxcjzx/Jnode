@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>HubbleDotNet 开源全文搜索数据库项目--Contains 方式 - eaglet - 博客园</title>
+<link type="text/css" rel="stylesheet" href="/bundles/blog-common.css?v=gdNkSiQMyBMkpTeO1ex9qW-60UbMszQItnCUpBAT3LQ1"/>
+<link id="MainCss" type="text/css" rel="stylesheet" href="http://common.cnblogs.com/Skins/KJC/style.css?id=20140110"/>
+<link type="text/css" rel="stylesheet" href="/blog/customcss/26415.css?v=WO8LdelTQ1DIgYJL2mWCzu3%2bV3c%3d"/>
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/eaglet/rss"/>
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/eaglet/rsd.xml"/>
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/eaglet/wlwmanifest.xml"/>
+<script src="http://common.cnblogs.com/script/jquery.js" type="text/javascript"></script>  
+<script type="text/javascript">var currentBlogApp = 'eaglet', cb_enable_mathjax=false;</script>
+<script src="/bundles/blog-common.js?v=sYnK9SBBbtgipozKG6pi4Es_tynJ696hgo4AYlC6aiA1" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+<!--PageBeginHtml Block Begin-->
+<div style="width:728px; height:100px;">
+<div class="lqm_ad" lqm_publisher="lqm.eaglet.site" lqm_zone="ron" lqm_format="728x90"></div>
+</div>
+<!--PageBeginHtml Block End-->
+
+<table class="Framework" cellspacing="0" cellpadding="0" width="100%">
+	<tr>
+		<td colspan="3">
+			
+<div id="top">
+<table cellpadding="10" cellspacing="0">
+	<tr>
+		<td nowrap>
+			<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/eaglet/">eaglet</a></h1>
+			本博专注于基于微软技术的搜索相关技术
+		</td>
+	</tr>
+</table>
+</div>
+<div id="sub">
+	<div id="sub-right">
+<div class="BlogStats">posts - 188, comments - 3594, trackbacks - 26, articles - 0</div></div>
+	
+&nbsp;
+<a id="Header1_MyLinks1_HomeLink" href="http://www.cnblogs.com/">博客园</a>&nbsp;::
+<a id="Header1_MyLinks1_MyHomeLink" href="http://www.cnblogs.com/eaglet/">首页</a>&nbsp;::
+<a id="Header1_MyLinks1_NewPostLink" rel="nofollow" href="http://www.cnblogs.com/eaglet/admin/EditPosts.aspx?opt=1">新随笔</a>&nbsp;::
+<a id="Header1_MyLinks1_ContactLink" accesskey="9" rel="nofollow" href="http://space.cnblogs.com/msg/send/eaglet">联系</a>&nbsp;::
+<a id="Header1_MyLinks1_Syndication" href="http://www.cnblogs.com/eaglet/rss">订阅</a>
+<a id="Header1_MyLinks1_XMLLink" class="XMLLink" href="http://www.cnblogs.com/eaglet/rss"><img src="http://www.cnblogs.com/images/xml.gif" alt="订阅" /></a>&nbsp;::
+<a id="Header1_MyLinks1_Admin" rel="nofollow" href="http://www.cnblogs.com/eaglet/admin/EditPosts.aspx">管理</a>
+
+</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="LeftCell">
+			<div id="leftmenu">
+            	
+		            <div id="blog-calendar" style="display:none"></div><script type="text/javascript">loadBlogDefaultCalendar();</script>
+		            
+<div id=cell>
+<img src="/Skins/KJC/Images/icon-group.jpg" hspace=5 align=left vspace=2><h3>公告</h3>
+<div id=news>
+	<div id="blog-news"></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+</div>
+
+	            
+	            <div id="blog-sidecolumn"></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+		</td>
+		<td class="MainCell">
+			<div id="main">
+				
+
+	<div class="post">
+		<div class="posthead">
+			<h2>
+				<a id="cb_post_title_url" class="singleposttitle" href="http://www.cnblogs.com/eaglet/archive/2010/09/16/1827706.html">HubbleDotNet 开源全文搜索数据库项目--Contains 方式</a>
+			</h2>
+ 			Posted on <span id="post-date">2010-09-16 08:20</span> <a href='http://www.cnblogs.com/eaglet/'>eaglet</a> 阅读(<span id="post_view_count">...</span>) 评论(<span id="post_comment_count">...</span>)  <a href ="http://www.cnblogs.com/eaglet/admin/EditPosts.aspx?postid=1827706" rel="nofollow">编辑</a> <a href="#" onclick="AddToWz(1827706);return false;">收藏</a>
+			<script type="text/javascript">var allowComments=true,isLogined=false,cb_blogId=26415,cb_entryId=1827706,cb_blogApp=currentBlogApp,cb_blogUserGuid='50733d0b-63cf-dd11-9e4d-001cf0cd104b',cb_entryCreatedDate='2010/9/16 8:20:00';loadViewCount(cb_entryId);</script>
+			
+		</div>
+		<div class="postbody"><div id="cnblogs_post_body"><p><a href="http://images.cnblogs.com/cnblogs_com/eaglet/WindowsLiveWriter/HubbleDotNetContains_9040/image_2.png"><img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://images.cnblogs.com/cnblogs_com/eaglet/WindowsLiveWriter/HubbleDotNetContains_9040/image_thumb.png" width="490" height="618"></a> </p> <p>图1 Contains 匹配的示意图</p> <p>如图1 所示 Contains 匹配是对所有单词分量按与方式进行匹配，但也可以指定某个分量按或匹配。</p> <p>&nbsp;</p> <h1>对单个字段按与方式匹配</h1> <p>搜索标题包含 abc news to cut 这几个关键字中所有关键字的记录，并按匹配度排序  <p>SQL 语句：<pre>select top 10 Id, Title, Score from EnglishNews where title contains 'abc^5000^0 news^5000^3 to^5000^7 cut^5000^9' </pre><pre>order by score desc</pre>
+<p>采用 Contains 搜索，可以进行精确匹配，这里我们发现采用 Contains 搜索出来的数据要比 Match 少很多。因为只有 
+<p>同时包含abc news to cut 这四个单词的记录才会被输出出来。 
+<p>结果： 
+<p><a href="http://images.cnblogs.com/cnblogs_com/eaglet/WindowsLiveWriter/HubbleDotNetUpdatable_DF59/image_22.png"><img title="image" border="0" alt="image" src="http://images.cnblogs.com/cnblogs_com/eaglet/WindowsLiveWriter/HubbleDotNetUpdatable_DF59/image_thumb_10.png" width="749" height="510"></a>
+<h1>&nbsp;</h1>
+<h1>对单个字段按部分与，部分或方式匹配</h1>
+<p>上面的例子，由于&nbsp; to 这个词太常见，我们希望匹配同时包含 abc news cut 这三个单词的记录，并且记录中如果包含 to ， 
+<p>则得分比不包含to 的得分高。这种搜索方法已经很解决 google 或 baidu 的搜索方法了，google 中如果输入关键字中包含停用词， 
+<p>对非停用词采用与的方式匹配，对停用词采用或的方式匹配，但如果记录中包含要匹配的停用词，则得分比不包含的要高。 
+<p>SQL 语句：<pre>select top 10 Id, Title, Score from EnglishNews where </pre><pre>title contains 'abc^5000^0 news^5000^3 to^5000^7^1 cut^5000^9' order by score desc</pre><pre>&nbsp;</pre>
+<p>这里我们看出，多出了一条记录，这条记录排在第三位，和前两条记录比起来，这条记录没有 to 这个单词。 
+<p>to 这个单词分量后面跟的参数说明： 
+<p>to^5000^7^1 
+<p>前两个参数和其他单词的意思一样，一个为权重，一个为位置。 
+<p>第三个参数为标志字段，1 表示可以为或。 <pre>结果：</pre>
+<p><a href="http://images.cnblogs.com/cnblogs_com/eaglet/WindowsLiveWriter/HubbleDotNetUpdatable_DF59/image_24.png"><img title="image" border="0" alt="image" src="http://images.cnblogs.com/cnblogs_com/eaglet/WindowsLiveWriter/HubbleDotNetUpdatable_DF59/image_thumb_11.png" width="784" height="533"></a>
+<p></p>
+<p>&nbsp;</p>
+<p><font size="5">返回 </font><a href="http://www.cnblogs.com/eaglet/archive/2010/04/07/1706305.html"><font size="5">Hubble.net 技术详解</font></a> </div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="blog_post_info">
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"></div>
+</div>
+
+</div>
+	</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" id="lnk_RefreshComments" onclick="return RefreshCommentList();">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+<div id="comment_form_container"></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="site_nav_under"><a href="http://www.cnblogs.com/" target="_blank" title="程序员的网上家园">博客园首页</a><a href="http://q.cnblogs.com/" target="_blank" title="程序员问答社区">博问</a><a href="http://news.cnblogs.com/" target="_blank" title="IT新闻">新闻</a><a href="http://home.cnblogs.com/ing/" target="_blank">闪存</a><a href="http://job.cnblogs.com/" target="_blank">程序员招聘</a><a href="http://kb.cnblogs.com/" target="_blank">知识库</a></div>
+<div id="ad_under_post_holder"></div>
+<script type="text/javascript">
+var enableGoogleAd = true;
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+fixPostBodyFormat();
+loadAdUnderPost();
+</script>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+loadBlogSignature();
+LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+</script>
+<script type="text/javascript">
+    $.ajax({ url: 'http://counter.cnblogs.com/blog/post/' + cb_entryId, type: 'get', dataType: 'script', cache: true });
+</script>
+</div>
+
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="FooterCell">
+			
+<p id="footer">
+	Powered by: 
+	<br />
+	
+	<a id="Footer1_Hyperlink3" NAME="Hyperlink1" href="http://www.cnblogs.com/" style="font-family:Verdana;font-size:12px;">博客园</a>
+	<br />
+	Copyright &copy; eaglet
+</p>
+
+		</td>
+	</tr>
+</table>
+
+<!--PageEndHtml Block Begin-->
+<script type='text/javascript'>//<![CDATA[
+    if (typeof jQuery == 'undefined') {
+        document.write(unescape("%3Cscript src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.4.2.min.js' type='text/javascript' %3E%3C/script%3E"));
+    }//]]></script>
+<script type='text/javascript' language='Javascript' src='http://s1.lqcdn.com/m.min.js?dt=2.3.110104.1'></script>
+<script type='text/javascript' language='Javascript'> if(jQuery.LqmAds)jQuery.LqmAds();</script>
+<!--PageEndHtml Block End-->
+</body>
+</html>

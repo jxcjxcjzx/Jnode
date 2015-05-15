@@ -1,0 +1,579 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>HubbleDotNet--自定义分词器 - eaglet - 博客园</title>
+<link type="text/css" rel="stylesheet" href="/bundles/blog-common.css?v=gdNkSiQMyBMkpTeO1ex9qW-60UbMszQItnCUpBAT3LQ1"/>
+<link id="MainCss" type="text/css" rel="stylesheet" href="http://common.cnblogs.com/Skins/KJC/style.css?id=20140110"/>
+<link type="text/css" rel="stylesheet" href="/blog/customcss/26415.css?v=WO8LdelTQ1DIgYJL2mWCzu3%2bV3c%3d"/>
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/eaglet/rss"/>
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/eaglet/rsd.xml"/>
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/eaglet/wlwmanifest.xml"/>
+<script src="http://common.cnblogs.com/script/jquery.js" type="text/javascript"></script>  
+<script type="text/javascript">var currentBlogApp = 'eaglet', cb_enable_mathjax=false;</script>
+<script src="/bundles/blog-common.js?v=sYnK9SBBbtgipozKG6pi4Es_tynJ696hgo4AYlC6aiA1" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+<!--PageBeginHtml Block Begin-->
+<div style="width:728px; height:100px;">
+<div class="lqm_ad" lqm_publisher="lqm.eaglet.site" lqm_zone="ron" lqm_format="728x90"></div>
+</div>
+<!--PageBeginHtml Block End-->
+
+<table class="Framework" cellspacing="0" cellpadding="0" width="100%">
+	<tr>
+		<td colspan="3">
+			
+<div id="top">
+<table cellpadding="10" cellspacing="0">
+	<tr>
+		<td nowrap>
+			<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/eaglet/">eaglet</a></h1>
+			本博专注于基于微软技术的搜索相关技术
+		</td>
+	</tr>
+</table>
+</div>
+<div id="sub">
+	<div id="sub-right">
+<div class="BlogStats">posts - 188, comments - 3594, trackbacks - 26, articles - 0</div></div>
+	
+&nbsp;
+<a id="Header1_MyLinks1_HomeLink" href="http://www.cnblogs.com/">博客园</a>&nbsp;::
+<a id="Header1_MyLinks1_MyHomeLink" href="http://www.cnblogs.com/eaglet/">首页</a>&nbsp;::
+<a id="Header1_MyLinks1_NewPostLink" rel="nofollow" href="http://www.cnblogs.com/eaglet/admin/EditPosts.aspx?opt=1">新随笔</a>&nbsp;::
+<a id="Header1_MyLinks1_ContactLink" accesskey="9" rel="nofollow" href="http://space.cnblogs.com/msg/send/eaglet">联系</a>&nbsp;::
+<a id="Header1_MyLinks1_Syndication" href="http://www.cnblogs.com/eaglet/rss">订阅</a>
+<a id="Header1_MyLinks1_XMLLink" class="XMLLink" href="http://www.cnblogs.com/eaglet/rss"><img src="http://www.cnblogs.com/images/xml.gif" alt="订阅" /></a>&nbsp;::
+<a id="Header1_MyLinks1_Admin" rel="nofollow" href="http://www.cnblogs.com/eaglet/admin/EditPosts.aspx">管理</a>
+
+</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="LeftCell">
+			<div id="leftmenu">
+            	
+		            <div id="blog-calendar" style="display:none"></div><script type="text/javascript">loadBlogDefaultCalendar();</script>
+		            
+<div id=cell>
+<img src="/Skins/KJC/Images/icon-group.jpg" hspace=5 align=left vspace=2><h3>公告</h3>
+<div id=news>
+	<div id="blog-news"></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+</div>
+
+	            
+	            <div id="blog-sidecolumn"></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+		</td>
+		<td class="MainCell">
+			<div id="main">
+				
+
+	<div class="post">
+		<div class="posthead">
+			<h2>
+				<a id="cb_post_title_url" class="singleposttitle" href="http://www.cnblogs.com/eaglet/archive/2011/06/03/2070256.html">HubbleDotNet--自定义分词器</a>
+			</h2>
+ 			Posted on <span id="post-date">2011-06-03 06:05</span> <a href='http://www.cnblogs.com/eaglet/'>eaglet</a> 阅读(<span id="post_view_count">...</span>) 评论(<span id="post_comment_count">...</span>)  <a href ="http://www.cnblogs.com/eaglet/admin/EditPosts.aspx?postid=2070256" rel="nofollow">编辑</a> <a href="#" onclick="AddToWz(2070256);return false;">收藏</a>
+			<script type="text/javascript">var allowComments=true,isLogined=false,cb_blogId=26415,cb_entryId=2070256,cb_blogApp=currentBlogApp,cb_blogUserGuid='50733d0b-63cf-dd11-9e4d-001cf0cd104b',cb_entryCreatedDate='2011/6/3 6:05:00';loadViewCount(cb_entryId);</script>
+			
+		</div>
+		<div class="postbody"><div id="cnblogs_post_body"><p>HubbleDotNet 在设计之初就定位为一个开放式的搜索平台，分词器，得分算法，数据库适配器，存储过程，函数等等都可以通过编写自定义的插件来定制。目前版本分词器，数据库适配器的自定义接口已经开放，得分算法的自定义接口也将在最近开放出来。本文将讲述如何编写自己的分词器。</p>
+<p>HubbleDotNet 本身自带了3个分词器，分别是盘古分词，简单分词和英文分词。但对于搜索应用来说，仅仅这3种分词器是不够用的，很多应用需要定制化的分词器来提高搜索的准确度。本文通过讲述如何编写一个以逗号分隔的分词器，抛砖引玉。大家可以仿照这个简单的逗号分隔分词器来编写自己的分词器。</p>
+<p>逗号分词器主要用于一些分类信息的分解。比如某条记录同时属于&nbsp; A B C 三个分类，在关系型数据库中，我们可能需要设计2个表，通过主表和分类信息表关联来描述记录的分类关系。在搜索引擎技术中，往往偏向于no-sql ，至少是单表的简单平铺方式，这种方式的查询效率要比关系型要高很多，适合于搜索引擎对大规模数据检索的要求。目前以 google 为代表的搜索引擎基本上都是采用非关系型的设计，所以我们在设计搜索引擎时也最好参照这些搜索巨头的设计理念。回到这个问题，把分类信息平铺到一个表中的方法是增加一个全文索引字段，这个字段中存储这条记录的所属分类，分类之间以逗号分隔（比如 A,B,C)。 这样如果我们要查询属于A或B分类的记录，我们只要写类似如下的语句就可以完成：</p>
+<p>select top 10 * from table where title contains &#8216;xxxx&#8217; and class match &#8216;A B&#8217; order by score desc</p>
+<p>&nbsp;</p>
+<h1>分词器的编写</h1>
+<p>要实现自定义的分词器，我们只需要简单实现 IAnalyzer 和 INamedExternalReference 接口就可以。要实现这个接口，我们要引用</p>
+<p>Hubble.Analyzer.dll 和 Hubble.Framework.dll, 这两个动态库在 hubble 安装路径下中可以找到。</p>
+<p>并且&nbsp; using Hubble.Core.Analysis;</p>
+<p>&nbsp;</p>
+<h2>IAnalyzer 接口</h2><pre class="csharpcode">    <span class="kwrd">public</span> <span class="kwrd">interface</span> IAnalyzer
+    {
+        <span class="kwrd">void</span> Init();
+        <span class="kwrd">int</span> Count { get; }
+        IEnumerable&lt;WordInfo&gt; Tokenize(<span class="kwrd">string</span> text);
+        IEnumerable&lt;WordInfo&gt; TokenizeForSqlClient(<span class="kwrd">string</span> text);
+    }</pre>
+<p>上图为IAnalyzer 接口。下面我分别讲讲这个接口中各个成员的含义</p>
+<p>&nbsp;</p>
+<p>Init 函数是用于初始化分词器的，有的分词器比如盘古分词，在调用前需要加载字典，构建内部索引等，这些初始化过程在这个函数中完成。</p>
+<p>Count 属性返回 Tokenize 函数分词后的单词总数，这个参数会影响单词的查询权重，由于Tokenize 函数输出是一个 IEnumerable 接口，无法得到单词总数，所以必须通过这个Count属性来得到当前分词的单词总数。</p>
+<p>Tokenize 函数输出 text 的分词结果，这个结果以 IEnumerable 接口形式返回，这个函数是用于索引的分词。</p>
+<p>TokenizedForSqlClient 函数也是输出text的分词结果，但这个结果是为分解搜索关键字时用的，因为有时候搜索关键字的分词和索引的分词结果不一定完全一致。这个函数只有在搜索时需要通过服务器来帮助分解搜索关键字时才用到，即类似我的例子中的GetKeywordAnalyzerStringFromServer 函数的做法，如果客户端是本地分词，就用不到这个函数。这个函数不影响索引的分词。</p>
+<p>&nbsp;</p>
+<h2>INamedExternalReference&nbsp; 接口</h2><pre class="csharpcode">    <span class="kwrd">public</span> <span class="kwrd">interface</span> INamedExternalReference
+    {
+        <span class="kwrd">string</span> Name { get; }
+    }</pre>
+<style type="text/css">.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }
+</style>
+
+<p>上图为 INamedExternalReference&nbsp; 接口，这个接口用于指定分词器的名字</p>
+<p>&nbsp;</p>
+<p>下面为逗号分隔分词器代码,我们可以把这个代码编译为一个单独的 dll，在这里我们假设为 SplitByComma.dll</p>
+<p>&nbsp;</p><pre class="csharpcode"><span class="kwrd">using</span> System;
+<span class="kwrd">using</span> System.Collections.Generic;
+<span class="kwrd">using</span> System.Text;
+
+<span class="kwrd">using</span> Hubble.Core.Analysis;
+
+<span class="kwrd">namespace</span> SplitByComma
+{
+    <span class="kwrd">public</span> <span class="kwrd">class</span> Split : IAnalyzer, Hubble.Core.Data.INamedExternalReference
+    {
+        <span class="kwrd">int</span> _Count;
+        <span class="preproc">#region</span> IAnalyzer Members
+
+        <span class="rem">/// &lt;summary&gt;</span>
+        <span class="rem">/// Count of words</span>
+        <span class="rem">/// &lt;/summary&gt;</span>
+        <span class="kwrd">public</span> <span class="kwrd">int</span> Count
+        {
+            get 
+            { 
+                <span class="kwrd">return</span> _Count; 
+            }
+        }
+
+        <span class="rem">/// &lt;summary&gt;</span>
+        <span class="rem">/// Initialize the segment</span>
+        <span class="rem">/// &lt;/summary&gt;</span>
+        <span class="kwrd">public</span> <span class="kwrd">void</span> Init()
+        {
+            <span class="rem">//Write init code here</span>
+        }
+
+        <span class="rem">/// &lt;summary&gt;</span>
+        <span class="rem">/// Tokenize for index</span>
+        <span class="rem">/// &lt;/summary&gt;</span>
+        <span class="rem">/// &lt;param name="text"&gt;text which tokenized to&lt;/param&gt;</span>
+        <span class="rem">/// &lt;returns&gt;word info list&lt;/returns&gt;</span>
+        <span class="kwrd">public</span> IEnumerable&lt;Hubble.Core.Entity.WordInfo&gt; Tokenize(<span class="kwrd">string</span> text)
+        {
+            _Count = 0;
+
+            <span class="kwrd">int</span> begin = 0;
+
+            <span class="kwrd">for</span> (<span class="kwrd">int</span> i = 0; i &lt; text.Length; i++)
+            {
+                <span class="kwrd">if</span> (text[i] == <span class="str">','</span>)
+                {
+                    <span class="kwrd">yield</span> <span class="kwrd">return</span> <span class="kwrd">new</span> Hubble.Core.Entity.WordInfo(</pre><pre class="csharpcode">                          text.Substring(begin, i - begin), begin);
+                    <span class="kwrd">yield</span> <span class="kwrd">return</span> <span class="kwrd">new</span> Hubble.Core.Entity.WordInfo(<span class="str">","</span>, i);
+                    begin = i + 1;
+                    _Count += 2;
+                }
+            }
+
+            <span class="kwrd">if</span> (begin &lt; text.Length)
+            {
+                <span class="kwrd">yield</span> <span class="kwrd">return</span> <span class="kwrd">new</span> Hubble.Core.Entity.WordInfo(</pre><pre class="csharpcode">                     text.Substring(begin, text.Length - begin), begin);
+                _Count++;
+            }
+        }
+
+        <span class="rem">/// &lt;summary&gt;</span>
+        <span class="rem">/// Tokenize for search keywords</span>
+        <span class="rem">/// &lt;/summary&gt;</span>
+        <span class="rem">/// &lt;param name="text"&gt;text which tokenized to&lt;/param&gt;</span>
+        <span class="rem">/// &lt;returns&gt;word info list&lt;/returns&gt;</span>
+        <span class="kwrd">public</span> IEnumerable&lt;Hubble.Core.Entity.WordInfo&gt; TokenizeForSqlClient(<span class="kwrd">string</span> text)
+        {
+            <span class="kwrd">int</span> begin = 0;
+
+            <span class="kwrd">for</span> (<span class="kwrd">int</span> i = 0; i &lt; text.Length; i++)
+            {
+                <span class="kwrd">if</span> (text[i] == <span class="str">','</span>)
+                {
+                    <span class="kwrd">yield</span> <span class="kwrd">return</span> <span class="kwrd">new</span> Hubble.Core.Entity.WordInfo(</pre><pre class="csharpcode">                        text.Substring(begin, i - begin), begin);
+                    begin = i + 1;
+                }
+            }
+
+            <span class="kwrd">if</span> (begin &lt; text.Length)
+            {
+                <span class="kwrd">yield</span> <span class="kwrd">return</span> <span class="kwrd">new</span> Hubble.Core.Entity.WordInfo(</pre><pre class="csharpcode">                    text.Substring(begin, text.Length - begin), begin);
+            }
+        }
+
+        <span class="preproc">#endregion</span>
+
+        <span class="preproc">#region</span> INamedExternalReference Members
+
+        <span class="kwrd">public</span> <span class="kwrd">string</span> Name
+        {
+            get 
+            { 
+                <span class="kwrd">return</span> <span class="str">"SplitByComma"</span>; 
+            }
+        }
+
+        <span class="preproc">#endregion</span>
+    }
+}
+</pre>
+<style type="text/css">.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }
+</style>
+
+<p>这段代码中，为了区别，我对 Tokenize 和 TokenizeForSqlClient 采用了不同处理，Tokenize 函数将输出包括逗号在内的所有单词，而TokenizeForSqlClient则输出单词不包含逗号。</p>
+<p>把这段代码编译为 SplitByComma.dll ，分词器的编写工作就结束了</p>
+<h1>分词器的安装</h1>
+<p>安装分词器有三个步骤</p>
+<p>步骤1：</p>
+<p>将 SplitByComma.dll&nbsp; 拷贝到 program files/hubbledotnet/default 目录下</p>
+<p>步骤2：</p>
+<p>在 QueryAnalyzer 下执行如下语句。</p><pre class="csharpcode">SP_AddExternalReference <span class="str">'Analyzer'</span>, <span class="str">'SplitByComma.dll'</span></pre>
+<p>这个存储过程有两个参数，参数一指明外部引用的类型，这里为 Analyzer, 参数二为分词器的动态库文件名，如果文件不在hubble 的安装目录下，则需要输入完整路径名。</p>
+<p>&nbsp;</p>
+<p>步骤3：</p>
+<p>重启 Hubble.net 服务。分词器的安装和卸载都需要重启Hubble 服务才能生效。</p>
+<p>&nbsp;</p>
+<p>重启后，我们建一个 TestSplitComma 的表，我们可以看到如下图所示，分词器已经安装成功</p>
+<p>&nbsp;</p>
+<p><a href="http://images.cnblogs.com/cnblogs_com/eaglet/201106/201106030603083005.png"><img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://images.cnblogs.com/cnblogs_com/eaglet/201106/20110603060323275.png" width="695" height="462" /></a></p>
+<p>我们执行下面语句插入一条记录测试一下</p><pre class="csharpcode">insert TestSplitComma <span class="kwrd">values</span>(<span class="str">'today'</span><span class="str">'s sports news'</span>, <span class="str">'sports,news'</span>)
+</pre>
+<style type="text/css">.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }
+</style>
+
+<p>&nbsp;</p>
+<p>然后我们执行下面查询语句：</p><pre class="csharpcode">select top 10 * from TestSplitComma <span class="kwrd">where</span> title contains <span class="str">'today'</span> and <span class="kwrd">class</span> match <span class="str">'news'</span> order by score desc</pre>
+<style type="text/css">.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }
+</style>
+
+<p><a href="http://images.cnblogs.com/cnblogs_com/eaglet/201106/201106030603318021.png"><img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://images.cnblogs.com/cnblogs_com/eaglet/201106/201106030603377360.png" width="696" height="436" /></a></p>
+<p>查询成功</p>
+<h1>分词的测试方法</h1>
+<p>在实际应用中，我们往往希望知道 hubble 的服务器端对某个句子到底是怎么分词的。</p>
+<p>下面就在介绍两种查看分词结果的方法：</p>
+<h2>方法1： SP_TestAnalyzer </h2>
+<p>SP_TestAnalyzer 这个存储过程用于测试分词器的分词结果，它的作用是在服务器侧执行分词器的 Tokenize 方法。</p>
+<p>这个存储过程有两个参数，第一个参数为分词器名字，这里我们输入 &#8216;SplitByComma&#8217;，第二个参数是要测试的句子。 </p>
+<p>下面我们执行如下语句，看看效果</p><pre class="csharpcode">SP_TestAnalyzer <span class="str">'SplitByComma'</span>, <span class="str">'news,sports'</span></pre>
+<style type="text/css">.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }
+</style>
+
+<p>&nbsp;</p>
+<p><a href="http://images.cnblogs.com/cnblogs_com/eaglet/201106/201106030603449142.png"><img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://images.cnblogs.com/cnblogs_com/eaglet/201106/20110603060357820.png" width="705" height="442" /></a></p>
+<p>&nbsp;</p>
+<p>如上图所示，执行后，可以看到分词的结果。</p>
+<h2>方法2：SP_FieldAnalyze</h2>
+<p>SP_FieldAnalyze 这个存储过程是针对指定表的指定字段的分词器来分词</p>
+<p>它有4个参数，参数1为表名，参数2为字段名，参数3为要分词的句子，参数4指定是用 Tokenize 函数还是 TokenizedForSqlClient 函数来分词。第4个参数为可选参数，</p>
+<p>如果不输入，就是以 Tokenize 函数分词，如果输入 &#8216;SqlClient&#8217; 就是以 TokenizedForSqlClient 函数来分词</p>
+<p>下面我们首先执行默认的情况，即用 Tokenize 函数分词</p><pre class="csharpcode">SP_FieldAnalyze <span class="str">'TestSplitComma'</span>, <span class="str">'Class'</span>, <span class="str">'news,sports'</span></pre><pre class="csharpcode"><span class="str">这个语句是采用 TestSplitComma 表的 Class 字段的分词器来对 &#8216;news,sports&#8217;这个句子进行分词</span></pre>
+<p><a href="http://images.cnblogs.com/cnblogs_com/eaglet/201106/201106030604033573.png"><img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://images.cnblogs.com/cnblogs_com/eaglet/201106/201106030604107514.png" width="719" height="451" /></a></p>
+<p>&nbsp;</p>
+<p>我们再以 TokenizedForSqlClient 函数来分词看看效果：</p>
+<style type="text/css">.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }
+</style>
+
+<p>&nbsp;</p><pre class="csharpcode">SP_FieldAnalyze <span class="str">'TestSplitComma'</span>, <span class="str">'Class'</span>, <span class="str">'news,sports'</span>,<span class="str">'SqlClient'</span></pre>
+<style type="text/css">.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }
+</style>
+
+<p>&nbsp;</p>
+<p><a href="http://images.cnblogs.com/cnblogs_com/eaglet/201106/201106030604197363.png"><img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://images.cnblogs.com/cnblogs_com/eaglet/201106/201106030604271554.png" width="727" height="455" /></a></p>
+<p>&nbsp;</p>
+<p>可以看到后面加了 SqlClient 后，分词结果不同了，没有了逗号，这个是执行分词器的 TokenizedForSqlClient 的结果。</p>
+<p>&nbsp;</p>
+<h1>分词器的卸载</h1>
+<p>如果某个分词器我们不再需要，我们可以卸载它。卸载方法分两个步骤：</p>
+<p><strong>步骤1</strong>：执行SP_DeleteExternalReference存储过程</p>
+<p>这个存储过程有两个参数，参数一指明外部引用的类型，这里为 Analyzer, 参数二为分词器的动态库文件名，如果文件不在hubble 的安装目录下，则需要输入完整路径名。</p>
+<p>&nbsp;</p><pre class="csharpcode">SP_DeleteExternalReference <span class="str">'Analyzer'</span>, <span class="str">'SplitByComma.dll'</span></pre>
+<style type="text/css">.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }
+</style>
+
+<p><a href="http://images.cnblogs.com/cnblogs_com/eaglet/201106/201106030604315858.png"><img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://images.cnblogs.com/cnblogs_com/eaglet/201106/201106030604362232.png" width="735" height="439" /></a></p>
+<p><strong>步骤2</strong>：重启Hubble 服务</p>
+<p>&nbsp;</p>
+<p>返回 <a href="http://www.cnblogs.com/eaglet/archive/2010/04/07/1706305.html">Hubble.net 技术详解</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>
+<style type="text/css">.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }
+</style>
+</p></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="blog_post_info">
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"></div>
+</div>
+
+</div>
+	</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" id="lnk_RefreshComments" onclick="return RefreshCommentList();">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+<div id="comment_form_container"></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="site_nav_under"><a href="http://www.cnblogs.com/" target="_blank" title="程序员的网上家园">博客园首页</a><a href="http://q.cnblogs.com/" target="_blank" title="程序员问答社区">博问</a><a href="http://news.cnblogs.com/" target="_blank" title="IT新闻">新闻</a><a href="http://home.cnblogs.com/ing/" target="_blank">闪存</a><a href="http://job.cnblogs.com/" target="_blank">程序员招聘</a><a href="http://kb.cnblogs.com/" target="_blank">知识库</a></div>
+<div id="ad_under_post_holder"></div>
+<script type="text/javascript">
+var enableGoogleAd = true;
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+fixPostBodyFormat();
+loadAdUnderPost();
+</script>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+loadBlogSignature();
+LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+</script>
+<script type="text/javascript">
+    $.ajax({ url: 'http://counter.cnblogs.com/blog/post/' + cb_entryId, type: 'get', dataType: 'script', cache: true });
+</script>
+</div>
+
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="FooterCell">
+			
+<p id="footer">
+	Powered by: 
+	<br />
+	
+	<a id="Footer1_Hyperlink3" NAME="Hyperlink1" href="http://www.cnblogs.com/" style="font-family:Verdana;font-size:12px;">博客园</a>
+	<br />
+	Copyright &copy; eaglet
+</p>
+
+		</td>
+	</tr>
+</table>
+
+<!--PageEndHtml Block Begin-->
+<script type='text/javascript'>//<![CDATA[
+    if (typeof jQuery == 'undefined') {
+        document.write(unescape("%3Cscript src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.4.2.min.js' type='text/javascript' %3E%3C/script%3E"));
+    }//]]></script>
+<script type='text/javascript' language='Javascript' src='http://s1.lqcdn.com/m.min.js?dt=2.3.110104.1'></script>
+<script type='text/javascript' language='Javascript'> if(jQuery.LqmAds)jQuery.LqmAds();</script>
+<!--PageEndHtml Block End-->
+</body>
+</html>

@@ -1,0 +1,99 @@
+w3school 在线教程 
+
+ 
+HTML 系列教程
+浏览器脚本
+服务器脚本
+ASP.NET 教程
+XML 系列教程
+Web Services 系列教程
+建站手册
+HTML5 教程
+HTML5 教程
+HTML5 简介
+HTML5 视频
+HTML5 视频/DOM
+HTML5 音频
+HTML5 拖放
+HTML5 画布
+HTML5 SVG
+HTML5 画布 vs SVG
+HTML5 地理定位
+HTML5 Web 存储
+HTML5 应用缓存
+HTML5 Web Workers
+HTML5 服务器发送事件
+HTML5 表单
+HTML5 输入类型
+HTML5 表单元素
+HTML5 表单属性
+HTML5 测验
+HTML5 测验
+HTML5 参考手册
+HTML5 标签
+HTML5 属性
+HTML5 事件
+HTML5 视频/音频
+HTML5 画布
+HTML 有效 DTD
+HTML 5 <select> 标签
+定义和用法
+<select> 标签创建下拉列表。
+HTML 4.01 与 HTML 5 之间的差异
+HTML 5 有一些新的属性，同时不再支持一些 HTML 4.01 的属性。
+提示和注释：
+提示：请在 form 元素中使用此标签来接受用户的输入。
+例子
+<select>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+</select>
+属性
+属性	值	描述	4	5
+autofocus	
+true
+false
+在页面加载时使这个 select 字段获得焦点。	 	5
+data	url	供自动插入数据。	 	5
+disabled	
+true
+false
+当该属性为 true 时，会禁用该菜单。	4	5
+form	
+true
+false
+定义 select 字段所属的一个或多个表单。	 	5
+multiple	
+true
+false
+当该属性为 true 时，规定可一次选定多个项目。	4	5
+name	unique_name	定义下拉列表的唯一标识符。	4	5
+size	number	定义菜单中可见项目的数目。不支持。	4	 
+标准属性
+class, contenteditable, contextmenu, dir, draggable, id, irrelevant, 
+lang, ref, registrationmark, tabindex, template, title
+如需完整的描述，请访问 HTML 5 中标准属性。
+事件属性
+onabort, onbeforeunload, onblur, onchange, onclick, oncontextmenu, 
+ondblclick, ondrag, ondragend, ondragenter, ondragleave, ondragover, 
+ondragstart, ondrop, onerror, onfocus, onkeydown, onkeypress, onkeyup, 
+onload, onmessage, onmousedown, onmousemove, onmouseover, onmouseout, 
+onmouseup, onmousewheel, onresize, onscroll, onselect, onsubmit, onunload
+如需完整的描述，请访问 HTML 5 中事件属性。
+TIY 实例
+简单的下拉列表
+本例演示如何在 HTML 页面中创建简单的下拉列表框。下拉列表框是一个可选列表。
+另一个下拉列表
+本例演示如何创建一个简单的带有预选值的下拉列表。（注：预选值指预先指定的首选项。）
+SEARCH:
+ 
+HTML5 参考手册
+
+HTML5 测验
+
+
+ 
+W3School 提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。W3School 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+当使用本站时，代表您已接受了本站的使用条款和隐私条款。版权所有，保留一切权利。 赞助商：上海赢科投资有限公司。 蒙ICP备06004630号

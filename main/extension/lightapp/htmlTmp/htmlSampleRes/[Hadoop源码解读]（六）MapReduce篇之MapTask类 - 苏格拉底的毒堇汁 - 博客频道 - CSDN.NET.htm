@@ -1,0 +1,882 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ 
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>[Hadoop源码解读]（六）MapReduce篇之MapTask类 - 苏格拉底的毒堇汁
+        - 博客频道 - CSDN.NET</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="MapTask类继承于Task类，它最主要的方法就是run()，用来执行这个Map任务。&#160; run()首先设置一个TaskReporter并启动，然后调用JobConf的getUseNewAPI()判断是否使用New API，使用New API的设置在前面[Hadoop源码解读]（三）MapReduce篇之Job类&#160;讲到过，再调用Task继承来的initialize()方法初始化这个task，" />
+    <script src="http://static.blog.csdn.net/scripts/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://static.blog.csdn.net/scripts/ad.js?v=1.1"></script>
+        <!--new top-->
+               <link rel="stylesheet" href="http://static.csdn.net/public/common/toolbar/css/index.css">        <!--new top-->
+
+    <link rel="Stylesheet" type="text/css" href="http://static.blog.csdn.net/skin/dark1/css/style.css?v=1.1" />
+    <link id="RSSLink" title="RSS" type="application/rss+xml" rel="alternate" href="/posa88/rss/list" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="http://static.blog.csdn.net/scripts/SyntaxHighlighter/styles/blue_green.css" />
+ 
+
+</head>
+<body>
+    
+   
+      <!--new top-->
+    <script id="toolbar-tpl-scriptId" fixed="true" prod="blog" skin="black" src="http://static.csdn.net/public/common/toolbar/js/html.js" type="text/javascript"></script>
+     <!--new top-->
+    <div id="container">
+        <div id="header">
+    <div class="header">
+        <div id="blog_title">
+            <h2>
+                <a href="http://blog.csdn.net/posa88">苏格拉底的毒堇汁</a></h2>
+            <h3>我非常清楚地知道，我并没有智慧，不论大的还是小的都没有。</h3>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</div>
+<div id="navigator">
+    <div class="navigator_bg">
+    </div>
+    <div class="navigator">
+        <ul>
+                <li id="btnContents"><a href="http://blog.csdn.net/posa88?viewmode=contents"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_mulu'])">
+                    <img src="http://static.blog.csdn.net/images/ico_list.gif">目录视图</span></a></li>
+                <li id="btnView"><a href="http://blog.csdn.net/posa88?viewmode=list"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_zhaiyao'])">
+                    <img src="http://static.blog.csdn.net/images/ico_summary.gif">摘要视图</span></a></li>
+                <li id="btnRss"><a href="http://blog.csdn.net/posa88/rss/list"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_RSS'])">
+                    <img src="http://static.blog.csdn.net/images/ico_rss.gif">订阅</span></a></li>
+</ul>
+    </div>
+</div>
+<script type="text/javascript">
+    var username = "posa88";
+    var _blogger = username;
+    var blog_address = "http://blog.csdn.net/posa88";
+    var static_host = "http://static.blog.csdn.net";
+    var currentUserName = "";
+</script>
+
+        <div id="body">
+            <div id="main">
+                <div class="main">
+<div class="notice tracking-ad" data-mod='popu_3' > 
+
+
+<a href="http://bbs.csdn.net/topics/390708348" target="_blank"><font color=red>【大声说出你的爱】CSDN社区情人节特别活动
+</font></a>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<a href="http://www.csdn.net/article/2014-02-11/2818358"target="_blank">
+<font color=red>专访李云：从通讯行业的架构师到互联网“新兵”</font></a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<a href="http://bbs.csdn.net/topics/390708540"target="_blank">
+<font color=blue>电子版《程序员》杂志免费领</font></a>
+
+
+
+
+</div>                    <link href="http://static.blog.csdn.net/css/comment1.css" type="text/css" rel="stylesheet" />
+<link href="http://static.blog.csdn.net/css/style1.css" type="text/css" rel="stylesheet" />
+<div id="article_details" class="details">
+    <div class="article_title">
+    <span class="ico ico_type_Original"></span>
+    <h1>
+        <span class="link_title"><a href="/posa88/article/details/7956767">
+        [Hadoop源码解读]（六）MapReduce篇之MapTask类
+        </a></span>
+    </h1>
+</div>
+
+    <div class="article_manage">
+        <span class="link_categories">
+        分类：
+            <a href="/posa88/article/category/1220695">Hadoop源码解读</a> 
+        </span>
+    <span class="link_postdate">2012-09-08 01:16</span>
+    <span class="link_view" title="阅读次数">1956人阅读</span>
+    <span class="link_comments" title="评论次数"><a href="#comments" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_pinglun'])">评论</a>(0)</span>
+    <span class="link_collect"><a href="javascript:void(0);" onclick="javascript:_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_shoucang']);collectArticle('[Hadoop源码解读]（六）MapReduce篇之MapTask类','7956767');return false;" title="收藏">收藏</a></span>
+    <span class="link_report"><a href="#report"  onclick="javascript:_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_jubao']);report(7956767,2);return false;" title="举报">举报</a></span>
+    
+</div>
+<div class="tag2box"><a href='http://www.csdn.net/tag/mapreduce' target=_blank onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_tag']);">mapreduce</a><a href='http://www.csdn.net/tag/hadoop' target=_blank onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_tag']);">hadoop</a><a href='http://www.csdn.net/tag/constructor' target=_blank onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_tag']);">constructor</a><a href='http://www.csdn.net/tag/output' target=_blank onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_tag']);">output</a><a href='http://www.csdn.net/tag/api' target=_blank onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_tag']);">api</a><a href='http://www.csdn.net/tag/input' target=_blank onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_tag']);">input</a></div>
+
+    
+<div id="article_content" class="article_content">
+
+<p></p>
+<p>MapTask类继承于Task类，它最主要的方法就是run()，用来执行这个Map任务。</p>
+<p>&nbsp; run()首先设置一个TaskReporter并启动，然后调用JobConf的getUseNewAPI()判断是否使用New API，使用New API的设置在前面<a href="http://blog.csdn.net/posa88/article/details/7902709">[Hadoop源码解读]（三）MapReduce篇之Job类</a>&nbsp;讲到过，再调用Task继承来的initialize()方法初始化这个task，接着根据需要执行runJobCleanupTask()、runJobSetupTask()、runTaskCleanupTask()或相应的Mapper，执行Mapper时根据情况使用不同版本的MapReduce，这个版本是设置参数决定的。</p>
+<p></p>
+<pre name="code" class="html">  @Override
+  public void run(final JobConf job, final TaskUmbilicalProtocol umbilical) 
+    throws IOException, ClassNotFoundException, InterruptedException {
+    this.umbilical = umbilical;
+
+    // start thread that will handle communication with parent
+    TaskReporter reporter = new TaskReporter(getProgress(), umbilical,
+        jvmContext);
+    reporter.startCommunicationThread();
+    boolean useNewApi = job.getUseNewMapper();  //是由JobConf来的，而New API 的JobContext包含一个JobConf，Job类有
+    //setUseNewAPI()方法，当Job.submit()时使用它，这样，waitForCompletion()就用submit()设置了使用New API，而此时就使用它。
+    initialize(job, getJobID(), reporter, useNewApi);//一个Task的初始化工作，包括jobContext,taskContext，输出路径等，
+    						     //使用的是Task.initialize()方法
+ 
+    // check if it is a cleanupJobTask
+    if (jobCleanup) {
+      runJobCleanupTask(umbilical, reporter);
+      return;
+    }
+    if (jobSetup) {
+      runJobSetupTask(umbilical, reporter);
+      return;
+    }
+    if (taskCleanup) {
+      runTaskCleanupTask(umbilical, reporter);
+      return;
+    }
+
+    if (useNewApi) {//根据情况使用不同的MapReduce版本执行Mapper
+      runNewMapper(job, splitMetaInfo, umbilical, reporter);
+    } else {
+      runOldMapper(job, splitMetaInfo, umbilical, reporter);
+    }
+    done(umbilical, reporter);
+  }</pre><br>
+&nbsp; &nbsp;runNewMapper对应new API的MapReduce，而runOldMapper对应旧API。
+<p></p>
+<p>&nbsp; &nbsp;runNewMapper首先创建TaskAttemptContext对象，Mapper对象，InputFormat对象，InputSplit，RecordReader；然后根据是否有Reduce task来创建不同的输出收集器NewDirectOutputCollector[没有reducer]或NewOutputCollector[有reducer]，接下来调用input.initialize()初始化RecordReader，主要是为输入做准备，设置RecordReader，输入路径等等。然后到最主要的部分：mapper.run()。这个方法就是调用前面<a href="http://blog.csdn.net/posa88/article/details/7901304">[Hadoop源码解读]（二）MapReduce篇之Mapper类</a>讲到的Mapper.class的run()方法。然后就是一条一条的读取K/V对，这样就衔接起来了。</p>
+<p></p>
+<pre name="code" class="java"> @SuppressWarnings(&quot;unchecked&quot;)
+  private &lt;INKEY,INVALUE,OUTKEY,OUTVALUE&gt;
+  void runNewMapper(final JobConf job,
+                    final TaskSplitIndex splitIndex,
+                    final TaskUmbilicalProtocol umbilical,
+                    TaskReporter reporter
+                    ) throws IOException, ClassNotFoundException,
+                             InterruptedException {
+    // make a task context so we can get the classes
+    org.apache.hadoop.mapreduce.TaskAttemptContext taskContext =
+      new org.apache.hadoop.mapreduce.TaskAttemptContext(job, getTaskID());
+    // make a mapper
+    org.apache.hadoop.mapreduce.Mapper&lt;INKEY,INVALUE,OUTKEY,OUTVALUE&gt; mapper =
+      (org.apache.hadoop.mapreduce.Mapper&lt;INKEY,INVALUE,OUTKEY,OUTVALUE&gt;)
+        ReflectionUtils.newInstance(taskContext.getMapperClass(), job);
+    // make the input format
+    org.apache.hadoop.mapreduce.InputFormat&lt;INKEY,INVALUE&gt; inputFormat =
+      (org.apache.hadoop.mapreduce.InputFormat&lt;INKEY,INVALUE&gt;)
+        ReflectionUtils.newInstance(taskContext.getInputFormatClass(), job);
+    // rebuild the input split
+    org.apache.hadoop.mapreduce.InputSplit split = null;
+    split = getSplitDetails(new Path(splitIndex.getSplitLocation()),
+        splitIndex.getStartOffset());
+
+    org.apache.hadoop.mapreduce.RecordReader&lt;INKEY,INVALUE&gt; input =
+      new NewTrackingRecordReader&lt;INKEY,INVALUE&gt;
+          (split, inputFormat, reporter, job, taskContext);
+
+    job.setBoolean(&quot;mapred.skip.on&quot;, isSkipping());
+    org.apache.hadoop.mapreduce.RecordWriter output = null;
+    org.apache.hadoop.mapreduce.Mapper&lt;INKEY,INVALUE,OUTKEY,OUTVALUE&gt;.Context 
+         mapperContext = null;
+    try {
+      Constructor&lt;org.apache.hadoop.mapreduce.Mapper.Context&gt; contextConstructor =
+        org.apache.hadoop.mapreduce.Mapper.Context.class.getConstructor
+        (new Class[]{org.apache.hadoop.mapreduce.Mapper.class,
+                     Configuration.class,
+                     org.apache.hadoop.mapreduce.TaskAttemptID.class,
+                     org.apache.hadoop.mapreduce.RecordReader.class,
+                     org.apache.hadoop.mapreduce.RecordWriter.class,
+                     org.apache.hadoop.mapreduce.OutputCommitter.class,  //
+                     org.apache.hadoop.mapreduce.StatusReporter.class,
+                     org.apache.hadoop.mapreduce.InputSplit.class});
+
+      // get an output object
+      if (job.getNumReduceTasks() == 0) {
+         output =
+           new NewDirectOutputCollector(taskContext, job, umbilical, reporter);
+      } else {
+        output = new NewOutputCollector(taskContext, job, umbilical, reporter);
+      }
+
+      mapperContext = contextConstructor.newInstance(mapper, job, getTaskID(),
+                                                     input, output, committer,
+                                                     reporter, split);
+
+      input.initialize(split, mapperContext);
+      mapper.run(mapperContext);
+      input.close();
+      output.close(mapperContext);
+    } catch (NoSuchMethodException e) {
+      throw new IOException(&quot;Can't find Context constructor&quot;, e);
+    } catch (InstantiationException e) {
+      throw new IOException(&quot;Can't create Context&quot;, e);
+    } catch (InvocationTargetException e) {
+      throw new IOException(&quot;Can't invoke Context constructor&quot;, e);
+    } catch (IllegalAccessException e) {
+      throw new IOException(&quot;Can't invoke Context constructor&quot;, e);
+    }
+  }</pre>
+<p></p>
+<p></p>
+<p>至于运行哪个Mapper类，一般是我们用<span style="font-family:Consolas,'Courier New',Courier,mono,serif; line-height:18px; background-color:rgb(245,250,226)">job.setMapperClass(SelectGradeMapper.class)</span>设置的，那设置后是怎样获取的，或者默认&#20540;是什么，且看下面的追溯。</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; MapTask.runNewMapper()</p>
+<p>=&gt; &nbsp; &nbsp; &nbsp; (TaskAttemptContext)taskContext.getMapperClass(); &nbsp; &nbsp; //runNewMapper生成mapper时用到。</p>
+<p>=&gt; &nbsp; &nbsp; &nbsp; JobContext.getMapperClass()</p>
+<p>=&gt; &nbsp; &nbsp; &nbsp; JobConf.getClass(MAP_CLASS_ATTR,Mapper.class)</p>
+<p>=&gt; &nbsp; &nbsp; &nbsp; Configuration.getClass(name,default)</p>
+<p>根据上面一层的调用关系，找到了默认&#20540;是Mapper.class，它的获取过程也一目了然。</p>
+<p>再仔细看看Configuration.getClass()</p>
+<p></p>
+<pre name="code" class="java">  public Class&lt;?&gt; getClass(String name, Class&lt;?&gt; defaultValue) {
+    String valueString = get(name);
+    if (valueString == null)
+      return defaultValue;
+    try {
+      return getClassByName(valueString);
+    } catch (ClassNotFoundException e) {
+      throw new RuntimeException(e);
+    }
+  }</pre>它首先看是否设置了某个属性，如果设置了，就调用getClassByName获取这个属性对应的类[加载之]，否则就返回默认&#20540;。<br>
+Mapper执行完后，关闭RecordReader和OutputCollector等资源就完事了。
+<p></p>
+<p>另外我们把关注点放在上面的runNewMapper()中的mapper.run(mapperContext)；前面对Mapper.class提到，这个mapperContext会被用于读取输入分片的K/V对和写出输出结果的K/V对。而由</p>
+<p></p>
+<pre name="code" class="java">      mapperContext = contextConstructor.newInstance(mapper, job, getTaskID(),
+                                                     input, output, committer,
+                                                     reporter, split);</pre>可以看出，这个Context是由我们设置的mapper，RecordReader等进行配置的。
+<p></p>
+<p>Mapper中的map方法不断使用context.write(K,V)进行输出，我们看这个函数是怎么进行的，先看Context类的层次关系：</p>
+<p><img src="http://img.my.csdn.net/uploads/201209/08/1347035374_3086.png" alt=""><br>
+</p>
+<p>write()方法是由TaskInputOutputContext来的：</p>
+<p></p>
+<pre name="code" class="java">  public void write(KEYOUT key, VALUEOUT value
+                    ) throws IOException, InterruptedException {
+    output.write(key, value);
+  }</pre>它调用了RecordWriter.write()，RecordWriter是一个抽象类，主要是规定了write方法。
+<p></p>
+<p></p>
+<pre name="code" class="java">public abstract class RecordWriter&lt;K, V&gt; {
+  public abstract void write(K key, V value
+                             ) throws IOException, InterruptedException;
+
+  public abstract void close(TaskAttemptContext context
+                             ) throws IOException, InterruptedException;
+}</pre>然后看RecordWriter的一个实现NewOutputCollector，它是MapTask的内部类：
+<p></p>
+<p></p>
+<pre name="code" class="java">  private class NewOutputCollector&lt;K,V&gt;
+    extends org.apache.hadoop.mapreduce.RecordWriter&lt;K,V&gt; {
+    private final MapOutputCollector&lt;K,V&gt; collector;
+    private final org.apache.hadoop.mapreduce.Partitioner&lt;K,V&gt; partitioner;
+    private final int partitions;
+
+    @SuppressWarnings(&quot;unchecked&quot;)
+    NewOutputCollector(org.apache.hadoop.mapreduce.JobContext jobContext,
+                       JobConf job,
+                       TaskUmbilicalProtocol umbilical,
+                       TaskReporter reporter
+                       ) throws IOException, ClassNotFoundException {
+      collector = new MapOutputBuffer&lt;K,V&gt;(umbilical, job, reporter);
+      partitions = jobContext.getNumReduceTasks();
+      if (partitions &gt; 0) {
+        partitioner = (org.apache.hadoop.mapreduce.Partitioner&lt;K,V&gt;)
+          ReflectionUtils.newInstance(jobContext.getPartitionerClass(), job);
+      } else {
+        partitioner = new org.apache.hadoop.mapreduce.Partitioner&lt;K,V&gt;() {
+          @Override
+          public int getPartition(K key, V value, int numPartitions) {
+            return -1;
+          }
+        };
+      }
+    }
+
+    @Override
+    public void write(K key, V value) throws IOException, InterruptedException {
+      collector.collect(key, value,
+                        partitioner.getPartition(key, value, partitions));
+    }
+
+    @Override
+    public void close(TaskAttemptContext context
+                      ) throws IOException,InterruptedException {
+      try {
+        collector.flush();
+      } catch (ClassNotFoundException cnf) {
+        throw new IOException(&quot;can't find class &quot;, cnf);
+      }
+      collector.close();
+    }
+  }</pre>从它的write()方法，我们从context.write(K,V)追溯到了collector.collect(K,V,partition)，注意到输出需要一个Partitioner的getPartitioner()来提供当前K/V对的所属分区，因为要对K/V对分区，不同分区输出到不同Reducer，Partitioner默认是HashPartitioner，可设置，Reduce task数量决定Partition数量;
+<p></p>
+<p>我们可以从NewOutputCollector看出NewOutputCollector就是MapOutputBuffer的封装。MapoutputBuffer是旧API中就存在了的，它很复杂，但很关键，暂且放着先，反正就是收集输出K/V对的。它实现了MapperOutputCollector接口：</p>
+<p></p>
+<pre name="code" class="java">  interface MapOutputCollector&lt;K, V&gt; {
+    public void collect(K key, V value, int partition
+                        ) throws IOException, InterruptedException;
+    public void close() throws IOException, InterruptedException;
+    public void flush() throws IOException, InterruptedException, 
+                               ClassNotFoundException;
+  }</pre>
+<p>这个接口告诉我们，收集器必须实现collect，close，flush方法。</p>
+<p>看一个简单的:NewDirectOutputCollector,它在没有reduce task的时候使用，主要是从InputFormat中获取OutputFormat的RecordWriter，然后就可以用这个RecordWriter的write()方法来写出，这就与我们设置的输出&#26684;式对应起来了。</p>
+<p></p>
+<pre name="code" class="java">  private class NewDirectOutputCollector&lt;K,V&gt;
+  extends org.apache.hadoop.mapreduce.RecordWriter&lt;K,V&gt; {
+    private final org.apache.hadoop.mapreduce.RecordWriter out;
+
+    private final TaskReporter reporter;
+
+    private final Counters.Counter mapOutputRecordCounter;
+    private final Counters.Counter fileOutputByteCounter; 
+    private final Statistics fsStats;
+    
+    @SuppressWarnings(&quot;unchecked&quot;)
+    NewDirectOutputCollector(org.apache.hadoop.mapreduce.JobContext jobContext,
+        JobConf job, TaskUmbilicalProtocol umbilical, TaskReporter reporter) 
+    throws IOException, ClassNotFoundException, InterruptedException {
+      this.reporter = reporter;
+      Statistics matchedStats = null;
+      if (outputFormat instanceof org.apache.hadoop.mapreduce.lib.output.FileOutputFormat) { 
+		//outputFormat是Task来的，内部类访问外部类成员变量
+        matchedStats = getFsStatistics(org.apache.hadoop.mapreduce.lib.output.FileOutputFormat
+            .getOutputPath(jobContext), job);
+      }
+      fsStats = matchedStats;
+      mapOutputRecordCounter = 
+        reporter.getCounter(MAP_OUTPUT_RECORDS);
+      fileOutputByteCounter = reporter
+          .getCounter(org.apache.hadoop.mapreduce.lib.output.FileOutputFormat.Counter.BYTES_WRITTEN);
+
+      long bytesOutPrev = getOutputBytes(fsStats);
+      out = outputFormat.getRecordWriter(taskContext); //主要是这句，获取设置的OutputputFormat里的RecordWriter
+      long bytesOutCurr = getOutputBytes(fsStats);
+      fileOutputByteCounter.increment(bytesOutCurr - bytesOutPrev);
+    }
+
+    @Override
+    @SuppressWarnings(&quot;unchecked&quot;)
+    public void write(K key, V value) 
+    throws IOException, InterruptedException {
+      reporter.progress();  //报告一下进度
+      long bytesOutPrev = getOutputBytes(fsStats);
+      out.write(key, value);//使用out收集一条记录，out是设置的OutputFormat来的。
+      long bytesOutCurr = getOutputBytes(fsStats);
+      fileOutputByteCounter.increment(bytesOutCurr - bytesOutPrev);  //更新输出字节数
+      mapOutputRecordCounter.increment(1);      //更新输出K/V对数量
+    }
+
+    @Override
+    public void close(TaskAttemptContext context) 
+    throws IOException,InterruptedException {
+      reporter.progress();
+      if (out != null) {
+        long bytesOutPrev = getOutputBytes(fsStats);
+        out.close(context);
+        long bytesOutCurr = getOutputBytes(fsStats);
+        fileOutputByteCounter.increment(bytesOutCurr - bytesOutPrev);
+      }
+    }
+
+    private long getOutputBytes(Statistics stats) {
+      return stats == null ? 0 : stats.getBytesWritten();
+    }
+  }</pre><br>
+另外还有一些以runOldMapper()为主导的旧MapReduce API那套，就不进行讨论了。
+<p></p>
+<br>
+
+</div>
+
+
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare" style="float: right;">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more">更多</span>
+<a class="shareCount"></a>
+</div>
+<!-- Baidu Button END -->
+
+
+<!--192.168.100.34-->
+<div class="article_next_prev">
+            <li class="prev_article"><span>上一篇：</span><a href="/posa88/article/details/7906426" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_shangyipian'])">[Hadoop源码解读]（五）MapReduce篇之Writable相关类</a></li>
+            <li class="next_article"><span>下一篇：</span><a href="/posa88/article/details/8130774" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_xiayipian'])">MapReduce程序的测试--MRUnit</a></li>
+</div>
+
+<!-- Baidu Button BEGIN -->
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=1536434" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+    document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+        <div id="digg" ArticleId="7956767">
+            <dl id="btnDigg" class="digg digg_disable">
+                <dt onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_ding'])">顶</dt>
+                <dd>3</dd>
+            </dl>
+            <dl id="btnBury" class="digg digg_disable">
+                <dt onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_cai'])">踩</dt>
+                <dd>0</dd>
+            </dl>
+        </div>
+</div>
+    <div id="ad_cen">
+        <script type="text/javascript">            BAIDU_CLB_SLOT_ID = "117306";</script>
+        <script type="text/javascript" src="http://cbjs.baidu.com/js/o.js"></script>
+    </div>
+    <script type="text/javascript">
+        //new Ad(4, 'ad_cen');
+    </script>
+<div id="comment_title" class="panel_head">
+    查看评论<a name="comments"></a></div>
+<div id="comment_list">
+</div>
+<div id="comment_bar">
+</div>
+<div id="comment_form">
+</div>
+<div class="announce">
+    * 以上用户言论只代表其个人观点，不代表CSDN网站的观点或立场<a name="reply"></a><a name="quote"></a></div>
+<script type="text/javascript">
+    var fileName = '7956767';
+    var commentscount = 0;
+    var islock = false
+</script>
+<script type="text/javascript" src="http://static.blog.csdn.net/scripts/comment.js"></script>
+    <div id="ad_bot">
+    </div>
+    <script type="text/javascript">
+    new Ad(5, 'ad_bot');
+    </script>
+<div id="report_dialog">
+</div>
+<div id="d-top" style="display: none;">
+    <a id="d-top-a" href="#" title="回到顶部" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_huidaodingbu'])">
+        <img src="http://static.blog.csdn.net/images/top.png" alt="TOP" /></a>
+</div>
+<script type="text/javascript">
+    $(function ()
+    {
+        var d_top = $('#d-top');
+        document.onscroll = function ()
+        {
+            var scrTop = (document.body.scrollTop || document.documentElement.scrollTop);
+            if (scrTop > 500)
+            {
+                d_top.show();
+            } else
+            {
+                d_top.hide();
+            }
+        }
+        $('#d-top-a').click(function ()
+        {
+            scrollTo(0, 0);
+            this.blur();
+            return false;
+        });
+    });
+  
+</script>
+<style type="text/css">
+    .tag_list
+    {
+        background: none repeat scroll 0 0 #FFFFFF;
+        border: 1px solid #D7CBC1;
+        color: #000000;
+        font-size: 12px;
+        line-height: 20px;
+        list-style: none outside none;
+        margin: 10px 2% 0 1%;
+        padding: 1px;
+    }
+    .tag_list h5
+    {
+        background: none repeat scroll 0 0 #E0DBD3;
+        color: #47381C;
+        font-size: 12px;
+        height: 24px;
+        line-height: 24px;
+        padding: 0 5px;
+        margin: 0;
+    }
+    .tag_list h5 a
+    {
+        color: #47381C;
+    }
+    .classify
+    {
+        margin: 10px 0;
+        padding: 4px 12px 8px;
+    }
+    .classify a
+    {
+        margin-right: 20px;
+        white-space: nowrap;
+    }
+</style>
+<div class="tag_list">
+    <h5>
+        <a href="http://www.csdn.net/tag/" target="_blank">核心技术类目</a></h5>
+    <div class="classify">
+<a title="全部主题" href="http://www.csdn.net/tag" target="_blank" onclick="LogClickCount(this,336);">全部主题</a>
+<a title="Java" href="http://www.csdn.net/tag/Java" target="_blank" onclick="LogClickCount(this,336);">Java</a>
+<a title="VPN" href="http://www.csdn.net/tag/vpn" target="_blank" onclick="LogClickCount(this,336);">VPN</a>
+<a title="Android" href="http://www.csdn.net/tag/android" target="_blank" onclick="LogClickCount(this,336);">Android</a>
+<a title="iOS" href="http://www.csdn.net/tag/ios" target="_blank" onclick="LogClickCount(this,336);">iOS</a>
+<a title="ERP" href="http://www.csdn.net/tag/erp" target="_blank" onclick="LogClickCount(this,336);">ERP</a>
+<a title="IE10" href="http://www.csdn.net/tag/ie10" target="_blank" onclick="LogClickCount(this,336);">IE10</a>
+<a title="Eclipse" href="http://www.csdn.net/tag/eclipse" target="_blank" onclick="LogClickCount(this,336);">Eclipse</a>
+<a title="CRM" href="http://www.csdn.net/tag/crm" target="_blank" onclick="LogClickCount(this,336);">CRM</a>
+<a title="JavaScript" href="http://www.csdn.net/tag/javascript" target="_blank" onclick="LogClickCount(this,336);">JavaScript</a>
+<a title="Ubuntu" href="http://www.csdn.net/tag/ubuntu" target="_blank" onclick="LogClickCount(this,336);">Ubuntu</a>
+<a title="NFC" href="http://www.csdn.net/tag/nfc" target="_blank" onclick="LogClickCount(this,336);">NFC</a>
+<a title="WAP" href="http://www.csdn.net/tag/wap" target="_blank" onclick="LogClickCount(this,336);">WAP</a>
+<a title="jQuery" href="http://www.csdn.net/tag/jquery" target="_blank" onclick="LogClickCount(this,336);">jQuery</a>
+<a title="数据库" href="http://www.csdn.net/tag/数据库" target="_blank" onclick="LogClickCount(this,336);">数据库</a>
+<a title="BI" href="http://www.csdn.net/tag/bi" target="_blank" onclick="LogClickCount(this,336);">BI</a>
+<a title="HTML5" href="http://www.csdn.net/tag/html5" target="_blank" onclick="LogClickCount(this,336);">HTML5</a>
+<a title="Spring" href="http://www.csdn.net/tag/spring" target="_blank" onclick="LogClickCount(this,336);">Spring</a>
+<a title="Apache" href="http://www.csdn.net/tag/apache" target="_blank" onclick="LogClickCount(this,336);">Apache</a>
+<a title="Hadoop" href="http://www.csdn.net/tag/hadoop" target="_blank" onclick="LogClickCount(this,336);">Hadoop</a>
+<a title=".NET" href="http://www.csdn.net/tag/.net" target="_blank" onclick="LogClickCount(this,336);">.NET</a>
+<a title="API" href="http://www.csdn.net/tag/api" target="_blank" onclick="LogClickCount(this,336);">API</a>
+<a title="HTML" href="http://www.csdn.net/tag/html" target="_blank" onclick="LogClickCount(this,336);">HTML</a>
+<a title="SDK" href="http://www.csdn.net/tag/sdk" target="_blank" onclick="LogClickCount(this,336);">SDK</a>
+<a title="IIS" href="http://www.csdn.net/tag/iis" target="_blank" onclick="LogClickCount(this,336);">IIS</a>
+<a title="Fedora" href="http://www.csdn.net/tag/fedora" target="_blank" onclick="LogClickCount(this,336);">Fedora</a>
+<a title="XML" href="http://www.csdn.net/tag/xml" target="_blank" onclick="LogClickCount(this,336);">XML</a>
+<a title="LBS" href="http://www.csdn.net/tag/lbs" target="_blank" onclick="LogClickCount(this,336);">LBS</a>
+<a title="Unity" href="http://www.csdn.net/tag/unity" target="_blank" onclick="LogClickCount(this,336);">Unity</a>
+<a title="Splashtop" href="http://www.csdn.net/tag/splashtop" target="_blank" onclick="LogClickCount(this,336);">Splashtop</a>
+<a title="UML" href="http://www.csdn.net/tag/uml" target="_blank" onclick="LogClickCount(this,336);">UML</a>
+<a title="components" href="http://www.csdn.net/tag/components" target="_blank" onclick="LogClickCount(this,336);">components</a>
+<a title="Windows Mobile" href="http://www.csdn.net/tag/windowsmobile" target="_blank" onclick="LogClickCount(this,336);">Windows Mobile</a>
+<a title="Rails" href="http://www.csdn.net/tag/rails" target="_blank" onclick="LogClickCount(this,336);">Rails</a>
+<a title="QEMU" href="http://www.csdn.net/tag/qemu" target="_blank" onclick="LogClickCount(this,336);">QEMU</a>
+<a title="KDE" href="http://www.csdn.net/tag/kde" target="_blank" onclick="LogClickCount(this,336);">KDE</a>
+<a title="Cassandra" href="http://www.csdn.net/tag/cassandra" target="_blank" onclick="LogClickCount(this,336);">Cassandra</a>
+<a title="CloudStack" href="http://www.csdn.net/tag/cloudstack" target="_blank" onclick="LogClickCount(this,336);">CloudStack</a>
+<a title="FTC" href="http://www.csdn.net/tag/ftc" target="_blank" onclick="LogClickCount(this,336);">FTC</a>
+<a title="coremail" href="http://www.csdn.net/tag/coremail" target="_blank" onclick="LogClickCount(this,336);">coremail</a>
+<a title="OPhone " href="http://www.csdn.net/tag/ophone " target="_blank" onclick="LogClickCount(this,336);">OPhone </a>
+<a title="CouchBase" href="http://www.csdn.net/tag/couchbase" target="_blank" onclick="LogClickCount(this,336);">CouchBase</a>
+<a title="云计算" href="http://www.csdn.net/tag/云计算" target="_blank" onclick="LogClickCount(this,336);">云计算</a>
+<a title="iOS6" href="http://www.csdn.net/tag/iOS6" target="_blank" onclick="LogClickCount(this,336);">iOS6</a>
+<a title="Rackspace " href="http://www.csdn.net/tag/rackspace " target="_blank" onclick="LogClickCount(this,336);">Rackspace </a>
+<a title="Web App" href="http://www.csdn.net/tag/webapp" target="_blank" onclick="LogClickCount(this,336);">Web App</a>
+<a title="SpringSide" href="http://www.csdn.net/tag/springside" target="_blank" onclick="LogClickCount(this,336);">SpringSide</a>
+<a title="Maemo" href="http://www.csdn.net/tag/maemo" target="_blank" onclick="LogClickCount(this,336);">Maemo</a>
+<a title="Compuware" href="http://www.csdn.net/tag/compuware" target="_blank" onclick="LogClickCount(this,336);">Compuware</a>
+<a title="大数据" href="http://www.csdn.net/tag/大数据" target="_blank" onclick="LogClickCount(this,336);">大数据</a>
+<a title="aptech" href="http://www.csdn.net/tag/aptech" target="_blank" onclick="LogClickCount(this,336);">aptech</a>
+<a title="Perl" href="http://www.csdn.net/tag/perl" target="_blank" onclick="LogClickCount(this,336);">Perl</a>
+<a title="Tornado" href="http://www.csdn.net/tag/tornado" target="_blank" onclick="LogClickCount(this,336);">Tornado</a>
+<a title="Ruby" href="http://www.csdn.net/tag/ruby" target="_blank" onclick="LogClickCount(this,336);">Ruby</a>
+<a title="Hibernate" href="http://www.csdn.net/hibernate" target="_blank" onclick="LogClickCount(this,336);">Hibernate</a>
+<a title="ThinkPHP" href="http://www.csdn.net/tag/thinkphp" target="_blank" onclick="LogClickCount(this,336);">ThinkPHP</a>
+<a title="Spark" href="http://www.csdn.net/tag/spark" target="_blank" onclick="LogClickCount(this,336);">Spark</a>
+<a title="HBase" href="http://www.csdn.net/tag/hbase" target="_blank" onclick="LogClickCount(this,336);">HBase</a>
+<a title="Pure" href="http://www.csdn.net/tag/pure" target="_blank" onclick="LogClickCount(this,336);">Pure</a>
+<a title="Solr" href="http://www.csdn.net/tag/solr" target="_blank" onclick="LogClickCount(this,336);">Solr</a>
+<a title="Angular" href="http://www.csdn.net/tag/angular" target="_blank" onclick="LogClickCount(this,336);">Angular</a>
+<a title="Cloud Foundry" href="http://www.csdn.net/tag/cloudfoundry" target="_blank" onclick="LogClickCount(this,336);">Cloud Foundry</a>
+<a title="Redis" href="http://www.csdn.net/tag/redis" target="_blank" onclick="LogClickCount(this,336);">Redis</a>
+<a title="Scala" href="http://www.csdn.net/tag/scala" target="_blank" onclick="LogClickCount(this,336);">Scala</a>
+<a title="Django" href="http://www.csdn.net/tag/django" target="_blank" onclick="LogClickCount(this,336);">Django</a>
+<a title="Bootstrap" href="http://www.csdn.net/tag/bootstrap" target="_blank" onclick="LogClickCount(this,336);">Bootstrap</a>
+    </div>
+</div>
+
+                    <div class="clear">
+                    </div>
+                </div>
+            </div>
+            <div id="side">
+    <div class="side">
+<div id="panel_Profile" class="panel">
+<ul class="panel_head"><span>个人资料</span></ul>
+<ul class="panel_body profile">
+<div id="blog_userface">
+    <a href="http://my.csdn.net/posa88" target="_blank">
+    <img src="http://avatar.csdn.net/A/8/D/1_posa88.jpg" title="访问我的空间" style="max-width:90%"/>
+    </a>
+    <br />
+    <span><a href="http://my.csdn.net/posa88" class="user_name" target="_blank">posa88</a></span>
+</div>
+<div class="interact">
+<a href="javascript:void(0);" class="attent" id="span_add_follow" title="[加关注]" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_guanzhu'])"></a>
+<a href="javascript:void(0);" class="letter" onclick="loginto(1)" title="[发私信]" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_sixin'])"></a>
+</div>
+<div id="blog_medal">
+</div>
+<ul id="blog_rank">
+    <li>访问：<span>36702次</span></li>
+    <li>积分：<span>619分</span></li>
+    <li>排名：<span>千里之外</span></li>
+</ul>
+<ul id="blog_statistics">
+    <li>原创：<span>23篇</span></li>
+    <li>转载：<span>0篇</span></li>
+    <li>译文：<span>0篇</span></li>
+    <li>评论：<span>23条</span></li>
+</ul>
+</ul>
+</div>
+
+
+<div class="panel" id="panel_Search">
+    <ul class="panel_head"><span>文章搜索</span></ul>
+    <ul class="panel_body">
+        <form id="frmSearch" action="http://so.csdn.net/search" class="form_search" target="_blank">
+        <span><input id="inputSearch" type="text" class="blogsearch" title="请输入关键字" /></span>
+        <input id="btnSubmit" type="submit" value="搜索" title="search in blog" />
+        <input type="hidden" name="q" id="inputQ" />
+        <input type="hidden" name="t" value="blog" />
+        <a id="btnSearchBlog" target="_blank"></a>
+        </form>
+    </ul>
+</div><div id="panel_Category" class="panel">
+<ul class="panel_head"><span>文章分类</span></ul>
+<ul class="panel_body">
+<li>
+<a href="http://blog.csdn.net/posa88/article/category/1191720">Hadoop BASIC</a><span>(11)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/posa88/article/category/1216173">Nutch</a><span>(1)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/posa88/article/category/1220695">Hadoop源码解读</a><span>(6)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/posa88/article/category/1327001">Maven</a><span>(1)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/posa88/article/category/1333263">mapreduce</a><span>(3)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/posa88/article/category/1399899">其它工具</a><span>(0)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/posa88/article/category/1399903">thrift</a><span>(1)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/posa88/article/category/1400055">mahout</a><span>(1)</span>
+</li>
+</ul>
+</div><div id="panel_Archive" class="panel">
+<ul class="panel_head"><span>文章存档</span></ul>
+<ul class="panel_body">
+<div id="archive_list">
+<!--归档统计-->
+<li><a href="http://blog.csdn.net/posa88/article/month/2013/08">2013年08月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/posa88/article/month/2013/07">2013年07月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/posa88/article/month/2013/04">2013年04月</a><span>(2)</span></li><li><a href="http://blog.csdn.net/posa88/article/month/2013/01">2013年01月</a><span>(4)</span></li><li><a href="http://blog.csdn.net/posa88/article/month/2012/10">2012年10月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/posa88/article/month/2012/09">2012年09月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/posa88/article/month/2012/08">2012年08月</a><span>(12)</span></li><li><a href="http://blog.csdn.net/posa88/article/month/2012/07">2012年07月</a><span>(1)</span></li>
+</div>
+</ul>
+</div>
+<div id="hotarticls" class="panel">
+<ul class="panel_head"><span>阅读排行</span></ul>
+<ul class="panel_body itemlist">
+<li>
+<a href="/posa88/article/details/7901304" title="[Hadoop源码解读]（二）MapReduce篇之Mapper类">[Hadoop源码解读]（二）MapReduce篇之Mapper类</a><span>(7163)</span>
+</li>
+<li>
+<a href="/posa88/article/details/7897963" title="[Hadoop源码解读]（一）MapReduce篇之InputFormat">[Hadoop源码解读]（一）MapReduce篇之InputFormat</a><span>(4181)</span>
+</li>
+<li>
+<a href="/posa88/article/details/7906426" title="[Hadoop源码解读]（五）MapReduce篇之Writable相关类">[Hadoop源码解读]（五）MapReduce篇之Writable相关类</a><span>(2976)</span>
+</li>
+<li>
+<a href="/posa88/article/details/8505022" title="Could not resolve archetype org.apache.maven.archetypes:maven-archetype-quickstart">Could not resolve archetype org.apache.maven.archetypes:maven-archetype-quickstart</a><span>(2711)</span>
+</li>
+<li>
+<a href="/posa88/article/details/7956767" title="[Hadoop源码解读]（六）MapReduce篇之MapTask类">[Hadoop源码解读]（六）MapReduce篇之MapTask类</a><span>(1956)</span>
+</li>
+<li>
+<a href="/posa88/article/details/7904720" title="[Hadoop源码解读]（四）MapReduce篇之Counter相关类">[Hadoop源码解读]（四）MapReduce篇之Counter相关类</a><span>(1919)</span>
+</li>
+<li>
+<a href="/posa88/article/details/7870627" title="java.io.IOException: File /home/hadoop/mapred/system/jobtracker.info could only be replicated to 0 n">java.io.IOException: File /home/hadoop/mapred/system/jobtracker.info could only be replicated to 0 n</a><span>(1899)</span>
+</li>
+<li>
+<a href="/posa88/article/details/7870869" title="[Hadoop]使用DistributedCache进行复制联结">[Hadoop]使用DistributedCache进行复制联结</a><span>(1594)</span>
+</li>
+<li>
+<a href="/posa88/article/details/7902709" title="[Hadoop源码解读]（三）MapReduce篇之Job类">[Hadoop源码解读]（三）MapReduce篇之Job类</a><span>(1545)</span>
+</li>
+<li>
+<a href="/posa88/article/details/7880835" title="SEVERE: org.apache.solr.common.SolrException: undefined field text">SEVERE: org.apache.solr.common.SolrException: undefined field text</a><span>(1527)</span>
+</li>
+</ul>
+</div>
+<div id="hotarticls2" class="panel">
+<ul class="panel_head"><span>评论排行</span></ul>
+<ul class="panel_body itemlist">
+<li>
+<a href="/posa88/article/details/7897963" title="[Hadoop源码解读]（一）MapReduce篇之InputFormat">[Hadoop源码解读]（一）MapReduce篇之InputFormat</a><span>(8)</span>
+</li>
+<li>
+<a href="/posa88/article/details/7870807" title="使用hadoop的datajoin包进行关系型join操作">使用hadoop的datajoin包进行关系型join操作</a><span>(5)</span>
+</li>
+<li>
+<a href="/posa88/article/details/7901304" title="[Hadoop源码解读]（二）MapReduce篇之Mapper类">[Hadoop源码解读]（二）MapReduce篇之Mapper类</a><span>(4)</span>
+</li>
+<li>
+<a href="/posa88/article/details/7853759" title="关系型MapReduce模式：选择、分组和组内排序">关系型MapReduce模式：选择、分组和组内排序</a><span>(2)</span>
+</li>
+<li>
+<a href="/posa88/article/details/8505022" title="Could not resolve archetype org.apache.maven.archetypes:maven-archetype-quickstart">Could not resolve archetype org.apache.maven.archetypes:maven-archetype-quickstart</a><span>(2)</span>
+</li>
+<li>
+<a href="/posa88/article/details/8130774" title="MapReduce程序的测试--MRUnit">MapReduce程序的测试--MRUnit</a><span>(1)</span>
+</li>
+<li>
+<a href="/posa88/article/details/7906426" title="[Hadoop源码解读]（五）MapReduce篇之Writable相关类">[Hadoop源码解读]（五）MapReduce篇之Writable相关类</a><span>(1)</span>
+</li>
+<li>
+<a href="/posa88/article/details/8516612" title="mapreduce编程(一）：输入文件的过滤">mapreduce编程(一）：输入文件的过滤</a><span>(0)</span>
+</li>
+<li>
+<a href="/posa88/article/details/8534230" title="Pangool:行走在mapreduce之上">Pangool:行走在mapreduce之上</a><span>(0)</span>
+</li>
+<li>
+<a href="/posa88/article/details/8556992" title="mapreduce作业调优tips">mapreduce作业调优tips</a><span>(0)</span>
+</li>
+</ul>
+</div>
+<div id="homepageArticles" class="panel tracking-ad" data-mod="popu_4">
+<ul class="panel_head"><span>推荐文章</span></ul>
+<ul class="panel_body" id="ad_commend"></ul>
+</div>
+<script type="text/javascript">
+ new Ad(12, 'ad_commend');
+</script><div id="newcomments" class="panel">
+<ul class="panel_head"><span>最新评论</span></ul>
+<ul class="panel_body itemlist">
+    <li>
+    <a href="/posa88/article/details/7897963#comments">[Hadoop源码解读]（一）MapReduce篇之InputFormat</a>
+    <p style="margin:0px;"><a href="/wangqiaoshi" class="user_name">wangqiaoshi</a>:
+你好，我想测试KeyValueTextInputFormat是怎么个读取方式，我该怎么测试，hado...
+    </p>
+    </li>
+    <li>
+    <a href="/posa88/article/details/7870807#comments">使用hadoop的datajoin包进行关系型join操作</a>
+    <p style="margin:0px;"><a href="/bo_hai" class="user_name">bo_hai</a>:
+运行的参数怎么样传递呢？
+    </p>
+    </li>
+    <li>
+    <a href="/posa88/article/details/7897963#comments">[Hadoop源码解读]（一）MapReduce篇之InputFormat</a>
+    <p style="margin:0px;"><a href="/JimmyLincole" class="user_name">JimmyLincole</a>:
+感觉像是看天书，看了好多遍了，难道是我学习的方法不对？？该如何学习源码的分析呢？
+    </p>
+    </li>
+    <li>
+    <a href="/posa88/article/details/7897963#comments">[Hadoop源码解读]（一）MapReduce篇之InputFormat</a>
+    <p style="margin:0px;"><a href="/lihm0_1" class="user_name">lihm0_1</a>:
+@zhouleilei:每个InputFormat都会包装不同的RecordReader，单独分析L...
+    </p>
+    </li>
+    <li>
+    <a href="/posa88/article/details/8505022#comments">Could not resolve archetype org.apache.maven.archetypes:maven-archetype-quickstart</a>
+    <p style="margin:0px;"><a href="/kutekute" class="user_name">kutekute</a>:
+@zhj651430918:因为，mvn是maven的命令，你没有在path中配置maven的路径
+    </p>
+    </li>
+    <li>
+    <a href="/posa88/article/details/8130774#comments">MapReduce程序的测试--MRUnit</a>
+    <p style="margin:0px;"><a href="/mal39" class="user_name">mal39</a>:
+Turtorial 确实写错了
+    </p>
+    </li>
+    <li>
+    <a href="/posa88/article/details/7870807#comments">使用hadoop的datajoin包进行关系型join操作</a>
+    <p style="margin:0px;"><a href="/crazyzhb2012" class="user_name">crazyzhb2012</a>:
+哦，我发现我的项目中没有自动导入hadoop-0.20.2-datajoin.jar这个包，导入后就...
+    </p>
+    </li>
+    <li>
+    <a href="/posa88/article/details/7870807#comments">使用hadoop的datajoin包进行关系型join操作</a>
+    <p style="margin:0px;"><a href="/crazyzhb2012" class="user_name">crazyzhb2012</a>:
+你好，我的程序导入import org.apache.hadoop.contrib.utils.jo...
+    </p>
+    </li>
+    <li>
+    <a href="/posa88/article/details/7897963#comments">[Hadoop源码解读]（一）MapReduce篇之InputFormat</a>
+    <p style="margin:0px;"><a href="/zhouleilei" class="user_name">zhouleilei</a>:
+分析的不详细，比如在LineRecordReader类的解读上，一笔带过，没有解释大体流程，我能看懂...
+    </p>
+    </li>
+    <li>
+    <a href="/posa88/article/details/7897963#comments">[Hadoop源码解读]（一）MapReduce篇之InputFormat</a>
+    <p style="margin:0px;"><a href="/sggys" class="user_name">sggys</a>:
+分析的详细啊，学习。
+    </p>
+    </li>
+</ul>
+</div>
+    </div>
+    <div class="clear">
+    </div>
+</div>
+
+            <div class="clear">
+            </div>
+        </div>
+        
+
+<script type="text/javascript" src="http://static.blog.csdn.net/scripts/newblog.min.js"></script>
+<script type="text/javascript" src="http://medal.blog.csdn.net/showblogmedal.ashx?blogid=664827"></script>
+<script type="text/javascript">
+    document.write('<script type="text/javascript" src="http://csdnimg.cn/pubfooter/js/publib_footer.js?' + Math.floor(new Date() / 120000).toString(36) + '="></' + 'script>');
+</script>
+    <script type="text/javascript" src="http://passport.csdn.net/content/loginbox/login.js"></script>
+<script type="text/javascript">document.write("<img src=http://counter.csdn.net/pv.aspx?id=24 border=0 width=0 height=0>");</script>
+<script type="text/javascript" src="http://www.csdn.net/ui/scripts/Csdn/counter.js"></script>
+<script type="text/javascript" src="http://ad.csdn.net/scripts/ad-blog.js"></script>
+<script type="text/javascript" src="http://zz.csdn.net/js/count.js"></script>
+<script type="text/javascript">
+    $(function () {
+        function __get_code_toolbar(snippet_id) {
+            return $("<a href='https://code.csdn.net/snippets/"
+                    + snippet_id
+                    + "' target='_blank' title='在CODE上查看代码片' style='text-indent:0;'><img src='https://code.csdn.net/assets/CODE_ico.png' width=12 height=12 alt='在CODE上查看代码片' style='position:relative;top:1px;left:2px;'/></a>"
+                    + "<a href='https://code.csdn.net/snippets/"
+                    + snippet_id
+                    + "/fork' target='_blank' title='派生到我的代码片'  style='text-indent:0;'><img src='https://code.csdn.net/assets/ico_fork.svg' width=12 height=12 alt='派生到我的代码片' style='position:relative;top:2px;left:2px;'/></a>");
+        }
+        
+        $("[code_snippet_id]").each(function () {
+            __s_id = $(this).attr("code_snippet_id");
+            if (__s_id != null && __s_id != "" && __s_id != 0 && parseInt(__s_id) > 70020) {
+                __code_tool = __get_code_toolbar(__s_id);
+                $(this).prev().find(".tools").append(__code_tool);
+            }
+        });
+    });
+</script>
+
+    </div>
+      <!--new top-->
+    
+    <script id="csdn-toolbar-id" btnId="header_notice_num" wrapId="note1" count="5" subCount="5" type="text/javascript" src="http://static.csdn.net/public/common/toolbar/js/toolbar.js"></script>     <!--new top-->
+</body>
+</html>

@@ -1,9 +1,9 @@
 var repl = require("repl");
 
-var main = require(""./main.js);
+var main = require("./main.js");
 
 // tmp added 
-var simpleHandler = require("./tmp/simpleHandler.js")
+var simpleHandler = require("./tmp/simpleHandler.js");
 
 repl.start({
 // start with the command input and recall

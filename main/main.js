@@ -1,5 +1,6 @@
 
-var utils = require("./tools/utils.js");
+// remove temporarily 
+// var utils = require("./tools/utils.js");
 
 // export the main functionality
 module.exports = {
