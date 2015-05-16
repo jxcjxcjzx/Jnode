@@ -15,6 +15,8 @@ var ADDRS = {
 	
 	ASYNCHRONOUS_BASIC : "../../../src/lib/Comm/Asynchronous.js",
 	
+	DESKTOP: "../../../src/lib/Comm/Asynchronous.js",
+	
 	TMP  : "tmp"
 
 };
