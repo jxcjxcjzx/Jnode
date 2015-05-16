@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>  Desktop </title>
+</head>
+
+<body>
+
+<div class="container"> 
+
+<!-- adjust the framewokr here -->
+ <div class="inner_time">
+	<iframe src="" frameborder="0"></iframe>
+ </div>
+
+ <div class="background">
+	<img src ="./desktop.jpg" id = "desktop">   </img>
+ </div>
+
+
+</div >
+
+  <script language="javascript" src="./js/jquery.min.js"></script>
+ <!--script language="javascript" src="./desktop.js"--><!--/script-->
+ <script language="javascript" >
+	
+	<!-- encapture the following into the desktop.js later -->
+	$(function(){
+	var e = $('.inner_time');
+	e.append('<span class="now"></span>');
+	var r = $('.now');
+	var nw = function nw(){
+		r.empty().append(new Date($.now()));
+	}
+	nw();
+	setInterval(function(){
+		nw();
+	},1000);
+
+});
+	
+ </script>
+
+</body> 
+ 
+</html>
