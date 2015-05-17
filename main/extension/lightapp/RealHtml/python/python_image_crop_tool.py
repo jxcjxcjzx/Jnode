@@ -4,27 +4,42 @@ from PIL import Image
 
 
 import Image
+import sys
 
 
-def imageCrop(src,dst):	
+param = sys.argv[1].split(",");
+
+if(len(param)>5) :
+
+	# get the params 
+	src = param[0];
+	dst = param[1];
+	region_1 = int(param[2]);
+	region_2 = int(param[3]);
+	region_3 = int(param[4]);
+	region_4 = int(param[5]);	
+
+	# do the image crop :
+
+	#def imageCrop(src,dst,area):	
 	img = Image.open(src,'r')
-	region = (100,200,400,500)
+	region = (region_1,region_2,region_3,region_4)
 
 	#crop the image 
 	cropImg = img.crop(region)
 
 	#save the image croped	
 	cropImg.save(dst)
+	
+	# finally 
+	# the Image lib lack one close function, quite strange 
+	#cropImg.close();
+	#img.close();
+	
+else :
+	localrandomtime = "";
 
 
-
-	
-if __name__ == '__main__':
-	imageCrop('E:\\sz2\\project\\REDX\\window_source\\MediaLab\\Lab3\\test.jpg','E:\\sz2\\project\\REDX\\window_source\\MediaLab\\Lab3\\test_croped.jpg');
-	
-	
-	
-	
 
 #
 # one new idea about the image showing approach, think more about it 

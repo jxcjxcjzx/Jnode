@@ -22,10 +22,18 @@
 	
 	python_image_crop_tool : "./python/python_image_crop_tool.py",
 	
-	thumbnailGenerator : "./python/thumbnailGenerator.py"
+	thumbnailGenerator : "./python/thumbnailGenerator.py",
+	
+	html2pngWrapper : "./python/html2pngWrapper.py"
 	
  }
 
+ var OTHEREXE_ADDR = {
+ 
+	html2png :  "D:\\User\\Documents\\GitHub\\Jnode\\main\\extension\\lightapp\\RealHtml\\tool_html2pic\\html2png.exe"
+ 
+ }
+ 
  
  // ps : using offline http simulated httpserver to have the pic download test 
 
@@ -64,8 +72,8 @@ var innerFuncWrap = {
 function execmain(){
 	
 	console.log("is execting func1");
-	comm.Promise.first(func1,["http://127.0.0.1:1338/?pics2"]).then(func1,["http://127.0.0.1:1338/?pics2"]).then(func1,["http://127.0.0.1:1338/?pics2"]).then(func1,["http://127.0.0.1:1338/?pics2"]).then(func1,["http://127.0.0.1:1338/?pics2"]).then(func1,["http://127.0.0.1:1338/?pics2"]).then(func1,["http://127.0.0.1:1338/?pics2"]);
-	// comm.Promise.first(func1).then(func1).then(func1);
+	comm.init();
+	comm.Promise.first(func2,["http://127.0.0.1:1338/html1"]).then(func3,["./html1.png,./html2.png,10,20,100,100"]).start();
 	
 }
 
@@ -82,6 +90,37 @@ var  func1 = function(urladdr) {
 
 }
 
+
+var func2 = function(htmlAddr){
+
+	/*
+		var arg1 = htmlAddr;
+		exec(OTHEREXE_ADDR.html2png+' '+arg1,function(error,stdout,stderr){
+			// can do some handling here 
+			console.log(error);
+		});
+	*/
+	// for original exe , using wrapper strategy
+	var arg1 = htmlAddr;
+	exec('G:\\free\\CY\\For_python\\python.exe '+PYTHONEXE_ADDR.html2pngWrapper+' '+arg1,function(error,stdout,stderr){
+		// can do some handling here 
+		console.log(error);
+	});
+	
+}
+
+var func3 = function(htmlPicdAddr){
+
+	// temporarily added   
+	// var arg1 = "./python/tmp/hello.jpg,./html2.png,100,200,300,500";
+	var arg1 = htmlPicdAddr;
+	
+	exec('G:\\free\\CY\\For_python\\python.exe '+PYTHONEXE_ADDR.python_image_crop_tool+' '+arg1,function(error,stdout,stderr){
+		// can do some handling here 
+		console.log(error);
+	});
+
+}
 
 
 

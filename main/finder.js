@@ -39,6 +39,13 @@ function find(ADDR){
 		
 	}
 	
+	if(ADDR == consts.ADDRS.DESKTOP){
+		// return the functionmanager source addr 
+		// quite strange here 
+		return consts.ADDRS.DESKTOP;
+		
+	}
+	
 	
 
 }
