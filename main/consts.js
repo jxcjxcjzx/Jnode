@@ -17,6 +17,7 @@ var ADDRS = {
 	
 	DESKTOP: "../../../src/os/com//html/render/desktop.js",
 	
+	TOUTIAO : "../extension/lightapp/toutiao/toutiao.js",
 	
 	TMP  : "tmp"
 

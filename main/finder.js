@@ -46,6 +46,13 @@ function find(ADDR){
 		
 	}
 	
+	if(ADDR == consts.ADDRS.TOUTIAO){
+		// return the functionmanager source addr 
+		// quite strange here 
+		return consts.ADDRS.TOUTIAO;
+		
+	}
+	
 	
 
 }
