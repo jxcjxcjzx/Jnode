@@ -1,0 +1,40 @@
+reference from android_dslib @github, see it later 
+
+
+some effects 
+
+	bookpage 
+	
+	bookshelf
+	
+	bubblechat
+	
+	coverflow
+	
+	drawroll
+	
+	lancher3d
+	
+	listview
+	
+	path
+	
+	--- multipayer ---
+	
+	photostore
+	
+	qiyi 
+	
+	pickview
+	
+	qqtab
+	
+	qqlogin
+	
+	radiogroup
+	
+	waterfall
+	
+	viewpager
+	
+	

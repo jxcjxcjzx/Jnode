@@ -1,0 +1,18 @@
+htmlelements
+
+element locator
+
+htmltextinputs , htmlbuttons, htmlfileselctor, htmllabels, htmlcheckbox, htmldatainput, 
+
+
+simpleurlview : {
+	ui 
+	url 
+	view
+	function : onrender (){ do nothing }
+}
+
+
+function findbyhtmltag {
+	template(type, name) find (type,name ) { implemnt : { codes } }
+}

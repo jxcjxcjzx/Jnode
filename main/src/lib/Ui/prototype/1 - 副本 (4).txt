@@ -1,0 +1,19 @@
+process(Operation oper)
+
+BinaryOperation.class
+
+MultipleOperation.class
+
+SimpleOperation.class
+
+StringOpertion.class
+
+
+
+query :{
+	BooleanExpression.class
+	ComparableExpression.class
+	NumberExpression.class
+	SimpleExpression.class
+
+}

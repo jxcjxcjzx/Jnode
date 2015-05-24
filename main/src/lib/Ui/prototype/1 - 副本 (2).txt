@@ -1,0 +1,65 @@
+www.angrybirds.com/play
+
+
+canvas api :
+
+	wrap it 
+		
+		fillText(text,x,y,[,maxwidth])
+		
+		drawImage()
+		
+		
+frame (
+
+	background : black
+	
+	children : [
+		{
+			type : "image" 
+			frame : [ 0,0,320,200]
+			imageurl :  xxx
+		}
+		{
+			type : "text" 
+			frame : [ 0,0,320,200]
+			lineheight : 63
+			fontsize : 13
+			text : "one text"
+		}
+	]
+	
+	framerate : 60fps 
+)
+
+
+//reference from the facebook/ css_layout  @github, see it later 
+
+
+function render : {
+	
+	return (
+		<group>
+			<image style=xxx>
+			</image>
+			<text content=xxx>
+			</text>
+		</group>
+	)
+
+}
+
+
+listview = ui.create{
+
+	initial : function { return { a :1 , b :2}}
+	
+	render: function { item = xxx, return (<group>fill it up!</group>) }
+	
+	renderitem : {}
+	
+	setvisible : {}
+	
+	handletouch : {}
+
+}

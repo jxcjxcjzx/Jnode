@@ -1,0 +1,25 @@
+ui tree
+{
+	functions : {
+		add 
+		ischildof
+		findparentof
+		findparentwithproperty
+		findchildby
+		findnode
+		
+	}
+
+}
+
+
+subsystem : {
+	constants
+	layouts
+	ui_trees
+	helpers
+	
+}
+
+
+generator.run()

@@ -1,0 +1,18 @@
+// reference from roboli/ full-control @github , see it later
+
+def appstate (atom)
+
+defpage home  [cursor, home]
+[
+	render {
+		cursor !=null, move cursor to pos(1,2)
+		home !=null, home has button, get(button), render(button, css.new(context, params))
+		defaults {
+			p 'dewdce'
+			h1 'title '
+		}
+	}
+	
+	
+
+]

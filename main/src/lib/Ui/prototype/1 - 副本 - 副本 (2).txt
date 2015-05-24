@@ -1,0 +1,55 @@
+
+describe ::initialize do 
+	include sth; end 
+	
+	create sth, do
+		expect :: obj.get:ew eq sth 
+			then do .. 
+		
+	expect :: timeout time 
+		do create driver 
+			driver register sth :: do it later 
+			
+	define context:: with two buttons, do 
+		set one 'yes, one 'no 
+			expect 'yes button :: clicked do
+				sth 
+			expect 'no button :: clicked do 
+				sth 
+				
+			defaults :: do 
+				sth 
+				
+
+BDF.content :{
+	
+	programma :: = comando 
+	
+	commando :: = sequence 
+				| declarable 
+				| aplicacao
+				| for 
+				| acao 
+	
+	sequence :: = camando ";" cando 
+	
+	decalrabel :: = ..
+	
+	acao :: = atom thing 
+	
+	expression :: = .....
+	
+	id = [a-zA-Z]+
+
+
+}
+
+
+doctype 
+	html 
+		head 
+			title ....
+		body 
+			...
+			...
+	

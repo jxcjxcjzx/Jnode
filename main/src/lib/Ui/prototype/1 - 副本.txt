@@ -1,0 +1,30 @@
+ui table view
+
+
+
+define table
+	addsection {
+			header = 'hello'
+			addrow {
+				row.memorize =  true
+				identifier = @'id'
+				text = @'name'
+				
+			}
+			addinputline {
+				text = @"confirm"
+				customized = cell.filter = @"filter1"
+			}
+			
+		}
+		
+	addsection {
+		...
+		...
+		...
+	}
+	
+<dict>
+	<key>string text</key>
+	
+</dict>	

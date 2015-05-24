@@ -1,0 +1,16 @@
+
+	var filebrowser = {
+	
+		title :
+		url : 
+		x : 
+		y : 
+		width :
+		height :
+		config :
+		root :
+		security :
+		float :
+		
+	
+	}

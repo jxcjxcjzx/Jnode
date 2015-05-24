@@ -1,0 +1,20 @@
+labelprovider{
+	
+	text(content) = return "my"+text[content]
+	
+	image(url) = return gif.image[url]
+
+}
+
+
+registerInjectorfor(sth) {
+
+
+}
+
+getInjector(name) { ... }
+
+getRuleName() {
+	(((name, grammer.getname),context), put)
+
+}

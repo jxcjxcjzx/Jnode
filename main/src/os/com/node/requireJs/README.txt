@@ -1,0 +1,3 @@
+thks to requireJS js library , 
+it makes the js lib requiring work
+becoming even more easy ....
