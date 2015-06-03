@@ -1,0 +1,4 @@
+
+ var consts = {
+	UserInfo info;
+ }
