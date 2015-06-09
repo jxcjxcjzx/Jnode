@@ -1,3 +1,4 @@
+/* 
  
  var ajax = {
 	var xhr = new XMLHttpRequest();
@@ -13,4 +14,4 @@
 	}
  };
  
- 
+ */

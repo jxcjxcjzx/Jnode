@@ -32,11 +32,11 @@ var url = require('url');
 			var task = global_consts.taskQueue.shift();
 			if(!task) { 
 				// for debug 
-				console.log("task is null , sorry ... ");
+				// console.log("task is null , sorry ... ");
 				return;
 			}
 			// for debug 
-			console.log("task is ready  , task is : "+task);
+			 // console.log("task is ready  , task is : "+task);
 			task.FuncObj.apply(task.context,task.Args);
 		}			
 	}	
@@ -47,10 +47,10 @@ var url = require('url');
 			var requesturl = req.url;
 			var params = url.parse(requesturl);	
 			// for debug 
-			console.log(" get request : "+requesturl);				
+			// console.log(" get request : "+requesturl);				
 			if(params.query == 'taskbegin')   // push the index html page
 			{				
-				console.log(" get request , ready to execFunction ");
+				// console.log(" get request , ready to execFunction ");
 					// exec the function
 					taskManager.execFunction();
 			}	
@@ -62,7 +62,7 @@ var url = require('url');
 	var Promise = {	
 		first : function(Func,args){		
 			// for debug 
-			console.log(" in first global_consts.exec is : "+global_consts.exec);					
+			// console.log(" in first global_consts.exec is : "+global_consts.exec);					
 			// Func.apply(this,args);			
 			// this variable not used yet 
 			taskManager.registerFunction(Func,this,args,null);
@@ -71,8 +71,8 @@ var url = require('url');
 		},		
 		// seems stupid here to use some repeated bunch of codes 
 		then : function(Func,args){		
-			console.log(" in then global_consts.exec is : "+global_consts.exec);			
-			console.log(" args is : "+args);		
+			// console.log(" in then global_consts.exec is : "+global_consts.exec);			
+			// console.log(" args is : "+args);		
 			// add to function list 
 			taskManager.registerFunction(Func,this,args,null);
 			return this;

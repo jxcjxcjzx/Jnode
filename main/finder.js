@@ -53,6 +53,13 @@ function find(ADDR){
 		
 	}
 	
+	if(ADDR == consts.ADDRS.GRABBER_FRAMEWORK){
+		// return the functionmanager source addr 
+		// quite strange here 
+		return consts.ADDRS.GRABBER_FRAMEWORK;
+		
+	}
+	
 	
 
 }

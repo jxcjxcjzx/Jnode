@@ -19,7 +19,10 @@ var ADDRS = {
 	
 	TOUTIAO : "../extension/lightapp/toutiao/toutiao.js",
 	
+	GRABBER_FRAMEWORK : "../../../src/lib/net/share/grab/grab.js",
+	
 	TMP  : "tmp"
+	
 
 };
 
