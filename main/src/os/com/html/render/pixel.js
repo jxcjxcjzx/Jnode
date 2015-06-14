@@ -1,0 +1,1 @@
+// pixel handle in html5 canvas 
