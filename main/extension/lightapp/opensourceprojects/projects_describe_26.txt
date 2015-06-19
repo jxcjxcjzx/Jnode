@@ -1,0 +1,514 @@
+ title : The The XML Database Object-Oriented Model Open Source Project on Open Hub
+ summary : <p>Xmldoom is now maintained on Gna! now: http://gna.org/projects/xmldoom/
+<br/>The CVS repository hosted here is historic, including all version up until 0.0.5. The source code is now hosted in GNU Arch on Gna! See the Gna! project page for details.</p>
+ title : Oren Eini : Oren Eini - Open Hub
+ title : The Bluetail Ticket Tracker Open Source Project on Open Hub
+ summary : <p>A system for creating, storing and keeping track of tickets., </p>
+ title : The Eddie Open Source Project on Open Hub
+ summary : <p>Eddie is a high availability clustering tool. It is an open source, 100% software solution written primarily in the functional programming language Erlang.</p>
+ title : The Tigase Jabber/XMPP Server Open Source Project on Open Hub
+ summary : <p>Tigase Jabber/XMPP Server is Open Source and Free (AGPLv3) Java server using all available features in last JDKs. It uses NIO for network communication, selectors, concurrent JDK framework, security library and so on. All these functionalities are available directly from JDK so the need for external libraries is limited to minimum. Actually it doesn&#39;t use any external library at run-time. A few third-party libraries are used for development such as JUnit, Forrest, UnitTestsGen and ANT</p>
+ title : The ESDL Open Source Project on Open Hub
+ summary : <p>Library that gives access to SDL and Opengl functionality in Erlang software., </p>
+ title : The Jabberlang Open Source Project on Open Hub
+ summary : <p>Jabberlang is an Erlang XMPP (Jabber) client library., </p>
+ title : The Manderlbot Open Source Project on Open Hub
+ summary : <p>Manderlbot is an Erlang written IRC bot and possibly an IRC client., </p>
+ title : The Eunit Open Source Project on Open Hub
+ summary : <p>Eunit is an Erlang test suite tool, inspired by agile development ideas., </p>
+ title : The JEROME Open Source Project on Open Hub
+ summary : <p>The Java-based Engine for Real-time Online Multiuser Environments, is designed as a heterogeneous parallel virtual machine, or grid, specifically for real-time applications.</p>
+ title : The vbDrupal Open Source Project on Open Hub
+ summary : <p>A fork of the popular CMS Drupal. This fork introduces a tight integration with the forum software vBulletin.</p>
+ title : The UoW CompSoc Website Open Source Project on Open Hub
+ summary : No description has been added for this project.
+<a href="/p/4178/edit">Add description</a>
+ title : The py-lib Open Source Project on Open Hub
+ summary : <p>The py-lib aims at supporting a decent development process addressing important deployment, versioning, testing and documentation issues for the Python programming language.</p>
+ title : Paint.NET : Paint.NET - Open Hub
+ title : The The Unix Desktop Environment, UDE Open Source Project on Open Hub
+ summary : <p>The UDE-Project is creating a new WM which will be a complete GUI in future. The project does not use any special GUI-Libraries such as QT or GTK+. We just use the standard Xlibs (both to keep UDE fast and slim and to avoid dependencies). UDE has a completely original Look&#39;n&#39;Feel, it&#39;s not just another copy of the so well known &quot;classical&quot; window management user interface.</p>
+
+<p>UDE - Get used to it!</p>
+ title : The theFrontend Open Source Project on Open Hub
+ summary : <p>theFrontend is an audio conversion software with graphical user interface for Windows. This is an Open Source and easy to use software for everyone. Easy usage with predefined presets for newbies and xml-based configuration files and command-line interface for advanced users. Full UNICODE support and no additional dependences on external DLL libraries for main program (some tools may require additional DLLs).</p>
+ title : The EncWAVtoAC3 Open Source Project on Open Hub
+ summary : <p>EncWAVtoAC3 (WAV to AC3 Encoder) is a GUI for Aften A/52 audio encoder created by Justin Ruggles. WAV to AC3 Encoder project was started at 27 January 2007 by wisodev. There are Win32 (x86) and Win64 (x86_64) binaries available.</p>
+ title : The iODBC Open Source Project on Open Hub
+ summary : <p>iODBC (Independent Open Database Connectivity) is an open-source ODBC driver manager and SDK that facilitates the development of database-independent applications on Linux, FreeBSD, Mac OS X, other Unix-like OS, and other platforms.</p>
+ title : The OAT (OpenLink AJAX Toolkit) Open Source Project on Open Hub
+ summary : <p>OAT (OpenLink AJAX Toolkit) is a JavaScript-based toolkit for browser-independent Rich Internet Application development. It includes a rich collection of UI Widgets/Controls, Event Management System, and a truly platform-independent Data Access Layer called AJAX Database Connectivity.</p>
+ title : The OpenLink Virtuoso (Open-Source Edition) Open Source Project on Open Hub
+ summary : <p>OpenLink Virtuoso is a scalable, high-performance multi-model database management systems and application server combo. All interaction with Virtuoso occurs via its support of industry standard query languages, protocols, APIs, and data formats such as: ODBC, JDBC, OLE-DB, ADO.NET, XMLA, SQL, SPARQL, XQuery, SOAP, HTTP, WebDAV, SyncML, Atom (Publishing and Syndication), OpenID, OAuth, WebID, RSS, XML, RDF, and more.</p>
+ title : The JXTA JXSE Open Source Project on Open Hub
+ summary : <p>The JXSE project is a complete reference implementation of the JXTA protocols built using Java Standard Edition 5.0. The JXSE project was the original JXTA implementation and was built in Java because Java enabled us to rapidly prototype and test new ideas and develop a more robust implementation. Java is available for most operating systems (Solaris, Unix, Windows, MacOS, etc.) and allows us to reach the maximum number of potential users.</p>
+ title : The Eclipse Mylyn Open Source Project on Open Hub
+ summary : <p>Mylyn is a Task-Focused Interface for Eclipse that reduces information overload and makes multi-tasking easy. It does this by making tasks a first class part of Eclipse, and integrating rich and offline editing for repositories such as Bugzilla, Trac, and JIRA. Once your tasks are integrated, Mylyn monitors your work activity to identify information relevant to the task-at-hand, and uses this task context to focus the Eclipse UI on the interesting information, hide the uninteresting, and automatically find what&#39;s related. This puts the information you need to get work done at your fingertips and improves productivity by reducing searching, scrolling, and navigation. By making task context explicit Mylyn also facilitates multitasking, planning, reusing past efforts, and sharing expertise.</p>
+ title : The Higgins Open Source Project on Open Hub
+ summary : <p>Higgins is an open source software project that is developing an extensible, platform-independent, identity protocol-independent, software framework to support existing and new applications that give users more convenience, privacy and control over their identity information.</p>
+ title : The Novell Bandit Open Source Project on Open Hub
+ summary : <p>It is a community created to help develop components that help define and move common digital identities throughout the computing world. Currently the main focus is on defining a common identity frame work, provide authentication and credential caching, enable common roles and authorization, and ensure compliance via common record collecting.</p>
+ title : The ElfURL Open Source Project on Open Hub
+ summary : <p>A web 2.0 clone of tinyurl service., </p>
+ title : The FeedVault Open Source Project on Open Hub
+ summary : <p>If you are like most bloggers, your newsreader has more than 100+ feeds. These feeds are stored in, what is known as, an OPML file, some people call it a reading list or feed list. What if your online newsreader went down? Or your PC based newsreader crashed? How long would it take you to recreate all 100+ feeds? FeedVault was designed as a secure place to store your feeds and share them if you wish.</p>
+ title : The FrankenFeed Open Source Project on Open Hub
+ summary : <p>FrankenFeed was designed to generate a master feed for you either manually or using an OPML file. What is a master feed? Lets assume you have several feeds on a similar topic that you want to share with someone. FrankenFeed will take each RSS or ATOM feed and combine them into a single &#39;Monster Feed&#39;. You can give that feed to anyone or just use it yourself. You can always come back and add or delete feeds inside of that Monster Feed.</p>
+ title : The InstantFeed Open Source Project on Open Hub
+ summary : <p>InstantFeed allows you to receive any web feed (RSS or Atom) via all major IM carriers including MSN Messenger, Jabber, AIM and ICQ. You can add the InstantFeed Button to your bookmark toolbar and let InstantFeed auto-discover feeds on any page or login and add the feeds you want to monitor manually.</p>
+ title : The QwikPing Open Source Project on Open Hub
+ summary : <p>Add your blog(s) to Qwik Ping and whenever you update them just click on the Qwik Ping button and we will notify the services you selected. If you prefer you can simply enter our URI http://qwikping.biggu.com/blog/api into your blogging software.</p>
+ title : The SocialMail Open Source Project on Open Hub
+ summary : <p>SocialMail can help you turn email into feeds. Why do you need SocialMail? Why would you want to convert an email into a web feed? Lots of reasons! Starting thinking out of &quot;inbox&quot; and start using feeds today!</p>
+ title : The CircleMUD Open Source Project on Open Hub
+ summary : <p>CircleMUD is a multi-user dungeon game system (MUD) written by Jeremy Elson, originally at Johns Hopkins University&#39;s Department of Computer Science (I graduated in May of 1996). CircleMUD is a derivative of DikuMUD Gamma 0.0, which was written in 1990 at DIKU, the Department of Computer Science at the University of Copenhagen, by Katja Nyboe, Tom Madsen, Hans Henrik Staerfeldt, Michael Seifert, and Sebastian Hammer.</p>
+ title : The Vikingboard Open Source Project on Open Hub
+ summary : <p>Vikingboard is a PHP-based discussion forum designed by the principle of &quot;less is more&quot;, and features a lighting-fast cache system while still maintaining the features needed for a solid discussion board. According to benchmarks, it will outperform all the major boards out there! Vikingboard is small, but incredibly fast and powerful.</p>
+ title : The StructureMap Open Source Project on Open Hub
+ summary : <p>StructureMap is a Dependency Injection framework that can be used to improve the architectural qualities of an object oriented system by reducing the mechanical costs of good design techniques. StructureMap can enable looser coupling between classes and their dependencies, improve the testability of a class structure, and provide generic flexibility mechanisms. Used judiciously, StructureMap can greatly enhance the opportunities for code reuse by minimizing direct coupling between classes and configuration mechanisms.</p>
+ title : The StoryTeller Open Source Project on Open Hub
+ summary : <p>StoryTeller is a new tool for efficient creation and management of automated testing of .Net code with the NFit/FitNesse engine. StoryTeller is specifically created to support an Acceptance Test Driven Development strategy. All existing .Net FitNesse tests will run under StoryTeller. Features will include editing, tagging, and integration with source control, CruiseControl.Net, NAnt and/or MSBuild, and support for application versioning.</p>
+ title : The Smoothwall Open Source Project on Open Hub
+ summary : <p>SmoothWall Express is an open source firewall distribution based on the GNU/Linux operating system. Linux is the ideal choice for security systems; it is well proven, secure, highly configurable and freely��� available as open source code. SmoothWall includes a hardened subset of the GNU/Linux operating system, so there is no separate OS to install. Designed for ease of use, SmoothWall is configured via a web-based GUI, and requires absolutely no knowledge of Linux to install or use.</p>
+ title : The The XML Database Object-Oriented Model Open Source Project on Open Hub
+ summary : <p>Xmldoom is now maintained on Gna! now: http://gna.org/projects/xmldoom/
+<br/>The CVS repository hosted here is historic, including all version up until 0.0.5. The source code is now hosted in GNU Arch on Gna! See the Gna! project page for details.</p>
+ title : The Algernon-J Open Source Project on Open Hub
+ summary : <p>Algernon is a rule-based inference system that performs forward and backward rule-based processing of frame-based knowledge bases, and efficiently stores and retrieves information in ontologies and knowledge bases.</p>
+ title : The ATutor Open Source Project on Open Hub
+ summary : <p>ATutor is an Open Source Web-based Learning Content Management System (LCMS) designed with accessibility and adaptability in mind. Administrators can install or update ATutor in minutes, develop custom templates to give ATutor a new look, and easily extend its functionality with feature modules. Educators can quickly assemble, package, and redistribute Web-based instructional content, easily retrieve and import prepackaged content, and conduct their courses online. Students learn in an adaptive learning environment.</p>
+ title : The MooTools Open Source Project on Open Hub
+ summary : <p>MooTools is a compact, modular, Object-Oriented JavaScript framework designed for the intermediate to advanced JavaScript developer. It allows you to write powerful, flexible, and cross-browser code with its elegant, well documented, and coherent API.</p>
+
+<p>MooTools code respects strict standards and doesn&#39;t throw any warnings. It&#39;s extensively documented and has meaningful variable names: a joy to browse and a snap to understand.</p>
+ title : The Moodle (contrib) Open Source Project on Open Hub
+ summary : <p>This code is third-party or popular plugins, patches and tools for Moodle that are separate from the main codebase.</p>
+ title : The rpmorphan Open Source Project on Open Hub
+ summary : <p>rpmorphan finds &quot;orphaned&quot; packages on your system. It determines which packages have no other packages depending on their installation, and shows you a list of these packages.
+<br/>It intends to be clone of deborphan debian tools for rpm packages.</p>
+
+<p>It will try to help you to remove unused packages, for exemple :
+<br/>    * after a distribution upgrade
+<br/>    * when you want to suppress packages after some tests</p>
+ title : The JVoiceXML Open Source Project on Open Hub
+ summary : <p>free VoiceXML interpreter for JAVA supporting JAVA APIs such as JSAPI and JTAPI.</p>
+
+<p>JVoiceXML is an implementation of VoiceXML 2.1, the Voice Extensible Markup Language, specified at</p>
+
+<p>http://www.w3.org/TR/2005/CR-voicexml21-20050613/. This is an extension to VoiceXML 2.0, specified at http://www.w3.org/TR/voicexml20/</p>
+
+<p>VoiceXML is designed for creating audio dialogs that feature synthesized speech, digitized audio, recognition of spoken and DTMF key input, recording of spoken input, telephony, and mixed initiative conversations. Major goal is to have a platform independent implementation that can be used for free.</p>
+ title : The Linbox Rescue Server GPL edition Open Source Project on Open Hub
+ summary : <p>The Linbox Rescue Server (LRS) is a tool to centralize hard disk images (like Ghost Enterprise Server), file backups, hardware and software inventory (with Windows, Linux, and Mac OS X agents), and remote access on a single server. It can be managed from any PC through a Web-based administration interface, and disk images can be restored using PXE boot or using a bootable CD or DVD. It supports Ext2/3, ReiserFS, XFS, JFS, and LVM v1/v2.</p>
+ title : The AudioCutter Cinema Open Source Project on Open Hub
+ summary : <p>The AudioCutter Cinema isn&#39;t a &quot;normal&quot; audio application like many other programs you have seen before. This software offers you a wide range of functions for creating, changing, converting and editing of common and of surround sounds in 3D space.</p>
+ title : The AspectJ Open Source Project on Open Hub
+ summary : <p>A seamless, aspect-oriented extension to the Java programming language. Provides clean modularization of crosscutting concerns, such as error checking and handling, synchronization, context-sensitive behavior, performance optimizations, monitoring and logging, debugging support, and multi-object protocols.</p>
+ title : The Berkeley DB Open Source Project on Open Hub
+ summary : <p>Berkeley DB (BDB) is a high-performance, embedded database library with bindings in C, C++, Java, Perl, Python, Tcl, Smalltalk and many other programming languages. BDB stores arbitrary key/data pairs as byte arrays, and supports multiple data items for a single key. BDB can support thousands of simultaneous threads of control or concurrent processes manipulating databases as large as 256 terabytes, on a wide variety of systems including most UNIX-like and Windows systems as well as real-time operating systems.</p>
+ title : The Berkeley DB XML Open Source Project on Open Hub
+ summary : <p>Oracle Berkeley DB XML is an open source, embeddable XML database with XQuery-based access to documents stored in containers and indexed based on their content. Oracle Berkeley DB XML is built on top of Oracle Berkeley DB and inherits its rich features and attributes. Like Oracle Berkeley DB, it runs in process with the application with no need for human administration. Oracle Berkeley DB XML adds a document parser, XML indexer and XQuery engine on top of Oracle Berkeley DB to enable the fastest, most efficient retrieval of data.</p>
+ title : The BIND (Berkeley Internet Name Domain) Open Source Project on Open Hub
+ summary : <p>BIND (Berkeley Internet Name Domain) is an implementation of the Domain Name System (DNS) protocols and provides an openly redistributable reference implementation of the major components of the Domain Name System, including a Domain Name System server, a Domain Name System resolver library and tools for verifying the proper operation of the DNS server.</p>
+ title : The Bizgres Open Source Project on Open Hub
+ summary : <p>Bizgres is a PostgreSQL &quot;distribution&quot;, including experimental core mods, for an optimized Business Intelligence version</p>
+ title : The AJDT - AspectJ Development Tools Open Source Project on Open Hub
+ summary : <p>The AspectJ Development Tools (AJDT) project provides Eclipse platform based tool support for Aspect Oriented Software Development with AspectJ. AJDT offers a user experience that aims to be consistent with the Java Development Tools (JDT) when working with AspectJ projects and resources.</p>
+ title : The Bricolage Open Source Project on Open Hub
+ summary : <p>Bricolage, an open-source enterprise-class content management and publishing system, greatly simplifies the complex tasks of creating, managing, and publishing the vast libraries of content essential to any organization. Includes advanced features such as fully-configurable workflows, customizable document types, multisite management capabilities, and comprehensive Perl- and PHP-based templating support. Built to support large organizations.</p>
+ title : The Celtix Open Source Project on Open Hub
+ summary : <p>Celtix delivers a Java enterprise service bus (ESB) runtime and set of APIs that make it easy to add transports, message formats, and security features. The goal is to simplify the construction, integration and flexible reuse of technical and business components using a standards-based, service-oriented architecture.</p>
+ title : The ConcourseSuite (formerly Centric CRM) Open Source Project on Open Hub
+ summary : <p>ConcourseSuite is a cross platform CRM solution architected to be cross platform, at both the operating system and browser level. More complex features can all be turned off by the customer, leaving a contact management system with opportunity management and sales forecasting for the small enterprise. Can also be used as a power Contact Manager. Using Java architecture, Centric CRM supports MS Windows, various flavors of Linux, Mac OS X, Solaris, and BSD. CS ships with a full graphical installer, and a high performance SQL database.</p>
+ title : The QBIC Play Smart! Open Source Project on Open Hub
+ summary : <p>QBIC is bascially a &quot;four in a row&quot; board game, except that you can place your tokens on 16 sticks. This way you can connect four tokens in 3D space and no longer on a 2D plane.</p>
+ title : The Bombus Open Source Project on Open Hub
+ summary : <p>Full-featured jabber client for mobile phones. Requires MIDP2.0 phone.</p>
+
+<p>sources in svn:
+<br/>https://svn.xmpp.ru/repos/bombus/trunk</p>
+ title : The The XML Database Object-Oriented Model Open Source Project on Open Hub
+ summary : <p>Xmldoom is now maintained on Gna! now: http://gna.org/projects/xmldoom/
+<br/>The CVS repository hosted here is historic, including all version up until 0.0.5. The source code is now hosted in GNU Arch on Gna! See the Gna! project page for details.</p>
+ title : ClamAV (Deleted 4223) : ClamAV (Deleted 4223) - Open Hub
+ title : The Euler (Linux/Unix) Open Source Project on Open Hub
+ summary : <p>This is the GTK+ based version of EULER for Unix / Linux systems. EULER is a program for quickly and interactively computing with real and complex numbers and matrices, or with intervals, in the style of MatLab, Octave. It can draw and animate your functions in two and three dimensions.</p>
+ title : The Euler for Windows Open Source Project on Open Hub
+ summary : <p>Euler is a powerful numerical laboratory with a programming language. The system can handle real, complex and interval numbers, vectors and matrices. It can produce 2D/3D plots. Included is a programming language.</p>
+ title : The Evolution Open Source Project on Open Hub
+ summary : <p>Evolution provides integrated mail, addressbook and calendaring functionality to users of freedesktop.org compliant desktop environments.</p>
+ title : The Exim Open Source Project on Open Hub
+ summary : <p>Exim is a message transfer agent (MTA) developed for Unix systems connected to the Internet. It is similar to Smail 3, but expands on Smail features.</p>
+ title : The eXo Platform Open Source Project on Open Hub
+ summary : <p>The eXo Platform combines several modules to build a powerful enterprise portal. It includes a content management system, a portlet container, a portal, hot deployable services, a portlet framework, a customization tool, a workflow service, enhanced communication tools, and a bunch of bundled portlets.</p>
+ title : The freeRADIUS Open Source Project on Open Hub
+ summary : <p>FreeRADIUS is an open source RADIUS server. The server scales easily from embedded systems with small amounts of memory to systems with millions of users.</p>
+
+<p>It is fast, flexible, configurable, and supports more authentication protocols than most commercial servers. It includes support for SQL, LDAP, RADIUS Proxying, failover, load balancing, and nearly 100 vendor dictionary files. It can perform authentications via the PAP, CHAP, MS-CHAP, EAP-MD5, EAP-GTC, EAP-TLS, EAP-TTLS, PEAPv0, LEAP, EAP-SIM, and Digest authentication protocols.</p>
+ title : The GanttPV Open Source Project on Open Hub
+ summary : <p>GanttPV is a scriptable, cross-platform project scheduling software., </p>
+ title : The Ganymede Open Source Project on Open Hub
+ summary : <p>GANYMEDE is a portable and customizable network directory management system, released under the GNU General Public License.  The Ganymede server is designed to run on a UNIX-type system, but can be run on almost any Java-supporting operating systems with the proper support scripts.</p>
+ title : The GForge Open Source Project on Open Hub
+ summary : <p>GForge delivers tools to help manage the development process.It includes tools to help your team collaborate, like message forums and mailing lists; tools to create and control access to Source Code Management repositories like CVS and Subversion. GForge automatically creates a repository and controls access to it depending on the role settings of the project.</p>
+ title : The Eclipse Java Development Tools (JDT) Open Source Project on Open Hub
+ summary : <p>The JDT project provides the tool plug-ins that implement a Java IDE supporting the development of any Java application, including Eclipse plug-ins. It adds a Java project nature and Java perspective to the Eclipse Workbench as well as a number of views, editors, wizards, builders, and code merging and refactoring tools. The JDT project allows Eclipse to be a development environment for itself.</p>
+ title : The Groovy Open Source Project on Open Hub
+ summary : <p>An agile dynamic language for the Java Platform with many features that are inspired by languages like Python, Ruby and Smalltalk, making them available to Java developers using a Java-like syntax. Developing web applications , writing shell scripts easily, writing concise, meaningful, test cases using Groovy&#39;s JUnit integration, or prototyping and producing real industrial strength applications have never been so concise and groovy.</p>
+ title : The Hammurapi Open Source Project on Open Hub
+ summary : <p>Hammurapi is an open source code analysis tool. Its includes more than 100 inspectors which inspect different aspects of code: Compliance with EJB specification, threading issues, coding standards, and much more. Hammurapi is primarily a tool for architects or senior developers who need to control quality of large codebases and quickly pinpoint high severity problems.</p>
+ title : The HelpCORE Open Source Project on Open Hub
+ summary : <p>HelpCORE is a help- and service desk software package featuring functionality for reporting incidents, knowledge search, and frequently asked questions.</p>
+ title : The JOnAS (Java Open Application Server) Open Source Project on Open Hub
+ summary : <p>JOnAS is a leading edge Java EE 5 certified Open Source OSGi Enterprise Server by OW2.</p>
+
+<p># JOnAS provides top level clustering mechanisms to ensure scalability and high availability
+<br/># JOnAS&#39; high level Management features satisfy professional SI administrators
+<br/># Integration to the Enterprise SI is enabled through many mechanisms like Web Services, Java EE Connectors, LDAP access, IIOP, Websphere MQ connector, ...
+<br/># JOnAS 5 runs on top of an OSGi architecture, rendering trivial the integration of existing OSGi and iPOJO components
+<br/># Plugins for many IDEs make development on top of JOnAS easy</p>
+ title : The JORAM Open Source Project on Open Hub
+ summary : <p>JORAM (Java Open Reliable Asynchronous Messaging) is an open source implementation of the JMS (Java Message Service) 1.1 API. It provides access to a really distributed MOM (Message Oriented Middleware), built on top of the ScalAgent D.T. agents based platform and used within many critical operational applications.</p>
+
+<p>Stable versions of JORAM are JMS 1.1 certified. Moreover JORAM is used by JOnAS to undergo the J2EE 1.4 certification, and has passed all tests concerning JMS 1.1 certification in this J2EE TCK.</p>
+
+<p>JORAM is a mature project started in 1999, it is an open source software released under the LGPL license since May 2000. Professional Support is available from Scalagent D.T.</p>
+ title : The JOSSO Open Source Project on Open Hub
+ summary : <p>Atricore’s JOSSO is an open source and commercially supported Internet Single Sign-On (FSSO) solution for point-and-click and standards-based (SAML2) Internet-scale SSO implementations. For more information contact us at : http://www.josso.org</p>
+ title : The jPOS Open Source Project on Open Hub
+ summary : <p>jPOS is a Java platform based mission critical financial transaction library/framework that can be customized and extended in order to implement financial interchanges.</p>
+ summary : <p>Avogadro is an advanced molecular editor designed for cross-platform use in computational chemistry, molecular modeling, bioinformatics, materials science, and related areas. It offers flexible rendering and a powerful plugin architecture.</p>
+ title : The Avogadro Open Source Project on Open Hub
+ title : The Desktop Notes & Contacts Open Source Project on Open Hub
+ summary : <p>Provides two tabs at the top of your screen:  One for Notes and the other for Contacts.  Written in VB.Net 2.0 and C# 2.0.</p>
+ title : The QBLIDE Open Source Project on Open Hub
+ summary : <p>A free IDE for FreeBASIC, made in FreeBASIC., </p>
+ title : The Beryl Open Source Project on Open Hub
+ summary : <p>Beryl is an OpenGL accelerated desktop that seeks to provide a free, open source desktop experience to the community that reflects the wishes of the users. </p>
+
+<p>Beryl is a combined window manager and composite manager written in C using OpenGL to provide acceleration. It is designed to be highly flexible, extensible, and portable, all the while keeping in mind that the users know how they want their desktops to act better than we do. With Beryl the rather esoteric concept of the computer desktop is brought down to a more human level, allowing for a more native and intuitive understanding of your workspace.</p>
+ title : The Contracts Open Source Project on Open Hub
+ summary : <p>Brings design-by-contracts to .NET.</p>
+ title : The JFox Open Source Project on Open Hub
+ summary : <p>JFox is an Open Source, standards-compliant, J2EE based application server implemented in 100% Pure Java, It comes from China Enterprise Open Source Community. (www.huihoo.org)</p>
+ title : The XOo°F Open Source Project on Open Hub
+ summary : <p>XOo°F is a development and XML specification framework for documenting and developing the services layer of enterprise business applications. From the specifications, it generates WSDL, DocBook, client-side and server-side code for Java, C# and Python.</p>
+ title : The systemtap Open Source Project on Open Hub
+ summary : <p>SystemTap provides free software (GPL) infrastructure to simplify the gathering of information about the running Linux system. This assists diagnosis of a performance or functional problem. SystemTap eliminates the need for the developer to go through the tedious and disruptive instrument, recompile, install, and reboot sequence that may be otherwise required to collect data.</p>
+
+<p>SystemTap provides a simple command line interface and scripting language for writing instrumentation for a live running kernel and user-space applications.</p>
+ title : The Konqueror Open Source Project on Open Hub
+ summary : <p>Konqueror is a file manager, web browser and file viewer, which was developed as part of the K Desktop Environment (KDE) by volunteers and runs on most Unix-like operating systems.</p>
+ title : The jUDDI Open Source Project on Open Hub
+ summary : <p>jUDDI (pronounced &quot;Judy&quot;) is an open source Java implementation of the Universal Description, Discovery, and Integration (UDDI) specification for Web Services.</p>
+ title : Konsole (Deleted 4251) : Konsole (Deleted 4251) - Open Hub
+ title : The The XML Database Object-Oriented Model Open Source Project on Open Hub
+ summary : <p>Xmldoom is now maintained on Gna! now: http://gna.org/projects/xmldoom/
+<br/>The CVS repository hosted here is historic, including all version up until 0.0.5. The source code is now hosted in GNU Arch on Gna! See the Gna! project page for details.</p>
+ title : The KETL - Kinetic ETL Open Source Project on Open Hub
+ summary : <p>KETL is an extract, transform, and load (ETL) tool designed by Kinetic Networks. KETL includes job scheduling and alerting capabilities. The KETL Server is a Java-based data integration platform consisting of a multi-threaded server that manages various job executors. Jobs are defined using an XML definition language.</p>
+ title : The Knopflerfish Open Source Project on Open Hub
+ summary : <p>Knopflerfish is an Open Source OSGi (Open Service Gateway Initiative) Java application platform.</p>
+ title : Konqueror (Deleted 4255) : Konqueror (Deleted 4255) - Open Hub
+ title : The Apache Lenya Open Source Project on Open Hub
+ summary : <p>Apache Lenya is an Open Source Java/XML Content Management System and comes with revision control, site management, scheduling, search, WYSIWYG editors, and workflow.</p>
+ title : The LogicBlaze FUSE Open Source Project on Open Hub
+ summary : <p>LogicBlaze FUSE is a complete SOA and Web 2.0 runtime platform. LogicBlaze FUSE supports 3 implementations - integrate with any J2EE application server, comes integrated with WebSphere, integrated support for mySQL.</p>
+
+<p>In April 2007, IONA Technologies acquired LogicBlaze and the development team joined IONA&#39;s open source business. The key constituent parts of LogicBlaze FUSE are now distributed in the IONA FUSE product family. More information can be found at http://open.iona.com</p>
+ title : Pentaho (Deleted 4258) : Pentaho (Deleted 4258) - Open Hub
+ title : The sid Open Source Project on Open Hub
+ summary : <p>SID is a framework for building computer system simulations. Specifically, a simulation is comprised of a collection of loosely coupled components. Simulated systems may range from a CPU&#39;s instruction set to a large multi-processor embedded system.</p>
+
+<p>SID defines a small component interface which serves to tightly encapsulate them. Components may be written in C++, C, Tcl or any other language to which the API is bound. Typically, components are separately compiled and packaged into shared libraries. A standard run-time linking/loading interface is defined for these.</p>
+
+<p>The package includes a growing library of components for modeling hardware and software parts, instrumentation, control, and external interfaces.</p>
+ title : The Lustre Open Source Project on Open Hub
+ summary : <p>Lustre is a scalable, secure, robust, highly-available cluster file system., </p>
+ title : The MailCleaner Open Source Project on Open Hub
+ summary : <p>The MailCleaner core was migrated to open source by Fastnet SA. MailCleaner is a professional filtering solution that eradicates all undesirable and dangerous e-mail. MailCleaner is installed between the Internet and your mail server.</p>
+ title : The Majordomo Open Source Project on Open Hub
+ summary : <p>Majordomo is a program which automates the management of Internet mailing lists. Commands are sent to Majordomo via electronic mail to handle all aspects of list maintenance. Once a list is set up, virtually all operations can be performed remotely by email, requiring no intervention upon the postmaster of the list site. (For a web-based interface to Majordomo, see the MajorCool add-on package).</p>
+ title : The Majordomo 2 Open Source Project on Open Hub
+ summary : <p>Majordomo 2 is an upwardly-compatible, PERL, rewrite of the popular majordomo mailing list manager software by Jason Tibbitts and Michael Yount.</p>
+ title : The Mandarax Open Source Project on Open Hub
+ summary : <p>Mandarax is an open source java class library for deduction rules. It provides an infrastructure for defining, managing and querying rule bases.</p>
+ title : The Debian Open Source Project on Open Hub
+ summary : <p>Debian is a free operating system (OS) for your computer. An operating system is the set of basic programs and utilities that make your computer run. Debian uses the Linux and kFreeBSD kernels (the core of operating systems), but most of the basic OS tools come from the GNU project; hence the names GNU/Linux and GNU/kFreeBSD.</p>
+ title : The EnterpriseDB Open Source Project on Open Hub
+ summary : <p>EnterpriseDB is a flagship product of EnterpriseDB, which offers supported packages to enterprise. It is a database solution that expands on PostgreSQL.</p>
+ title : The CUFTS2 Open Source Project on Open Hub
+ summary : <p>CUFTS is an open source (GPL) OpenURL link resolver designed for use by library consortia. It supports multiple sites from one server, online management tools, usage statistics, and an advanced journal list system. A knowledgebase of over 320 resources with more than 384,000 title records is available for license. Sites can individually activate resources they have access to, as well as subserts of titles for packages to which they only have partial subscriptions.</p>
+ title : The Cleversafe - Dispersed Storage Open Source Project on Open Hub
+ summary : <p>Cleversafe provides a dispersed data storage solution., </p>
+ title : The Cleversafe DSGrid File System Open Source Project on Open Hub
+ summary : <p>The Cleversafe Dispersed Storage Grid File System (dsgfs) will allow a dispersed storage grid to appear as a mountable file system for Linux-based software applications.</p>
+ summary : <p>CloverETL is an Commercial Open Source, Java based ETL framework which can be used to transform structured data. While using JAVA technology it allows for platform independence. It can be used standalone - as a server application or can be embedded in other applications as a library.</p>
+ title : The CloverETL Open Source Project on Open Hub
+ title : The Apache Cocoon Open Source Project on Open Hub
+ summary : <p>Apache Cocoon is a web development framework built around the concepts of separation of concerns and component-based web development. Cocoon is &quot;web glue for your web application development needs&quot;. It is a glue that keeps concerns separate and allows parallel evolution of all aspects of a web application, improving development pace and reducing the chance of conflicts.</p>
+ title : Cruise Control (Deleted 4272) : Cruise Control (Deleted 4272) - Open Hub
+ title : The DHCP (ISC) Open Source Project on Open Hub
+ summary : <p>The Internet Systems Consortium (ISC) offers a Dynamic Host Configuration Protocol (DHCP) distribution including a DHCP server, client and relay agent. This distribution supports POSIX-compliant operating systems and also non-POSIX systems like Windows NT and MacOS.</p>
+ title : The DSPAM Open Source Project on Open Hub
+ summary : <p>DSPAM is a scalable and open-source content-based spam filter designed for multi-user enterprise systems. On a properly configured system, many users experience results between 99.5% - 99.95%, or one error for every 200 to 2000 messages. DSPAM supports many different MTAs and can also be deployed as a stand-alone SMTP appliance. For developers, the DSPAM core engine (libdspam) can be easily incorporated directly into applications for drop-in filtering (GPL applies; commercial licenses are also available).</p>
+ title : The Eclipse RCP (Rich Client Platform) Open Source Project on Open Hub
+ summary : <p>Eclipse RCP (Rich Client Platform) is a set of plug-ins added to the Eclipse platform for creating Rich Client Applications. These plug-ins are part of the Eclipse offering in the Runtime, SWT, JFace, and Workbench.</p>
+ title : The EGroupware Open Source Project on Open Hub
+ summary : <p>EGroupware is a enterprise ready groupware software for your network. It enables you to manage contacts, appointments, todos and many more for your whole business.</p>
+
+<p>EGroupware is a groupware server. It comes with a native web-interface which allowes to access your data from any platform all over the planet. Moreover you also have the choice to access the EGroupware server with your favorite groupware client (Kontact, Evolution, Outlook) and also with your mobile or PDA via SyncML.</p>
+
+<p>EGroupware is international. At the time, it supports more than 25 languages including rtl support.</p>
+
+<p>EGroupware is platform independent. The server runs on Linux, Mac, Windows and many more other operating systems. On the client side, all you need is a internetbrowser such as Firefox, Konqu</p>
+ title : The Enhydra Octopus Open Source Project on Open Hub
+ summary : <p>Enhydra Octopus is a Java-based Extraction, Transformation, and Loading (ETL) tool. It may connect to any JDBC data sources and perform transformations defined in an XML file.</p>
+ title : The Enhydra Shark Open Source Project on Open Hub
+ summary : <p>The Enhydra Shark project delivers a workflow server with a difference. It is an extendable and embeddable Java Open Source workflow engine framework including a standard implementation completely based on WfMC specifications using XPDL (without any proprietary extensions !) as its native workflow process definition format and the WfMC &quot;ToolAgents&quot; API for serverside execution of system activities.</p>
+ title : The Enhydra JaWE Open Source Project on Open Hub
+ summary : <p>nhydra JaWE (Java Workflow Editor) is the first open source graphical Java workflow process editor fully according to WfMC specifications supporting XPDL as its native file format. It can be used to edit / view every XPDL file which conforms to WfMC XPDL specifications, does NOT use any proprietary XPDL.</p>
+ title : The Enhydra Server Open Source Project on Open Hub
+ summary : <p>Enhydra Server is the world&#39;s first and leading open source Java/XML application and webservice SOA server with an efficient &quot;super-servlet&quot; approach</p>
+ title : The Erlang Open Source Project on Open Hub
+ summary : <p>Erlang is a programming language designed at the Ericsson Computer Science Laboratory. Ericsson released the entire source code of the Erlang system including extensive libraries of code for building robust fault-tolerant distributed applications.</p>
+ title : The ERP5 Open Source Project on Open Hub
+ summary : <p>ERP5 is a full featured high end Open Source / Libre Software solution published under GPL license and used for mission critial ERP / CRM / MRP / SCM / PDM applications by industrial organisations and government agencies.</p>
+
+<p>It is distributed to linux community via packages for numerous distributions (Mandriva, Debian, Ubuntu,...) and a dedicated Live CD.</p>
+ title : The The XML Database Object-Oriented Model Open Source Project on Open Hub
+ summary : <p>Xmldoom is now maintained on Gna! now: http://gna.org/projects/xmldoom/
+<br/>The CVS repository hosted here is historic, including all version up until 0.0.5. The source code is now hosted in GNU Arch on Gna! See the Gna! project page for details.</p>
+ title : The Mobile Trail Explorer Open Source Project on Open Hub
+ summary : <p>Mobile Trail Explorer is an application for user to view and record tracks using the mobile phone and GPS device. Recorded tracks can be exported in KML format on memory card so that they can be viewed in Google Earth application later on. Mobile Trail Explorer is mainly targeted for recording biking, hiking etc. trails.</p>
+
+<p>Software runs on Java platform so it is supported by many mobile phones. It is required that mobile phone supports Bluetooth connections (JSR 82) for GPS and File connection (JSR 75) for exporting trails.</p>
+ title : The Mobile RSS Reader Open Source Project on Open Hub
+ summary : <p>Mobile RSS Reader is a mobile Java MIDlet application that runs on Java enabled mobile phones and devices.</p>
+
+<p>User can store multiple RSS and ATOM feeds as bookmarks. Feeds can be imported from OPLM file.</p>
+ title : The fntsample Open Source Project on Open Hub
+ summary : <p>fntsample is a program for making font samples that show Unicode coverage of the font. The samples are similar in appearance to Unicode charts. Samples can be saved as PDF or PostScript files.</p>
+ title : The DejaVu fonts Open Source Project on Open Hub
+ summary : <p>The DejaVu fonts are a font family based on the Bitstream Vera Fonts. Its purpose is to provide a wider range of characters while maintaining the original look and feel.</p>
+ title : The Panopticode Open Source Project on Open Hub
+ summary : <p>The Panopticode project provides a standardized format for describing the structure of software projects and integrates metrics from several tools into that format. Reporting options provide correlation, historic analysis, and visualization.</p>
+ title : The mrim Open Source Project on Open Hub
+ summary : <p>XMPP to Mail.RU IM Transport</p>
+ title : The SWISDK 2 Open Source Project on Open Hub
+ summary : <p>This is a web application framework built with PHP 5.</p>
+
+<p>Its main strenghts lie in the area of:</p>
+
+<p>- Powerful database abstraction layer
+<br/>- Forms with server- and client-side validation rules and behaviors
+<br/>- Reusable widgets (Sortable/searchable TableView, etc.)
+<br/>- Permission system
+<br/>- Security (hopefully :-)
+<br/>- E_ALL|E_STRICT conforming
+<br/>- Template inheritance as an extension to the popular Smarty template engine</p>
+ title : The GTK+ Open Source Project on Open Hub
+ summary : <p>GTK+ is a multi-platform toolkit for creating graphical user interfaces. Offering a complete set of widgets, GTK+ is suitable for projects ranging from small one-off projects to complete application suites.</p>
+
+<p>GTK+ has been designed from the ground up to support a range of languages, not only C/C++. Using GTK+ from languages such as Perl and Python (especially in combination with the Glade GUI builder) provides an effective method of rapid application development.</p>
+ title : The GLib Open Source Project on Open Hub
+ summary : <p>GLib is the low-level core library that forms the basis of GTK+ and GNOME. It provides data structure handling for C, portability wrappers, and interfaces for such runtime functionality as an event loop, threads, dynamic loading, and an object system.</p>
+ title : The cgen Open Source Project on Open Hub
+ summary : <p>CGEN, the Cpu tools GENerator</p>
+
+<p>CGEN (pronounced seejen) is a framework for developing generators of CPU-related tools such as assemblers, disassemblers and simulators. It specifies a description language for describing the architecture and organization of a CPU without reference to any particular application. Additional applications can be written within the framework. CGEN is written in Scheme and can be run under the GNU Guile interpreter. It is placed under a free software license.</p>
+ title : The JCT Open Source Project on Open Hub
+ summary : <p>JCT lets you draw and edit thematic maps.</p>
+
+<p>It was made by two EIVD students (Switzerland) for DFJ.</p>
+
+<p>JCT is written in Java, it runs on Mac OS X, Windows and Linux.</p>
+
+<p>It is free software, under GNU GPL licence (see restriction below).</p>
+ title : The Joda Time Open Source Project on Open Hub
+ summary : <p>Joda-Time provides a quality replacement for the Java date and time classes. The design allows for multiple calendar systems, while still providing a simple API. The &#39;default&#39; calendar is the ISO8601 standard which is used by XML. The Gregorian, Julian, Buddhist, Coptic and Ethiopic systems are also included, and we welcome further additions. Supporting classes include time zone, duration, format and parsing.</p>
+ title : The Canoo WebTest Open Source Project on Open Hub
+ summary : <p>Canoo WebTest is a free open source tool for automated testing of web applications.</p>
+
+<p>It calls web pages and verifies results, giving comprehensive reports on success and failure.</p>
+ title : The JWebUnit Open Source Project on Open Hub
+ summary : <p>JWebUnit is a Java framework that facilitates creation of acceptance tests for web applications. It evolved from a project where we were using JUnit to create acceptance tests. Also, we can have different testing engines. Currently, only HtmlUnit plugin is ready. As the tests were being written, they were continuously refactored to remove duplication and other bad smells in the test code. JWebUnit is the result of these refactorings.</p>
+
+<p>JWebUnit provides a high-level API for navigating a web application combined with a set of assertions to verify the application&#39;s correctness. This includes navigation via links, form entry and submission, validation of table contents, and other typical business web application features.</p>
+ title : The Vienna 2.2 Open Source Project on Open Hub
+ summary : <p>Vienna is a freeware, open source RSS/Atom newsreader for the Mac OS X operating system. It provides features comparable to commercial newsreaders, but both it and the source code are freely available for download.</p>
+ title : The Groovy XML-RPC Open Source Project on Open Hub
+ summary : <p>Provides a very easy way of implementing XML-RPC servers and clients in Groovy</p>
+
+<p>Also supports Jabber-RPC which allows Jabber transports (like GTalk) to be used to support RPC servers and clients</p>
+ title : The Carrot2 Open Source Project on Open Hub
+ summary : <p>Carrot2 is an Open Source Search Results Clustering Engine. It can automatically organize (cluster) search results into thematic categories.
+<br/>Carrot2 provides an architecture  for acquiring search results from various sources (YahooAPI, GoogleAPI, MSN Search API, OpenSearch, Lucene index), clustering the results and visualising the clusters. Currently, 5 clustering algorithms  are available that are suitable for different kinds of document clustering tasks.</p>
+ title : The Grails Open Source Project on Open Hub
+ summary : <p>Grails aims to bring the &quot;coding by convention&quot; paradigm to  Groovy . It&#39;s an open-source web application framework that leverages  the Groovy language  and complements Java Web development. You can use Grails as a standalone development environment that hides all configuration details or integrate your Java business logic.</p>
+
+<p>Grails aims to make development as simple as possible and hence should appeal to a wide range of developers not just those from the Java community.</p>
+ title : The Atlas for FlightGear Open Source Project on Open Hub
+ summary : <p>Atlas aims to produce and display high quality charts of the world for users of FlightGear, an open source flight simulator.</p>
+ title : The PLIB Open Source Project on Open Hub
+ summary : <p>PLIB includes sound effects, music, a complete 3D engine, font rendering, a simple Windowing library, a game scripting language, a GUI, networking, 3D math library and a collection of handy utility functions. All are 100% portable across nearly all modern computing platforms. What&#39;s more, it&#39;s all available on line - and completely free. Each library component is fairly independent of the others - so if you want to use SDL, GTK, GLUT, or FLTK instead of PLIB&#39;s &#39;PW&#39; windowing library, you can.</p>
+ title : The MOGRE (Managed OGRE) Open Source Project on Open Hub
+ summary : <p>An advanced C++/CLI wrapper for the OGRE 3D rendering engine, that integrates the native Ogre engine into the .NET framework seamlessly.</p>
+ title : The TeamEdit Open Source Project on Open Hub
+ summary : <p>TeamEdit is collaborative text editor: it lets several people write in the same document at the same time through the network. The original idea comes from the Mac OS X editor SubEthaEdit. TeamEdit has been written by six students at EIVD (Switzerland).</p>
+ title : xChat (Deleted 4308) : xChat (Deleted 4308) - Open Hub
+ title : The Bersirc Open Source Project on Open Hub
+ summary : <p>Bersirc is a multi-platform open source IRC client currently in development for the Windows, Linux, and Mac OS X operating systems. It utilises the Claro toolkit, which aims to provide an interface to native windowing systems and widgets on all operating systems.</p>
+ title : The climm Open Source Project on Open Hub
+ summary : <p>climm is a very portable text-mode instant messenger – it is known to compile under Linux, BSD, AIX, HPUX, Windows, AmigaOS and with restrictions BeOS.</p>
+
+<p>climm was named mICQ in the past and started as ICQ-clone. It&#39;s intended to be a multi-messenger which supports other networks like Jabber/XMPP as well.</p>
+ title : The Swift (WebKit Browser) Open Source Project on Open Hub
+ summary : <p>Swift is a Microsoft Windows native web browser that utilizes Apple&#39;s WebKit, which is a KHTML-based rendering system, to achieve superior load times. Although the web browser is in an early alpha version, and contains many bugs, it is the first KHTML based browser available for Microsoft Windows.</p>
+ title : The WebWork Open Source Project on Open Hub
+ summary : <p>WebWork is a Java web-application development framework. It is built specifically with developer productivity and code simplicity in mind, providing robust support for building reusable UI templates, such as form controls, UI themes, internationalization, dynamic form parameter mapping to JavaBeans, robust client and server side validation, and much more.</p>
+ title : The THE (The Hessling Editor) Open Source Project on Open Hub
+ summary : <p>THE is a powerful text editor modelled on the VM/CMS text editor XEDIT with the best features of Mansfield Software&#39;s Kedit.</p>
+ title : Duplicate Project 115 : Duplicate Project 115 - Open Hub
+ title : The Venkman Open Source Project on Open Hub
+ summary : <p>Venkman is the code name for Mozilla&#39;s JavaScript Debugger. Venkman aims to provide a powerful JavaScript debugging environment for Mozilla based browsers, including Firefox 2.x, the Netscape 7.x series of browsers and Mozilla Seamonkey 1.x. It does not  include Gecko-based browsers such as K-Meleon 1.02, Galeon 2.x and Netscape 8.x. The debugger is available as an add-on package in XPI format and has been provided as part of the Mozilla install distribution since October 3rd 2001.</p>
+ title : The Chiba Open Source Project on Open Hub
+ summary : <p>WARNING: Chiba development has stopped in 2010. The betterFORM Project (http://www.betterform.de) is the successor of Chiba. See https://www.ohloh.net/p/betterform.</p>
+ title : The The XML Database Object-Oriented Model Open Source Project on Open Hub
+ summary : <p>Xmldoom is now maintained on Gna! now: http://gna.org/projects/xmldoom/
+<br/>The CVS repository hosted here is historic, including all version up until 0.0.5. The source code is now hosted in GNU Arch on Gna! See the Gna! project page for details.</p>
+ title : The WSO2 (Tungsten) Open Source Project on Open Hub
+ summary : <p>WSO2 Web Services Application Server (formerly WSO2 Tungsten) is an application server for Web services, fully open source and licensed under the Apache Software License. With its built in high-performance Web server, full support for XML, SOAP, WSDL, and support for reliable, secure communications, WSO2 WSAS makes it simple and effective to create, consume and manage Web services.</p>
+ title : The Apache WSS4J Open Source Project on Open Hub
+ summary : <p>Apache WSS4J is an implementation of the OASIS Web services Security (WS-Security) specification in Java. It is primarily a Java library that can be used to sign and verify SOAP Messages with WS-Security information. Apache WSS4J can be used for securing Web services deployed in virtually any application server, but it includes special support for Apache Axis.</p>
+ title : The Apache Xindice Open Source Project on Open Hub
+ summary : <p>Apache Xindice is a database designed from the ground up to store XML data or what is more commonly referred to as a native XML database.</p>
+ title : Zimbra (duplicated) (Deleted 4321) : Zimbra (duplicated) (Deleted 4321) - Open Hub
+ title : The ZK Open Source Project on Open Hub
+ summary : <p>ZK is a highly productive open source Java web framework for building amazing enterprise web and mobile applications</p>
+ title : The Akregator (KDE) Open Source Project on Open Hub
+ summary : <p>Akregator is a news feed reader for the KDE desktop. It enables you to follow news sites, blogs and other RSS/Atom-enabled websites without the need to manually check for updates using a web browser. Akregator is designed to be both easy to use and to be powerful enough to read hundreds of news sources conveniently. It comes with Konqueror integration for adding news feeds and with an internal browser for easy news reading.</p>
+ title : The Kompare (KDE) Open Source Project on Open Hub
+ summary : <p>Kompare is a graphical difference viewer that allows you to visualize changes to a file. Whether you&#39;re a developer comparing source code, or you just want to see the difference between that research paper draft and the final document, Kompare is the tool you need.</p>
+ title : The KCachegrind (KDE) Open Source Project on Open Hub
+ summary : <p>KCachegrind is a KDE viewer of profiling data generated by Callgrind., </p>
+ title : The Valgrind Open Source Project on Open Hub
+ summary : <p>Valgrind is an award-winning suite of tools for debugging and profiling Linux programs. With the tools that come with Valgrind, you can automatically detect many memory management and threading bugs, avoiding hours of frustrating bug-hunting, making your programs more stable. You can also perform detailed profiling, to speed up and reduce memory use of your programs.</p>
+
+<p>The Valgrind distribution currently includes four tools: a memory error detector, a cache (time) profiler, a call-graph profiler, and a heap (space) profiler.</p>
+ title : The TemaTres Open Source Project on Open Hub
+ summary : <p>TemaTres is a web application to manage documentation languages - especially good at hierarchical thesauri and cataloging vocabularies but also useful for navigation structures</p>
+ summary : <p>GNU TeXmacs is a free wysiwyw (what you see is what you want) editing platform with special features for scientists. The software aims to provide a unified and user friendly framework for editing structured documents with different types of content (text, graphics, mathematics, interactive content, etc.). The rendering engine uses high-quality typesetting algorithms so as to produce professionally looking documents, which can either be printed out or presented from a laptop.</p>
+
+<p>The software includes a text editor with support for mathematical formulas, a small technical picture editor and a tool for making presentations from a laptop. Moreover, TeXmacs can be used as an interface for many external systems for computer algebra, numerical analysis, statistics, etc.</p>
+ title : The TeXmacs Open Source Project on Open Hub
+ title : The xdvi Open Source Project on Open Hub
+ summary : <p>Xdvi is a tool for previewing DVI files, so its main application is viewing the typeset results while editing or proofreading a (La)TeX file. It is not targeted at doing presentations or multimedia - there are other formats (e.g. PDF) and tools that are much better suited for that.</p>
+ title : The MaNGOS Open Source Project on Open Hub
+ summary : <p>MaNGOS is an object-oriented Massively Multiplayer Online Role-Playing Game Server (MMORPGS). It&#39;s an educational project, to help developers get familar with large scale C++ development projects.</p>
+ title : The mevenide2 Open Source Project on Open Hub
+ summary : <p>Maven 2 projects integration for Netbeans IDE. Allows to open any Maven2 project straight away and start coding. No project metadata synchronization.</p>
+
+<p>The downloadable version works in NetBeans 6.1. Alternatively, check the default NetBeans update center.</p>
+
+<p>Please note that NetBeans 6.5 Beta has a more uptodate version of Maven support on the update center and the Mevenide binaries shall not be used there.</p>
+
+<p>The sources of NetBeans Maven integration have been moved to hg.netbeans.org</p>
+
+<p>Update: The Maven integration is now natively bundled with NetBeans. No plugin is needed anymore.</p>
+ summary : <p>Dawn of Light is the first and only active open source server emulator for the MMORPG Dark Age of Camelot (DAOC), built using C# and the .NET 2.0 Framework.</p>
+ title : The Dawn of Light Open Source Project on Open Hub
+ title : The HiveMind Open Source Project on Open Hub
+ summary : <p>HiveMind is an services and configuration microkernel. Its features are also referred to as Inversion of Control (IoC) Container or Lightweight Container.</p>
+ title : The HylaFAX Open Source Project on Open Hub
+ summary : <p>HylaFAX is an enterprise-class system for sending and receiving facsimiles as well as for sending alpha-numeric pages.</p>
+
+<p>The software is designed around a client-server architecture. Fax modems may reside on a single machine on a network and clients can submit an outbound job from any other machine on the network.</p>
+ title : The Hyperic Open Source Project on Open Hub
+ summary : <p>Hyperic HQ is designed to maximize availability of all data center assets, where the demands of SOA, virtualization and composite applications are changing the pace and complexities of modern IT operations. HQ lets you monitor more than 60 platforms, servers, and services out of the box, with the most comprehensive technology coverage of any IT operations management software provider.</p>
+
+<p>HQ is built on an agent-server model and features auto-discovery, alerting, event and log tracking, remote corrective control actions, an extensible easy-to-use plugin model, and an intuitive web-based management portal.</p>
+ title : The Ingres Database Open Source Project on Open Hub
+ summary : <p>Ingres Database is the open source database management system that can reduce IT costs and time to value while providing the strength and features expected from an enterprise class database. Ingres Database is a leader in supporting business critical applications and helping manage the most demanding enterprise applications of Fortune 500 companies. Focused on reliability, security, scalability, and ease of use, Ingres contains features demanded by the enterprise while providing the flexibility of open source. Core Ingres technology forms the foundation, not only of Ingres Database, but numerous other industry-leading RDBMS systems a</p>
+ title : The Intalio Open Source Project on Open Hub
+ summary : <p>Offer Business Process Management Suite. Requires Registration.</p>
+ title : The Apache JAMES Project Open Source Project on Open Hub
+ summary : <p>The Apache Java Enterprise Mail Server (a.k.a. Apache James) is a 100% pure Java SMTP and POP3 Mail server and NNTP News server. James is a complete and portable enterprise mail engine solution based on currently available open protocols.</p>
+
+<p>James is also a mail application platform. We have developed a Java API to let you write Java code to process emails that we call the mailet API. A mailet can generate an automatic reply, update a database, prevent spam, build a message archive, or whatever you can imagine. A matcher determines whether your mailet should process an email in the server. The James project hosts the Mailet API, and James provides an implementation of this mail application platform API.</p>
+ title : The JasperIntelligence Open Source Project on Open Hub
+ summary : <p>JasperIntelligence is an open source business intelligence platform from JasperSoft, providing common services like security and metadata management, and the capability to easily add additional functionality.</p>
+ title : The jbilling Open Source Project on Open Hub
+ summary : <p>jbilling is a robust, billing solution. It is written in java programming language and supports the J2EE platform. It will scale from a single server processing just a handful of customers, to a cluster of servers dealing with millions of customers. It is OS and database independent, supporting Windows, Linux, Oracle, Postgres. Includes customer and employee web interfaces.</p>
+ title : The JBoss AOP Open Source Project on Open Hub
+ summary : <p>JBoss AOP is a 100% Pure Java aspected oriented framework usuable in any programming environment or tightly integrated with our application server. Aspects allow you to more easily modularize your code base when regular object oriented programming just doesn&#39;t fit the bill. It can provide a cleaner separation from application logic and system code. It provides a great way to expose integration points into your software. Combined with JDK 1.5 Annotations, it also is a great way to expand the Java language in a clean pluggable way rather than using annotations solely for code generation.</p>
+ title : The Buni Meldware Communication Suite Open Source Project on Open Hub
+ summary : <p>Buni is a community of open source software developers and users dedicated to the research and development of communication and collaboration software. Buni offers Meldware Communications Suite with Mail, a Calendar Server, Webmail, and a Secure Administration System.</p>
+ title : The The XML Database Object-Oriented Model Open Source Project on Open Hub
+ summary : <p>Xmldoom is now maintained on Gna! now: http://gna.org/projects/xmldoom/
+<br/>The CVS repository hosted here is historic, including all version up until 0.0.5. The source code is now hosted in GNU Arch on Gna! See the Gna! project page for details.</p>
+ title : Page Not Found - Open Hub
+ title : The Poppler Open Source Project on Open Hub
+ summary : <p>Poppler is a PDF rendering library based on the xpdf-3.0 code base., </p>
+ title : The BePDF Open Source Project on Open Hub
+ summary : <p>PDF reader based on xpdf for BeOS., </p>
+ title : The Flyspray Open Source Project on Open Hub
+ summary : <p>Flyspray is an uncomplicated, web-based bug tracking system written in PHP for assisting with software development.</p>
+
+<p>It was originally conceived when the Psi Jabber client project couldn&#39;t find a bugtracker that suited their needs, and has been made available for everyone to use for their own projects.</p>
+ title : The RapidSVN Open Source Project on Open Hub
+ summary : <p>SVN Graphical client for Windows, Linux, Mac OS/X, Solaris, BSD, AIX, ..., </p>
+ title : The GEGL Open Source Project on Open Hub
+ summary : <p>GEGL (Generic Graphics Library) is a graph based image processing framework.</p>
+
+<p>GEGLs original design was made to scratch GIMPs itches for a new compositing and processing core. This core is being designed to have minimal dependencies. and a simple well defined API.</p>
+
+<p>The GEGL software is part of the GEGL Project: https://www.ohloh.net/p/gegl-project</p>
+ title : The Elvyx Open Source Project on Open Hub
+ summary : <p>Elvyx is a tool designed to monitor and profile the jdbc activity.</p>
+
+<p>This jdbc profiler has a wrapper that intercept the access to the database and send this information to the elvyx server. The server receives the information, store the data into a database and serve this information to the client. The client shows sql statements, bound sql statements, elapsed time, elapsed time preparing the statements, etc.</p>
+ title : The Tiny Marbles CMS Open Source Project on Open Hub
+ summary : <p>Tiny Marbles is a Java-based Open Source content management system for articles, images, MP3 files and videos. It enables you to interactively organize and manage content and media files in an easy and intuitive way.</p>
+
+<p>The system is designed to manage a large number of users as well. Therefore Tiny Marbles is the perfect basis for a growing community platform.</p>
+ title : The OpenIDE Open Source Project on Open Hub
+ summary : No description has been added for this project.
+<a href="/p/4352/edit">Add description</a>
+ title : The Mokoi Gaming Open Source Project on Open Hub
+ summary : <p>Mokoi Gaming is a Open Game Platform, with easy to use creation tools. 
+<br/>Mokoi is being designed to work on any OS, Console or Handheld device. 
+<br/>We&#39;re also have projects to help with creating and sharing platform neutral games.</p>
+ title : The Easy PHP Data Objects (EZPDO) Open Source Project on Open Hub
+ summary : <p>A simple solution for PHP Object Relational Mapping and Data Persistence, </p>
+ title : The Motiro Open Source Project on Open Hub
+ summary : <p>Motiro is an ancient tupy word for a work gathering. During a motiro, people help each other in order to achieve a common goal like harvesting food or building houses. Motiro is also a project tracking tool.</p>
+
+<p>Everything in Motiro is designed to encourage collaboration. People can report project related events and track features with wiki pages. Everything can be edited using a MediaWiki-like language. There are even plans for allowing site design and layout to be editable by visitors.</p>
+ title : The JBoss Portal Open Source Project on Open Hub
+ summary : <p>JBoss Portal provides an open source platform for hosting and serving a portal&#39;s Web interface, publishing and managing its content, and customizing its experience.</p>
+ title : The Seam 2 Open Source Project on Open Hub
+ summary : <p>JBoss Seam is a powerful new application framework for building next generation Web 2.0 applications by unifying and integrating technologies such as Asynchronous JavaScript and XML (AJAX), Java Server Faces (JSF), Enterprise Java Beans (EJB3), Java Portlets and Business Process Management (BPM).</p>
+
+<p>Gavin King, Seam creator, is also the Expert Group lead on JSR-299 (http://jcp.org/en/jsr/detail?id=299) which is based on many of the concepts that are part of Seam.</p>
+ title : The JBoss Transaction Manager (Narayana) Open Source Project on Open Hub
+ summary : <p>JBoss acquired, opened and has developed the Java and Web Services distributed transaction management technology owned by Arjuna Technologies and HP. The acquisition included Arjuna Transaction Service Suite (ArjunaTS) and Arjuna&#39;s Web Services Transaction implementation, an implementation supporting both leading web services specifications Web Services Transaction (WS-TX) and Web Services Composite Application Framework (WS-CAF).</p>
+
+<p>Narayana is a transactions toolkit which provides support for applications developed using a broad range of standards-based transaction protocols:
+<br/>1. JTA
+<br/>2. JTS
+<br/>3. Web-Service Transactions
+<br/>4. REST Transactions
+<br/>5. STM
+<br/>6. XATMI/TX</p>
+ title : The JetSpeed 2 Open Source Project on Open Hub
+ summary : <p>Jetspeed is an Open Source implementation of an Enterprise Information Portal, written in Java and XML. Within a Jetspeed portal, individual portlets can be aggregated to create a page. Each portlet is an independent application with Jetspeed acting as the central hub making information from multiple sources available in an easy to use manner.</p>
+ title : The Jitterbit Open Source Project on Open Hub
+ summary : <p>Jitterbit is an open source client and server designed to give end users a quick and easy way to design, configure, test, and deploy integration solutions. Organizations can use Jitterbit to connect data from ERP and CRM applications, data warehouses, online marketplaces, and much more. Jitterbit supports Web Services, XML Files, HTTP/S, FTP, ODBC, Flat and Hierarchic file structures and file shares. To see a full list of protocol and document support please read our datasheet.</p>
+ title : The NetBSD Open Source Project on Open Hub
+ summary : <p>NetBSD is a free, secure, and highly portable Unix-like Open Source  operating system available for many platforms, from 64-bit Opteron machines and desktop systems to handheld and embedded devices. Its clean design and advanced features make it excellent in both production and research environments, and it is user-supported with complete source. Many applications are easily available through pkgsrc, the NetBSD Packages Collection.</p>
+
+<p>OpenHUB results caution:
+<br/>Check the &quot;Analyzed n months ago&quot; line before concluding anything about recent project activity, and the repo download status before judging single contributors.</p>
+ title : The Bonita Open Solution Open Source Project on Open Hub
+ summary : <p>Bonita is a workflow/BPM solution for handing long-running, user-oriented workflows providing out of the box workflow functionalities to handle your business processes.</p>

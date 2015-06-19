@@ -1,0 +1,500 @@
+ title : The The XML Database Object-Oriented Model Open Source Project on Open Hub
+ summary : <p>Xmldoom is now maintained on Gna! now: http://gna.org/projects/xmldoom/
+<br/>The CVS repository hosted here is historic, including all version up until 0.0.5. The source code is now hosted in GNU Arch on Gna! See the Gna! project page for details.</p>
+ title : The ms-spectre Open Source Project on Open Hub
+ summary : <p>MS-Spectre is a visualisation and analysis tool for mass spectrometry. It provides (Quantitiave) analysis of multiple ls-ms(ms) runs, using mzXML import of raw data coming from spectrometers. MS-Spectre incorporates visualisation, analysis and export tools.</p>
+ title : The iFrame Open Source Project on Open Hub
+ summary : <p>iFrame is a simple MVC web framework for PHP., </p>
+ title : The XML Catalog Manager Open Source Project on Open Hub
+ summary : <p>XML Catalog Manager (xmlcatmgr in its short form) is a small utility used to manipulate SGML and XML catalogs. It is extremely small and lightweight, specially designed to be run from packaging systems. Basically, it allows adding and removing entries from catalogs, in a completely automated way.</p>
+ title : The Buildtool Open Source Project on Open Hub
+ summary : <p>Buildtool is a highly integrated shell based build infrastructure. It can be used in the development of any kind of software package, like standalone programs, shared libraries or documentation packages due to its modularity. Furthermore, it is completely free, licensed under the terms of the revised BSD license, which basically means that it suits perfectly free projects as well as commercial development.</p>
+ title : The Menu2WM Open Source Project on Open Hub
+ summary : <p>menu2wm is a program that reads an abstract menu specification written in XML and converts it to the format used by the most popular window managers. As of March 6th, 2005, this project is marked as dead.</p>
+ title : The Evergreen Open Source Project on Open Hub
+ summary : <p>An enterprise-class Integrated Library System (ILS)., </p>
+ title : The Samba pdb-sql* plugins Open Source Project on Open Hub
+ summary : <p>Pdbsql provides three samba passdb backend modules:</p>
+
+<p>    * pdb_mysql: A mysql passdb backend
+<br/>    * pdb_pgsql: A postgresql passdb backend
+<br/>    * pdb_multi: A backend which loads multiple passdb backends</p>
+ title : The shroudBNC Open Source Project on Open Hub
+ summary : <p>shroudBNC is a modular IRC proxy written in C++. It is capable of proxying IRC connections for multiple users. Using TCL scripts it can be extended.</p>
+
+<p>Amongst its features you can find a user-friendly web interface (coded in TCL and PHP) which allows you to easily create and manage users. A live demonstration of the web interface can be viewed here. Some screenshots are also available.</p>
+
+<p>A variety of operating systems are currently supported: Linux, FreeBSD (and possibly other variations of BSD) and Windows.</p>
+ title : The AndroMDA Plugins Open Source Project on Open Hub
+ summary : <p>This project is a community platform for plug-ins for the code generator AndroMDA. Here, users of AndroMDA can share and contribute any plug-in they like, e.g. cartridges, repositories, template-engines, metafacades, translation libraries, and so on.</p>
+ title : The ROBOTester Open Source Project on Open Hub
+ summary : <p>ROBOTester is an unittest framework for C. It is a combination of a perl program that carries out the tests and parses the output and  a library to create testcases.</p>
+ title : The libpng Open Source Project on Open Hub
+ summary : <p>libpng is the official PNG reference library. It supports almost all PNG features, is extensible, and has been extensively tested for over 17 years.</p>
+
+<p>libpng is available as ANSI C source code and requires zlib 1.0.4 or later (1.2.3 or 1.1.4 recommended due to potential security vulnerabilities in earlier versions). In addition to the main library sources, libpng includes the rpng, rpng2 and wpng demo programs, the pngminus demo program, a subset of Willem van Schaik&#39;s PngSuite test images, and Willem&#39;s VisualPng demo program.  Configure, CMake, Visualc projects, and various makefiles are included for building libpng.</p>
+
+<p>Libpng is under the libpng license.</p>
+ title : The phpCodeGenerator Open Source Project on Open Hub
+ summary : <p>phpCodeGenerator is a free database driven website code generator. It reads the database and generates a website with the ability to Create, List, Edit, Update, Delete and Search Records.
+<br/>Tested and working against:</p>
+
+<p>   1. mySQL
+<br/>   2. microsoft access
+<br/>   3. postgreSQL
+<br/>   4. More to follow.....</p>
+ title : The libjpeg Open Source Project on Open Hub
+ summary : <p>A widely used free library for JPEG image compression., </p>
+ title : The The XML Database Object-Oriented Model Open Source Project on Open Hub
+ summary : <p>Xmldoom is now maintained on Gna! now: http://gna.org/projects/xmldoom/
+<br/>The CVS repository hosted here is historic, including all version up until 0.0.5. The source code is now hosted in GNU Arch on Gna! See the Gna! project page for details.</p>
+ title : The Mapstraction Open Source Project on Open Hub
+ summary : <p>Mapstraction is a library that provides a common API for various javascript mapping APIs to enable switching from one to another as smoothly as possible. Developers can code their applications once, and then easily switch mapping provider based on project needs, terms and conditions, and new functionality.</p>
+
+<p>Users can switch maps as desired based on personal taste and quality of maps in their local area. Various tools built on top of Mapstraction allow users to easily integrate maps into their own sites, and configure them with different controls, styles, and provider.</p>
+ title : The Mashup Kursliteratur Open Source Project on Open Hub
+ summary : <p>Mashup Kursliteratur is a project for the Open Source e-learning and collaboration platform for colleges and universities &quot;eStudy&quot;. It is created during a software engineering course at the University of Applied Sciences Gießen.
+<br/>This Mashup adds the possibility to search for Books through APIs from Amazon and AbeBooks. These Books can be saved to let students know, which Book are essential for their study on a given subject. All Books have a status indicating the availability of it at the local university library.
+<br/>It is also possible to add links to eBooks.
+<br/>Each literature entry can be discussed by all course participants. Other members of eStudy can view these discussions as well as the literature entries itself.</p>
+ title : The CdFly Open Source Project on Open Hub
+ summary : <p>CdFly is a crossplatform CD collection manager written in c++ using the brand-new qt4 library by trolltech and storing its data in a sqlite3 database. Supported platforms are Linux and Windows. Mac OS X should work too but is not tested.</p>
+ title : The Revhosts Open Source Project on Open Hub
+ summary : <p>Revhosts attempt to enumerate virtual hosts to a given IP address. The tool revhosts is based on a plugins system, each plugin has its own autonomy and can be completely coded apart from revhosts.</p>
+ title : The MTBrowser Open Source Project on Open Hub
+ summary : <p>MTBrowser, Program useful for web designers who want to test websites in different web browsers. Detects already installed browsers and opens up a web page/site for testing in all these browsers in one click. Also contains a pixel to % to em converter.</p>
+ title : The CS2 Open Source Project on Open Hub
+ summary : <p>CS2 stands for C# Code Search. It&#39;s an academic project developed for the course of Information Retrieval at Università di Modena e Reggio Emilia, Italy.</p>
+ title : The Lucene.Net Open Source Project on Open Hub
+ summary : <p>Lucene.Net is a source code, class-per-class, API-per-API and algorithmatic port of the Java Lucene search engine to the C# and .NET platform utilizing  Microsoft .NET Framework.</p>
+ title : The Project 6224 Open Source Project on Open Hub
+ summary : No description has been added for this project.
+<a href="/p/6224/edit">Add description</a>
+ title : The Radiance Open Source Project on Open Hub
+ summary : <p>Radiance is also the name of a physically based rendering package written largely by Greg Ward, initially at LBNL, EPFL, then SGI, now running Anyhere Software. It is a physically-based, image-generating, backward raytracer with very a powerful rendering engine. It is used worldwide for lighting analysis and can generate accurate values for radiance/luminance (W/sr.m²,cd/m²) and irradiance/illuminance (W/m,Lux).</p>
+ title : The clearskys payments Open Source Project on Open Hub
+ summary : <p>A selection of implementations and associated core classes that all a number of payment system API&#39;s to be easily integrated into a custom system.</p>
+
+<p>Initial API&#39;s will include PayPal, Google Checkout and Nochex</p>
+ title : The Mockrunner Open Source Project on Open Hub
+ summary : <p>Mockrunner is a lightweight framework for unit testing applications in the J2EE environment. It supports servlets, filters, tag classes and Struts  actions and forms. Furthermore it includes a JDBC, a JMS and a JCA test framework and can be used in conjunction with MockEJB  to test EJB based applications.</p>
+
+<p>Mockrunner extends JUnit and simulates the necessary behaviour without calling the real infrastructure. It does not need a running application server or a database. Furthermore it does not call the webcontainer or the Struts ActionServlet. It is very fast and enables the user to manipulate all involved classes and mock objects in all steps of the test. It can be used to write very sophisticated unit-tests for J2EE based applications without any overhead. Mockrunner does not support any</p>
+ title : The OpenSIMS Open Source Project on Open Hub
+ summary : <p>openSIMS is distributed via SourceForge under an Apache 2.0 License. OpenSIMS ties together NMap, Snort, and other open source tools into a Security Infrastructure Management System.</p>
+ title : The Orchestra Open Source Project on Open Hub
+ summary : <p>Orchestra is a complete solution for Business Process Orchestration. It is based on the BPEL (Business Process Execution Language) standard defined by the Oasis consortium. It proposes an execution engine but also a designer, an administration console and a monitoring tool. The entire solution is completely open source under the LGPL license.
+<br/>Orchestra provides the possibility to be plugged to ESBs. In particular Orchestra is proposed as the BPEL engine of the Petals JBI compliant ESB.</p>
+ title : The TinyButStrong Open Source Project on Open Hub
+ summary : <p>TinyButStrong is a library that enables you to dynamically create XML/HTML pages and any other files based on text source. It&#39;s a Template Engine for the PHP language. It enables you to easily display information from your database, but also to seriously harmonize and simplify your PHP programming.</p>
+
+<p>TinyButStrong is oriented to HTML but not specialized to Html. This means it can work as well with Text files, XML, RSS, RTF, WML, Excel (xml), ... The OpenTBS plug-in enables your to merge OpenOffice and Ms Office documents.</p>
+ title : The Horizon System Tools Open Source Project on Open Hub
+ summary : <p>HST are a set of CLI tools meant to ease administration of GNU/Linux systems (in terms of user accounts, groups, shares, email-adresses/aliases, permissions...).
+<br/>HST are built on a python lib which allows accessing the underlying system in an uniform way, whatever the service (shadow, samba, postfix, dhcpd and so on).</p>
+ title : The dsacheck Open Source Project on Open Hub
+ summary : <p>dsacheck is a python program that will check all the packages on a Debian system. Dsacheck will download dynamically the DSA (Debian Security Alert) news from the security webpage and build a list that will be compared to the locally installed packages.</p>
+ title : The SILC Open Source Project on Open Hub
+ summary : <p>The SILC Project develops the Secure Internet Live Conferencing protocol, which is designed to provide rich featured conferencing services and high security. The project has been coordinating the protocol development for the past few years and the protocol specifications are available through IETF. The goal is to fully standardize the SILC protocol in the IETF.
+<br/> </p>
+
+<p>The project also develops the reference implementation of the SILC protocol, both client and server side. For software developers the project has created SILC Toolkit which provides the libraries for third-party developers to integrate SILC support in their products. It&#39;s also responsible of coordinating the SILC Network, its development and maintenance, provides users public and free access to SILC network and its services.</p>
+ title : The bugnux Open Source Project on Open Hub
+ summary : <p>Bugnux is a complete Linux (mandriva) distribution that runs from a single bootable CD and runs entirely in RAM. Bugnux contains an extensive set of Open Source software testing tools that can be used for functional and performance testing. Standalone Tools to test GUI applications and Mozilla Firefox extensions pre-installed to aid in web application testing have been packaged. This virtually can turn any PC into black-box testing device without having to install any software. Bugnux also contains a set of stress and load testing tools that can be used to assist in testing performance of web applications.</p>
+ title : The Boca Open Source Project on Open Hub
+ summary : <p>Boca is a scalable multi-user RDF repository being developed by the IBM Adtech group in Cambridge. Boca is designed to make it possible to build RDF applications requiring features not commonly found in other RDF repositories, including:</p>
+
+<p>    * Named Graphs: Partitioning of data into sets of statements that can be named with a URI and later be accessed using that named graph&#39;s URI
+<br/>    * Replication: RDF from the server may be selectively cached on client machines and data can be persisted for offline access
+<br/>    * Security: Named graphs are secured using a role based access control system
+<br/>    * Revision history: All changes to named graphs are tracked and are available via API calls
+<br/>    * Notification: The client receives updates through a JMS Notification subsystem about changes to relevant triples and named graphs</p>
+ title : The Project 6236 Open Source Project on Open Hub
+ summary : No description has been added for this project.
+<a href="/p/6236/edit">Add description</a>
+ title : The Open Collab Open Source Project on Open Hub
+ summary : <p>Open Collab is an open source project inspired by the Sebetha Engine by The Coding Monkeys to allow multiple parties to edit a text document live across the internet and across multiple platforms. The server is being coded in Ruby and the client will be an Adobe AIR application meaning identical performance across platforms. Righn now the AIR runtime is avaliable for Windows and Mac OSX but Adobe say that a Linux version is on it&#39;s way. The source will also be available to download for development under the GNU General Public License meaning fast updates.</p>
+ title : The IRIS Reasoner Open Source Project on Open Hub
+ summary : <p>IRIS - Integrated Rule Inference System is an extensible reasoning engine for expressive rule-based languages (WSML Core/Flight/Rule), as well as description logic based languages (WSML-DL). Currently IRIS supports reasoning with WSML Core/Flight.</p>
+ title : The jdots Open Source Project on Open Hub
+ summary : <p>JDots, Java Dynamic Object Tree Software. A library/framework to create a dynamic tree of Java objects, for active method communication/propagation. Java implementation of the BEAST project.</p>
+ title : The jGnash Open Source Project on Open Hub
+ summary : <p>jGnash is a cross platform personal finance application written in Java. jGnash is a double entry system with support for multiple currencies. </p>
+
+<p>jGnash stores data in an XML file with custom schema. It can import Gnucash, QIF and OFX files.</p>
+
+<p>You can write scripts in JavaScript to extend jGnash functionality.</p>
+ title : The NeL Open Source Project on Open Hub
+ summary : <p>NeL is a MMORPG game development platform under GNU General Public License, initially built by Nevrax to power Ryzom (www.ryzom.com), and now maintained by Gameforge. Join the NeL community and develop your own online game as free software! 
+<br/>It contains a 3D engine, network engine, sound engines.</p>
+ title : The FireStats Open Source Project on Open Hub
+ summary : <p>FireStats is an Ajax  web statistics system with support various CMS like WordPress, Joomla, Drupal trac and more.
+<br/>FireStats shows you basic information about your page views and visitors, as well as advanced browser and OS distribution, countries and more.</p>
+
+<p>FireStats is translated to  multiple languages.</p>
+ title : The wxJavaScript Open Source Project on Open Hub
+ summary : <p>wxJavaScript started as a project for porting wxWidgets  to JavaScript. But at this time, wxJavaScript is a lot more. wxJavaScript has an Apache module mod_wxjs, an SQLite module, ... And many other modules are planned. So with wxJavaScript, you can write server side scripts for generating (x)html pages, system scripts, GUI applications, ... in one of the most used programming languages: JavaScript.</p>
+
+<p>wxJavaScript uses SpiderMonkey. SpiderMonkey is the JavaScript engine of Mozilla. E4X is activated in wxJavaScript. E4X is a programming language extension that adds native XML support to JavaScript.</p>
+ title : The MyJXTA Open Source Project on Open Hub
+ summary : <p>MyJXTA is an exemplary JXTA application that strives to showcase JXTA best practices for all core lib/apis via deployments of massive scale and provide a framework from which people can learn from and build upon. </p>
+
+<p>see: http://wiki.java.net/bin/view/Jxta/WhatIsMyJXTA</p>
+ title : The The XML Database Object-Oriented Model Open Source Project on Open Hub
+ summary : <p>Xmldoom is now maintained on Gna! now: http://gna.org/projects/xmldoom/
+<br/>The CVS repository hosted here is historic, including all version up until 0.0.5. The source code is now hosted in GNU Arch on Gna! See the Gna! project page for details.</p>
+ title : The SQLcoach Open Source Project on Open Hub
+ summary : <p>SQLcoach is a eLearning platform for sql..., </p>
+ title : The Ugamela Open Source Project on Open Hub
+ summary : <p>ogame clone, </p>
+ title : The StudiAnalyse Open Source Project on Open Hub
+ summary : <p>Visualization of your StudiVZ..., </p>
+ title : Cave App (Deleted 6249) : Cave App (Deleted 6249) - Open Hub
+ title : The BC Website Statistics Open Source Project on Open Hub
+ summary : <p>Brookins Consulting is proud to announce the stable release of the BC Website Statistics extension the first certified extension from the United States of America (USA) / North America.</p>
+
+<p>This extension consists of setting which hold the values received during your Google Analytics account creation, the template operators which provides the javascript dependencies required to collect page and related webshop customer and order statistics.</p>
+ title : The TappedAudio Open Source Project on Open Hub
+ summary : <p>TappedAudio is an audio library with an emphasis on the programming interface -- independent of the backend, written in highly-encapsulated C++ and using SWIG to present a unified API for C++, Python, Ruby, etc., regardless of the underlying audio platform.
+<br/>Features</p>
+
+<p>    * Direct support for JACK and PortAudio sound systems
+<br/>    * Indirect support for OSS, ALSA, JACK, CoreAudio, Windows DirectSound, SoundMapper, and more via PortAudio
+<br/>    * Support for a wide range of sound files via libsndfile    
+<br/>    * Supports recording and saving to file (e.g. wav, flac)
+<br/>    * Clean C++ API
+<br/>    * Maintained interface bindings for Python and Ruby
+<br/>    * Automatic resampling
+<br/>    * Streaming record and play from disk
+<br/>    * Software mixing
+<br/>    * Lots more..</p>
+ title : The MySQL Proxy Open Source Project on Open Hub
+ summary : <p>MySQL Proxy is a simple program that sits between your client and MySQL server(s) that can monitor, analyze or transform their communication. Its flexibility allows for unlimited uses; common ones include: load balancing; failover; query analysis; query filtering and modification; and many more.</p>
+ title : The Lilina Open Source Project on Open Hub
+ summary : <p>Lilina News Aggregator is a simple aggregator written in PHP. It can parse Atom and RSS feeds and uses the SimplePie library. It is XSS-safe thanks to the HTML Purifier library.
+<br/>It is designed to be simple and easy to use for beginners, although it does require a web server and FTP access to upload the files.</p>
+ title : The DFWiki Open Source Project on Open Hub
+ summary : <p>NWiki is the only wiki engine designed from scratch to be a part of a LMS. Its completely integrated with moodle and supports mediawiki markup, implements student grading and lots of features designed for educational use of wikis.
+<br/>NWiki will be distributed as the default wiki engine in Moodle 1.9 and on fall 2007 will support the OKI (Open Knowledge Iniciative ) standard, so will be interoperable also with other LMS OKI compliant, such as SAKAI.</p>
+ title : The Spring.NET RichClient Open Source Project on Open Hub
+ summary : <p>Inspired and influenced by the Java based Spring richclient project this projects goal is to help leveraging Springs power in desktop applications.</p>
+
+<p>Unlike the Java version, which uses a frame based attempt to provide views for different application aspects (just like web applications), one of the main goals of Spring.NET RichClient is to retain and further improve Windows Forms design-time capabilities. It provides dependency injection into forms and user controls as well as input validation based on the Spring.NET Validation Framework.</p>
+ title : The NHibernate VS.NET Extensions Open Source Project on Open Hub
+ summary : <p>NHibernate.DataBinding is a tiny NHibernate Extension that can be used to make the VS.NET GUI Builder aware of NHibernate mapped collections and thus eases Application development a lot.</p>
+ title : The pecl_rpc Open Source Project on Open Hub
+ summary : No description has been added for this project.
+<a href="/p/6257/edit">Add description</a>
+ title : The pecl_adt Open Source Project on Open Hub
+ summary : No description has been added for this project.
+<a href="/p/6258/edit">Add description</a>
+ title : The The Transterpreter Open Source Project on Open Hub
+ summary : <p>A small, portable virtual machine for the occam-pi programming language, enabling safe concurrency on everything from embedded platforms like the LEGO Mindstorms through desktop and server-class hardware.</p>
+ title : The Tellico Open Source Project on Open Hub
+ summary : <p>Tellico is a KDE application for organizing your collections., </p>
+ title : The Cobertura Open Source Project on Open Hub
+ summary : <p>Cobertura is a free Java tool that calculates the percentage of code accessed by tests. It can be used to identify which parts of your Java program are lacking test coverage. It is based on jcoverage.</p>
+ title : The Opticks Open Source Project on Open Hub
+ summary : <p>Opticks is a software framework that enables video and image processing. It allows users to load numerous types of video and image file formats, geo-reference  image data, display and playback video and images, build algorithms to process images and video,  and save the results as new images and video.  Additionally, the Opticks public API allows software engineers to develop and add new software plug-ins, thereby expanding and customizing the Opticks functionality.</p>
+ summary : <p>poldek is a full-featured frontend to RPM package manager. Its core features are similar to every modern package updater like APT. Features include package installation, upgrading and removal with automatic dependency handling, querying/ search the package database and many more.</p>
+ title : The poldek Open Source Project on Open Hub
+ title : The tcpreplay Open Source Project on Open Hub
+ summary : <p>Tcpreplay is a suite of BSD licensed tools written by Aaron Turner for UNIX (and Win32 under Cygwin) operating systems which gives you the ability to use previously captured traffic in libpcap format to test a variety of network devices. It allows you to classify traffic as client or server, rewrite Layer 2, 3 and 4 headers and finally replay the traffic back onto the network and through other devices such as switches, routers, firewalls, NIDS and IPS&#39;s. Tcpreplay supports both single and dual NIC modes for testing both sniffing and inline devices.</p>
+
+<p>Tcpreplay is used by numerous firewall, IDS, IPS and other networking vendors, enterprises, universities, labs and open source projects.</p>
+ title : The YAGS Open Source Project on Open Hub
+ summary : <p>Yet Another Genetics Simulator</p>
+
+<p>Student(s) will design and implement a robust web application using Ruby on Rails to simulate basic genetics of inheritance. The resulting program will allow users to conduct breeding experiments with virtual organisms (e.g., virtual fruit flies) that allow them to see patterns of inheritance and to determine the modes of inheritance that are in operation. In addition, the software will produce assessment/feedback reports that can be used by Biology faculty whom will serve as “clients” in this software engineering project.</p>
+ title : The Pardus Linux Open Source Project on Open Hub
+ summary : <p>Pardus is a GNU/Linux distribution developed by BTE/TUBITAK according to computer literates&#39; basic desktop needs; uses existing distributions&#39; dominant parts as concept, architecture or code; provides easy use, configuration, installation with configuration environment and tools that can be converted to an autonomous system.</p>
+ title : The MatrixSSL Open Source Project on Open Hub
+ summary : <p>PeerSec Networks MatrixSSL™ is an embedded SSL implementation designed for small footprint applications and devices. PeerSec MatrixSSL allows secure management of remote devices.</p>
+
+<p> &lt; 50KB total footprint with crypto provider
+<br/> SSLv3, TLS, SSH server and client support
+<br/> Included crypto library - RSA, AES, 3DES, ARC4, SHA1, MD5
+<br/> Cipher Suites - RC4-MD5, RC4-SHA, DES-CBC3-SHA, AES128-SHA, AES256-SHA
+<br/> RSA public and private key generation
+<br/> X.509 certificate generation and signing</p>
+
+<p>MatrixSSL supports all operating systems and has been ported to OSs including VxWorks, uClinux, eCos, pSOS, Nucleus, BREW, Linux, Mac OS X, Windows and PocketPC. MatrixSSL has been deployed on systems with no OS, filesystem or memory management.</p>
+ title : The NPack Open Source Project on Open Hub
+ summary : <p>An implementation of linear algebra numerical structures and methods for the CLR. NPack is unique in that it uses generics for matrix element definitions, and a set of matrix operations via an interface, allowing a CLR-based operations engine as well as the opportunity to use GPGPU-based operation engines. NPack was initially ported from Java Matrix Package (JAMA) by the US National Institute of Standards and Technology (which was a Java reinterpretation of LINPACK).</p>
+ title : The Ruleby Open Source Project on Open Hub
+ summary : <p>Ruleby -- the Rule Engine for Ruby -- A pure Ruby Rule Engine -- Rete Algorithm, </p>
+ title : The Hydrogen@Home Open Source Project on Open Hub
+ summary : <p>Examining interactions between substrate and enzymes to identify optimal catalysts for hydrogen productions.</p>
+ title : The Apache Labs Open Source Project on Open Hub
+ summary : <p>Apache Labs is a place for innovation where committers of the foundation can experiment with new ideas. The aim is to provide the necessary resource to promote and maintain the innovative power within the Apache community without the burden of community building.</p>
+
+<p>Research efforts are intrinsically associated with a higher mortality rate and don&#39;t satisfy the established incubation and development practices. Labs provides a place for the Apache committer community to collaborate on such efforts - without discrimination of purpose, medium or implementation technology.</p>
+
+<p>Individual Labs are regularly evaluated to determine whether the lab should be terminated, continue to receive support and oversight, or proposed to the incubator as a seed for a new project.</p>
+ title : MetaComp : MetaComp - Open Hub
+ title : The Origo Open Source Project on Open Hub
+ summary : <p>Origo is a software and development platform based on a service oriented architecture that allows many people to work together to develop a software and also to stay connected to customers.</p>
+ title : The Goanna Open Source Project on Open Hub
+ summary : <p>This project provides a web services library for Eiffel. The library contains clusters that support servlets, end-points (HTTP, CGI, FastCGI), XML-RPC, SOAP, logging (log4e), DOM Level 2, and XML to DOM parsing.</p>
+ title : The GCstar Open Source Project on Open Hub
+ summary : <p>GCstar is a free open source application for managing your collections. Detailed information on each item can be automatically retrieved from the internet and you can store additional data, such as the location or who you&#39;ve lent it to. You may also search and filter your collection by many criteria.</p>
+
+<p>Current version manages these kind of collections: Movies; Video games; Books; Music; Numismatic; Wines; User defined collections.</p>
+ title : The The XML Database Object-Oriented Model Open Source Project on Open Hub
+ summary : <p>Xmldoom is now maintained on Gna! now: http://gna.org/projects/xmldoom/
+<br/>The CVS repository hosted here is historic, including all version up until 0.0.5. The source code is now hosted in GNU Arch on Gna! See the Gna! project page for details.</p>
+ summary : <p>Rubylets is a rails application that makes it easy to take normal ruby scripts and put them online with slick ajax input and output and minimal change to the script code.</p>
+
+<p>(It isn&#39;t written mostly in Javascript, that&#39;s just the included libraries.  It&#39;s a side-effect of Rubylets&#39; batteries-included approach.)</p>
+ title : The Rubylets Open Source Project on Open Hub
+ title : The dnAnalytics Open Source Project on Open Hub
+ summary : <p>dnAnalytics is a numerical library for the .NET Framework licensed under the Microsoft Public License. The library is written in C# and is available as a fully managed library, or as a native version that uses Intel® Math Kernel Library (MKL). The native version of dnAnalytics provides significantly better performance when working with large sets of data. dnAnalytics is compatible with .NET 2.0 or later, and Mono. The managed version will run on a Windows XP or newer, and any platform that supports Mono. The native version supports 32bit and 64bit versions of Windows XP or newer, and 32bit and 64bit versions of Linux.</p>
+ title : The Dbdb Open Source Project on Open Hub
+ summary : <p>Beginning of a JPDA-based integrated debugger (as an Eclipse plugin) for mixed-language applications. The proof-of-concept allows seamless stepping through from Java code into PL/SQL stored procedure and back.</p>
+ title : The Antenna Open Source Project on Open Hub
+ summary : <p>Antenna provides a set of Ant  tasks suitable for developing wireless Java applications targeted at the Mobile Information Device Profile  (MIDP)</p>
+ title : The jnotify Open Source Project on Open Hub
+ summary : <p>JNotify is a java library that allow java application to listen to file system events, such as:
+<br/>    * file created.
+<br/>    * file modified.
+<br/>    * file renamed.
+<br/>    * file deleted.</p>
+
+<p>JNotify works on both Windows (Windows 2000, XP, Vista) and Linux with INotify support (Kernel 2.6.14 and above).</p>
+ title : The Free Software Directory Open Source Project on Open Hub
+ summary : <p>The Free Software Directory is a collection of stable free software that has been fully checked for licensing and technical prerequisites.</p>
+ title : The Eclipse XPS Open Source Project on Open Hub
+ summary : <p>The Eclipse XPS plug-in shows the results of JUnit test runs using the Dell XPS&#39; built-in LEDs.</p>
+
+<p>The LED colors change when the JUnit test run starts, when a test fails and when the test run completes successfully. In the plug-in&#39;s preferences you can configure colors, brightness, which LEDs should be used and whether the LEDs should pulsate (glow) during the test run.</p>
+ title : The Mogblotor Open Source Project on Open Hub
+ summary : <p>Mogblotor is a compact yet efficient blogging platform for people who would like to concentrate on writing posts instead of maintaining their blogging software. It is designed to be easy to use, intuitive, extendable and architecturally superior to the alternative blogging platforms of today.</p>
+
+<p>Mogblotor is built on PHP5, Smarty templating engine and AdoDB data abstraction layer.</p>
+ title : The cCLiP Open Source Project on Open Hub
+ summary : <p>CLiP is a command line parser written in C++ featuring a flexible ease of use and fast execution.</p>
+
+<p>To use it you just need to add a line to your project, decide which options and arguments are supported and then include your functions file in the project. Then CLiP works!</p>
+ title : The RTMPy Open Source Project on Open Hub
+ summary : <p>RTMPy is a Twisted protocol implementing Adobe&#39;s Real Time Messaging Protocol, used for full-duplex real-time communication with applications running inside the Flash Player.</p>
+ title : The PHPUnit Pocket Guide Open Source Project on Open Hub
+ summary : <p>The PHPUnit Pocket Guide is a free book, published in print by O&#39;Reilly Media, that serves as the official documentation for PHPUnit.</p>
+ title : The OntoWiki Open Source Project on Open Hub
+ summary : <p>OntoWiki is a Semantic Data Wiki as well as an Application Framework providing support for agile, distributed knowledge engineering scenarios.</p>
+ title : The Junitour Open Source Project on Open Hub
+ summary : <p>Enhancement to ANT / Maven - JUnit Reports: 
+<br/>Adds an not-fully-implemented state (&#39;yellow&#39; or &#39;blue&#39;) to Junit test cases: 
+<br/>This gives an overview over how much not-fully-implemented tests exist.
+<br/>What is it good for? It helps combined with automatic testcase generation: the generated methods can contain this assertion and will be reported in JunitReports.</p>
+ title : The Flamerobin Open Source Project on Open Hub
+ summary : <p>FlameRobin is an administration and management GUI tool for the Firebird DBMS written in C++ using wxWidgets and IBPP libraries.</p>
+
+<p>The goal of the project is to build a lightweight, cross-platform application which doesn&#39;t have any closed-source dependency for either building or running.</p>
+ title : The Codesquale Open Source Project on Open Hub
+ summary : <p>CodeSquale is an Open Source project, initialized by Ajilon. It aims to provide a source code static and external audit professionnal tool.</p>
+ title : The MondayMania Open Source Project on Open Hub
+ summary : <p>MondayMania is a custom developed application to manage scheduling, auditing and internal communications for a promotional organisation.</p>
+ title : The Bioconductor Open Source Project on Open Hub
+ summary : <p>Bioconductor is an open source and open development software project for the analysis and comprehension of genomic data.</p>
+
+<p>The project was started in the Fall of 2001. The Bioconductor core team is based primarily at the Fred Hutchinson Cancer Research Center. Other members come from various US and international institutions.</p>
+ title : The PureFTPd Open Source Project on Open Hub
+ summary : <p>Pure-FTPd is a free (BSD), secure, production-quality and standard-conformant FTP server. It doesn&#39;t provide useless bells and whistles, but focuses on efficiency and ease of use. It provides simple answers to common needs, plus unique useful features for personal users as well as hosting providers.</p>
+ title : The LDAP 2 SPARQL Open Source Project on Open Hub
+ summary : <p>LDAP 2 SPARQL - Accessing RDF Knowledge Bases via LDAP Clients</p>
+
+<p>In order to exploit the client support of LDAP directories with the semantic expressivity of RDF knowledge bases, we aim at integrating RDF knowledge bases into LDAP directory services.</p>
+
+<p>LDAP 2 SPARQL is a Backend to the widely used OpenLDAP server. It translates LDAP queries into SPARQL queries, asks a SPARQL endpoint and translates the result back to LDIF.</p>
+ title : The Powl Open Source Project on Open Hub
+ summary : <p>The aim of the Powl - Semantic Web Development Plattform project is thus to deliver a PHP and web-based ontology edititing and management solution to the OpenSoure community.</p>
+ title : The Wacko Wiki Fork Open Source Project on Open Hub
+ summary : <p>This is a fork of the Wacko Wiki with many features and improvements. The main goal of this project was to create a wiki for our needs but now we think this project is interesting for the rest of the world :-)</p>
+ title : The Pax Wicket Open Source Project on Open Hub
+ summary : <p>Pax Wicket is an OSGi-based extension to the Wicket framework.</p>
+
+<p>The extension allows you to model the Wicket application, and move those model parts around and not be resolved until request time. You can add and remove parts of the Wicket application without restarting the application, simply by loading and unloading OSGi bundles. New sections can be added, and if properly prepared, menu items for those sections can be added to all existing pages.</p>
+ title : The Pax Runner Open Source Project on Open Hub
+ summary : <p>Painless OSGi framework startup and provisioning., </p>
+ title : The Pax Logging Open Source Project on Open Hub
+ summary : <p>The logging support in the standard Log Service of the OSGi specification is minimalistic and not entirely suitable for enterprise applications. This project tries to address this by extending the standard interface with additional interfaces and using a strong logging backend, the Apache Log4J. Pax Logging defines its own API, but more importantly it supports the Log4J and Jakarta Commons Logging APIs as well, making it easy to creata bundles that uses these common APIs, either directly in new code or usage residing inside 3rd party libraries.</p>
+ title : The Openology Open Source Project on Open Hub
+ summary : <p>The primary objective of the Openology project is to provide an easy integration of php applications on both the visual frontend and the functional backend. </p>
+
+<p>By providing standardized methods to integrate application, it will be easier for designer, developer and maintainers to use all the excellent open source applications together. User will also be able to enjoy a more unified experience.</p>
+ title : The Gtk+ Mac OS X Open Source Project on Open Hub
+ summary : <p>GTK+ port to Mac OS X, </p>
+ title : The Selenium Open Source Project on Open Hub
+ summary : <p>Selenium is a test tool for web applications. Selenium tests run directly in a browser, just as real users do. And they run in Internet Explorer, Mozilla and Firefox on Windows, Linux, and Macintosh. No other test tool covers such a wide array of platforms.</p>
+
+<p>    * Browser compatibility testing. Test your application to see if it works correctly on different browsers and operating systems. The same script can run on any Selenium platform.
+<br/>    * System functional testing. Create regression tests to verify application functionality and user acceptance.</p>
+ title : The Mona OS Open Source Project on Open Hub
+ summary : <p>A small, new and fast micro-kernel operating system written in C++.
+<br/>- Mona is neither POSIX nor a Windows clone.
+<br/>- Boots from floppy disk or CD-ROM.
+<br/>- Scheme(Lisp) based shell.
+<br/>- Kernel size is now 88KB(2007/05/27)
+<br/>- Works on IA32 x86 CPUs
+<br/>- Graphical user interface</p>
+ title : The The XML Database Object-Oriented Model Open Source Project on Open Hub
+ summary : <p>Xmldoom is now maintained on Gna! now: http://gna.org/projects/xmldoom/
+<br/>The CVS repository hosted here is historic, including all version up until 0.0.5. The source code is now hosted in GNU Arch on Gna! See the Gna! project page for details.</p>
+ title : The Eclipse Printers Open Source Project on Open Hub
+ summary : <p>Eclipse Printers is a plug-in that shows the details of all available printers. It lists each printer&#39;s name, DPI, page size and printable area.</p>
+ title : The OpenNeL Open Source Project on Open Hub
+ summary : <p>OpenNeL is a MMORPG game development platform under GNU General Public License, initially built by Nevrax to power Ryzom (www.ryzom.com), and now maintained by Gameforge. Join the OpenNeL community and develop your own online game as free software!</p>
+
+<p>It contains a 3D engine, network engine, AI and collision engines.</p>
+
+<p>OpenNeL is a community extension of the NeL (www.nevrax.org) project.</p>
+ title : The CheckME Open Source Project on Open Hub
+ summary : <p>CheckME system for easy knowledge testing. Includes test preparation, test process and administration.</p>
+ title : lucene-query-parser-util (Deleted 6309) : lucene-query-parser-util (Deleted 6309) - Open Hub
+ title : Project Tango : Project Tango - Open Hub
+ title : The GData4R Open Source Project on Open Hub
+ summary : <p>An open source Ruby client library for the Google data (GData) REST API.</p>
+ title : The The Tao Framework Open Source Project on Open Hub
+ summary : <p>The Tao Framework for .NET is a collection of bindings to facilitate cross-platform media application development utilizing the .NET and Mono platforms.</p>
+ title : The KMess Open Source Project on Open Hub
+ summary : <p>KMess is an alternative MSN Messenger / WLM chat client for Linux. It allows Linux users to chat with friends who use MSN Messenger in Windows or Mac OS. The strength of KMess is its integration with the KDE desktop environment, focus on MSN Messenger specific features and an easy-to-use interface.</p>
+ title : The SDL.NET Open Source Project on Open Hub
+ summary : <p>SDL.NET is a set of object-oriented .NET bindings for the SDL gaming library and provides high-level access to audio, keyboard, mouse, joystick, TTF fonts, various image formats, sound mixing, MPEG-1, 2D video framebuffer and 3D hardware via OpenGL.</p>
+ title : The BooGame Open Source Project on Open Hub
+ summary : <p>BooGame is an object oriented CLS-compliant, 2D game engine framework that provides high-level access to video, audio, keyboard, mouse, joystick, embedded scripting and various image formats. Written in C#, its target platforms are .NET 2.0 and Mono 2.0.</p>
+ title : The x2x Open Source Project on Open Hub
+ summary : <p>x2x allows the keyboard, mouse on one X display to be used to control another X display. It also shares X clipboards between the displays.</p>
+ title : The musicBox Open Source Project on Open Hub
+ summary : <p>musicBox is a music management system and audio player for Gnome., </p>
+ title : The RESTAPI Open Source Project on Open Hub
+ summary : No description has been added for this project.
+<a href="/p/6319/edit">Add description</a>
+ title : The BXE (Bitflux Editor) Open Source Project on Open Hub
+ summary : <p>Bitflux Editor is a browser based Wysiwyg XML Editor., </p>
+ title : The Popoon Open Source Project on Open Hub
+ summary : <p>Popoon is an open source XML Publishing framework. It&#39;s modelled after Cocoon and is completely written in PHP 5.</p>
+
+<p>Popoon is the publishing backend within Bitflux CMS, but it can be used independently from the CMS.</p>
+ title : The Prebuild Open Source Project on Open Hub
+ summary : <p>Prebuild is an XML-driven pre-build tool allowing developers to easily generate project or make files for major IDE&#39;s and .NET/Mono development tools including: Visual Studio 2005, Visual Studio 2003, SharpDevelop, SharpDevelop 2, MonoDevelop and NAnt.</p>
+ title : The Mono.Xna Open Source Project on Open Hub
+ summary : <p>Mono.XNA is a cross platform implementation of the XNA gaming framework. It runs on Windows, MacOS and Linux using OpenGL for 3D support.</p>
+ title : The Hewle Open Source Project on Open Hub
+ summary : <p>Hewle&#39;s going to become an open source portal aimed to help people by publishing tutorials and guides focused on a certain problem.</p>
+
+<p>Users are free to submit new articles covering any issues the site deals with.
+<br/>A ranking list is updated once a day and the &quot;best&quot; users will be awarded monthly.</p>
+
+<p>The source code of the portal (PHP+MySQL) is freely available and editable by everyone!</p>
+ title : The Moonlight Open Source Project on Open Hub
+ summary : <p>The free, open source and Mono-based implementation of Silverlight., </p>
+ summary : <p>The goal of the FreeHEP library is to encourage the sharing and reuse of Java code in High Energy Physics. Although some of the code is fairly specific to HEP, other code is more generic and could be used by anyone. To maximize reuse we strive to keep the dependencies between various packages in the FreeHEP library to a minimum, so you can use which ever parts interest you without being forced to use the entire library.</p>
+ title : The FreeHEP Java Libraries Open Source Project on Open Hub
+ title : The phpPgAds Open Source Project on Open Hub
+ summary : <p>PostgreSQL port of phpAdsNew</p>
+
+<p>&gt;&gt;&gt; Moved to OpenX, </p>
+ title : The NuclearBB Open Source Project on Open Hub
+ summary : <p>NuclearBB is a forum system with features you would expect of a modern day forum system. With our powerful, yet simple and easy to use administration interface, you can control every aspect of your forum.</p>
+ title : The DCMMS Open Source Project on Open Hub
+ summary : <p>A web-based maintenance management system for water and wastewater networks. Allows to store customer complaints and issue workorder sheets. Rather than using street names, maps and landmarks are used for navigation.</p>
+ title : The The XML Database Object-Oriented Model Open Source Project on Open Hub
+ summary : <p>Xmldoom is now maintained on Gna! now: http://gna.org/projects/xmldoom/
+<br/>The CVS repository hosted here is historic, including all version up until 0.0.5. The source code is now hosted in GNU Arch on Gna! See the Gna! project page for details.</p>
+ title : The SafeHTML Open Source Project on Open Hub
+ summary : <p>SafeHTML is an anti-XSS HTML parser written in PHP. It strips all potentially dangerous content within HTML: opening tags without closing tags, closing tags without opening tags, certain attributes (on*, data*, dynsrc, javascript:/vbscript:/about:, etc.), protocols, expressions or behavior in styles, and any other active content.</p>
+ title : The Javacup Open Source Project on Open Hub
+ summary : <p>Framework for controlling a football team. If you developed an algorith and you&#39;d participate a contest JavaCup.</p>
+ title : The MVFLEX Expression Language (MVEL) Open Source Project on Open Hub
+ summary : <p>The MVFLEX Expression Language (MVEL) is a high-performance, powerful property extraction and expression language for Java.</p>
+ title : The KInterbasDB Open Source Project on Open Hub
+ summary : <p>KInterbasDB is a Python extension package that implements Python Database API 2.0-compliant support for the open source relational database Firebird and some versions of its proprietary cousin Borland® Interbase®.</p>
+
+<p>In addition to the minimal feature set of the standard Python DB API, KInterbasDB also exposes nearly the entire native client API of the database engine.</p>
+ title : The Perl::Critic::Bangs Open Source Project on Open Hub
+ summary : <p>Perl::Critic::Bangs is a collection of Perl::Critic policies that will help make your code better.</p>
+ title : The Socialtext Open Open Source Project on Open Hub
+ summary : <p>Socialtext Open is the Open Source version of Socialtext&#39;s hosted enterprise-strength Wiki software, its Wikiwyg editor, and associated projects.</p>
+ title : The JMeeting Open Source Project on Open Hub
+ summary : <p>JMeeting is a next generation type of business or personal meeting. JMeeting will have audio, video and chat conferencing easily set up and viewable. JMeeting will be able to share and create presentations. During the meeting you can click present and it will present the presentation or document full screen to all users with a red laser to show important points.</p>
+ title : The Beagle dataframework Open Source Project on Open Hub
+ summary : <p>Beagle is a Java lightweight framework to fetch database entries in an optimized data structure.It can be useful in those application that need to a fast data access.It is designed around Agile Methodologies with pattern of Test Driven Development.</p>
+ title : The Irrlicht Plugins Open Source Project on Open Hub
+ summary : <p>We&#39;ve moved back to sourceforge, see project irrext.
+<br/>This source repository is deprecated.</p>
+ title : The mIrrlicht Open Source Project on Open Hub
+ summary : <p>This projects tries to port a popular 3d graphics engine irrlicht onto mobile devices.</p>
+
+<p>First we&#39;ll try to port it on symbian S60 platform. Later we&#39;ll also plan to port it on WindowsCE.</p>
+
+<p>NOTE on license:
+<br/>---------------
+<br/>Since this project is a port of irrlicht 3D-engine, the license is also the same as the irrlicht license, which you can find here http://irrlicht.sourceforge.net/license.html.</p>
+ title : The Irrlicht.Net CP Open Source Project on Open Hub
+ summary : <p>A cross-platform .Net wrapper for the Irrlicht Engine, </p>
+ title : The Lightfeather Open Source Project on Open Hub
+ summary : <p>Lightfeather is an open source 3D Engine for MacOSX, Windows and Linux.</p>
+
+<p>It is distributed under the zlib/libpng license which allows you to use it for any purpose whatsoever including commercial projects without the need to redistribute your changes in any form or even mentioning that you use it (although that would be nice, of course).</p>
+
+<p>Lightfeather started as IrrlichtNX, a CVS repository for the Irrlicht engine, in 2004.
+<br/>It has since been completely rewritten and is an independent project since June 2005.</p>
+
+<p>To use Lightfeather you need to be proficient in c++ programming It is geared towards intermediate to professional programmers and not towards beginners.</p>
+
+<p>Lightfeather uses Mercurial instead of cvs for a few months now so the statistics are outdated.</p>
+ title : The JIrr Open Source Project on Open Hub
+ summary : <p>Java bindings for the Irrlicht 3D Engine, </p>
+ title : The Bongo Open Source Project on Open Hub
+ summary : <p>Bongo is an easy-to-use mail and calendar system, offering a simple yet powerful user interface. The goal is to make sharing, organisation, and communication simpler, quicker, and more useful.</p>
+ title : The Npgsql Open Source Project on Open Hub
+ summary : <p>Npgsql is a .NET data provider for PostgreSQL. It allows any program developed for .NET framework to access database server. It is implemented in 100% C# code. Works with PostgreSQL 7.x and 8.x.</p>
+ title : The GeoAPI.NET Open Source Project on Open Hub
+ summary : No description has been added for this project.
+<a href="/p/geoapifoffo/edit">Add description</a>
+ title : The Tangram Open Source Project on Open Hub
+ summary : <p>Object Persistence / Object/Relational mapping tool for Perl., </p>
+ title : The encfs Open Source Project on Open Hub
+ summary : <p>EncFS provides an encrypted filesystem in user-space. It runs without any special permissions and uses the FUSE library and Linux kernel module to provide the filesystem interface. You can find links to source and binary releases below. EncFS is open source software, licensed under the GPL.</p>
+
+<p>As with most encrypted filesystems, Encfs is meant to provide security against off-line attacks; ie your notebook or backups fall into the wrong hands, etc. The way Encfs works is different from the “loopback” encrypted filesystem support built into the Linux kernel because it works on files at a time, not an entire block device. This is a big advantage in some ways, but does not come without a cost.</p>
+ title : The NTFS-3G Open Source Project on Open Hub
+ summary : <p>The NTFS-3G driver is an open source, freely available read/write NTFS driver for Linux, FreeBSD, OS X, and NetBSD. It provides safe and fast handling of the Windows XP, Windows Server 2003, Windows 2000 and Windows Vista file systems. Most POSIX file system operations are supported, with the exception of full file ownership and access right support.</p>
+ title : The AjaxEngine - Aspects of Ajax Open Source Project on Open Hub
+ summary : <p>The AJAX Engine that you can find here is built upon the webservice standard protocols SOAP and WSDL for transferring the data between the browser client and the web server.
+<br/>Features and criteria of this platform:</p>
+
+<p>Cross Browser compatible JavaScript framework, Using standard WebServices protocols for asynchronous client-server communications: (SOAP, WSDL), Multiple DataType and XML support, Automatic generation of JavaScript proxies for WebServices, Fast Response,
+<br/>AJAX Actions, queuing actions, scheduling actions, Many AJAX enabled web controls are available.</p>
+
+<p>Most of the framework is written in JavaScript. Server side adapters are available for ASP.NET, C# and Java.</p>
+
+<p>The Repository, discussion forums and  tracker is available on http://sourceforge.net/projects/ajaxengine/.</p>
+ title : The Polyquest Open Source Project on Open Hub
+ summary : No description has been added for this project.
+<a href="/p/6350/edit">Add description</a>
+ title : The dotnetlib Open Source Project on Open Hub
+ summary : <p>A collection of classes, controls, add-ins, or anything else that will assist a .NET developer.
+<br/>Currently it contains an advanced listview/treeview hybrid, with support to multiple columns ordering, visual styles and the possibility to embed any control in the list.</p>
+ title : The MONOSIM - Manage your sim card contacts Open Source Project on Open Hub
+ summary : <p>...is a simple application that can be used to read, write, update, delete and backup your sim card contacts. It open and save also some format files to manage your contacts also in a text files. To connect monosim to your smartcard you need use a standard PCSC smartcard reader as towitoko, acs, athena, blutronics, etc.</p>
+ title : The ekg Open Source Project on Open Hub
+ summary : <p>EKG is an open Gadu Gadu client for *nix platforms., </p>
+ title : The Kadu Open Source Project on Open Hub
+ summary : <p>Kadu is a dynamically evolving instant messenger compatible with the Gadu-Gadu and XMPP protocols. It can be run on all platforms supporting the Qt toolkit.</p>
+ title : The OpenGL-Image Open Source Project on Open Hub
+ summary : <p>Perl module that provides tight integration between OpenGL and various imaging libraries.</p>
+
+<p>In the case of ImageMagick, C pointers may be shared between GPU and IM&#39;s image cache for optimized performance.</p>
+ title : The OSBL Open Source Project on Open Hub
+ summary : <p>OSBL stands for Open Source Business Library. Its goal is to provide an open solution that efficiently supports work processes in a business environment. There are many Open Source components on the market, some of them of a very high quality, that provide solutions for individual aspects of this. However, individually they fall short in achieving a solution; the decisive factor is their integration into a coherent whole. The purpose of the OSBL is to achieve this integration. It combines several well-known Open Source components in a way that allows for an easy and effective implementation of process-driven web applications.</p>
+ title : The Whaaw! Media Player Open Source Project on Open Hub
+ summary : <p>Whaaw! Media Player (whaawmp) is a GTK+ Media player written in python and using the gstreamer backend.</p>
+ title : The PostgreSQL Autodoc Open Source Project on Open Hub
+ summary : <p>PostgreSQL Autodoc</p>
+
+<p>This is a utility which will run through PostgreSQL system tables and returns HTML, Dot, Dia and DocBook XML which describes the database.</p>
+
+<p>The default output may be changed or new types may be created by altering the Templates which control the text file formatting.</p>
+ title : The genvlin Open Source Project on Open Hub
+ summary : <p>genvlin provides plotting and data manipulating in a rich client platform (netbeans)</p>

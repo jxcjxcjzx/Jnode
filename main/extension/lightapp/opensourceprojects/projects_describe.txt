@@ -1,0 +1,65 @@
+ title : The The XML Database Object-Oriented Model Open Source Project on Open Hub
+ summary : <p>Xmldoom is now maintained on Gna! now: http://gna.org/projects/xmldoom/
+<br/>The CVS repository hosted here is historic, including all version up until 0.0.5. The source code is now hosted in GNU Arch on Gna! See the Gna! project page for details.</p>
+ title : The gtest Open Source Project on Open Hub
+ summary : No description has been added for this project.
+<a href="/p/6361/edit">Add description</a>
+ title : The Translate.org.za Open Source Project on Open Hub
+ summary : <p>Translation of various Open Source software into South African languages.  Creation of tools to aid language users: keyboards, fonts, locales in South Africa.</p>
+ title : The FUSS Open Source Project on Open Hub
+ summary : <p>Free Upgrade Southtyrol&#39;s Schools (FUSS) is a project funded by the European Social Fund which has upgraded the computer systems of all the italian schools in the Autonomous Province of Bolzano/Bozen, removing all the software with a proprietary license used in the school activity with the FUSS GNU/Linux Soledad distribution. The project has developed the software solution and released it under a free software license.</p>
+
+<p>The main goal of the project is to think about computer science as a trasveral tool for teaching and not only as a specific discipline or a simple work to learn to use a specific software solution, giving thus a valid support to the schools&#39; didactics.</p>
+ title : The NHibernate to NUnit Smart Generator Open Source Project on Open Hub
+ summary : No description has been added for this project.
+<a href="/p/6364/edit">Add description</a>
+ summary : <p>A privacy and security aware mailing list manager, perfect for allowing closed groups to interact on the Internet without interference from outsiders and former insiders.</p>
+ title : The Shibboleth Open Source Project on Open Hub
+ title : The freebookie Open Source Project on Open Hub
+ summary : <p>Free bookmaker application, </p>
+ title : The GWanderer Open Source Project on Open Hub
+ summary : <p>Gnome version of old UNIX puzzle game wanderer and xwanderer. The idea for the game came from the games &#39;Repton&#39;, &#39;Boulderdash&#39;.</p>
+ title : The Apache Axiom Open Source Project on Open Hub
+ summary : <p>AXIOM stands for AXis Object Model (also known as OM - Object Model) and refers to the XML infoset model that was initially developed for Apache Axis2. XML infoset refers to the information included inside the XML and for programmatical manipulation it is convenient to have a representation of this XML infoset in a language specific manner. For an object oriented language the obvious choice is a model made up of objects. DOM and JDOM are two such XML models. OM is conceptually similar to such an XML model by its external behavior but deep down it is very much different.</p>
+ title : The WSO2 Commons Open Source Project on Open Hub
+ summary : <p>WSO2 Commons contain components that are used in WSO2 products . These components include utilities, modules (that can be dropped in to Apache Axis2/Java) and add-ons to other Apache Web Services projects.</p>
+
+<p>WSO2 Commons components are released under Apache License v2.0</p>
+ title : The OpenTK Open Source Project on Open Hub
+ summary : <p>The Open Toolkit (OpenTK) is a free, fast, cross-platform C# wrapper for OpenGL, OpenGL ES, OpenAL and OpenCL.</p>
+
+<p>The bindings are strongly-typed and contain inline documentation for improved security and coding speed. Additional utilities integrate the bindings with .Net, making OpenTK especially suited to Rapid Application Development.</p>
+
+<p>OpenTK can be used alone or integrated into GUI toolkits, like Windows.Forms and GTK#. It runs on Windows, Linux and Mac OS X without recompilation, is easy to deploy and is compatible with all .Net languages: C#, VB.Net, C++/CLI, F#, IronPython, Boo, ...</p>
+ title : The Sjonsite Open Source Project on Open Hub
+ summary : <p>Small CMS with focus on content, written by Sjon, </p>
+ title : The Gabber 1 Open Source Project on Open Hub
+ summary : <p>Gabber is an easy yet powerful Jabber client for GNOME. Jabber is a powerful open source instant messaging system. Jabber allows communication with other networks, such as ICQ, AIM, MSN, Yahoo, and even IRC, but beyond that it has unique features of its</p>
+ title : The WSO2 ESB Open Source Project on Open Hub
+ summary : <p>The WSO2 ESB is a lightweight and easy-to-use Open Source Enterprise Service Bus (ESB) available under the Apache Software License v2.0. WSO2 ESB allows administrators to simply and easily configure message routing, virtualization, intermediation, transformation, logging, task scheduling, load balancing, failover routing, event brokering, etc.. The runtime has been designed to be completely asynchronous, non-blocking and streaming based on the Apache Synapse core.</p>
+
+<p>WSO2 ESB is developed on top of the revolutionary Carbon platform (Middleware a&#39; la carte), and is based on the OSGi framework to achieve the better modularity for your Service Oriented Architecture (SOA). This also contains a lots of new features and many other optional components to customize the behavior of the server.</p>
+ title : The igraph library Open Source Project on Open Hub
+ summary : <p>This is another library for creating and manipulating graphs. There is simply no other graph library out there which can be handle graphs of the size the author is confronted with efficiently. Whenever possible igraph tries to be also user friendly and portable.</p>
+
+<p>igraph started as an additional package to the GNU R statistical environment, and still some functions which are hard to implement in C are available only in R (like interactive graphics). Most functions are however now written in C and they can be compiled without R as a separate library.</p>
+ title : The jquery-decorated Open Source Project on Open Hub
+ summary : <p>This set of plug-in manipulates simple html fragments and turn them into somthing else ...
+<br/>Target is to make this new elements more user-friendly !
+<br/>Project is very young ... I don&#39;t have much time right now .. I&#39;ll update it as soon as I have an Internet connection at my home.</p>
+ title : The jslibs Open Source Project on Open Hub
+ summary : <p>jslibs is a standalone Javascript development environment whose aim is to turn Javascript into a general-purpose scripting language.
+<br/>jslibs provides a set of native modules that contains various general-purpose classes and functions.
+<br/>Some of these modules are simple wrappers to familiar libraries such as : zlib, SQLite, FastCGI, NSPR (Netscape Portable Runtime), ODE (Open Dynamics Engine), libpng, libjpeg, OpenGL, OpenAL, LibTomCrypt, libffi (Foreign function interface), ...
+<br/>whereas other modules provide tools to enhance Javascript programming : Print(), Load(), Exec(), Seal(), Expand(), Buffer class, ...
+<br/>The jslibs distribution comes with a small standalone command-line access program (jshost) that can be used to run Javascript files.</p>
+ title : The rtorrent Open Source Project on Open Hub
+ summary : <p>rtorrent is a BitTorrent client for ncurses, using the libtorrent library. The client and library is written in C++ with emphasis on speed and efficiency, while delivering equivalent features to those found in GUI based clients in an ncurses client.</p>
+ title : The libtorrent Open Source Project on Open Hub
+ summary : <p>LibTorrent is a BitTorrent library written in C++ for *nix, with a focus on high performance and good code. The library differentiates itself from other implementations by transfering directly from file pages to the network stack. On high-bandwidth connections it is able to seed at 3 times the speed of the official client.</p>
+ title : The libnss-sqlite Open Source Project on Open Hub
+ summary : <p>A name service switch module which use a SQLite database as backend., </p>
+ title : The jReform Open Source Project on Open Hub
+ summary : <p>jReform is a library for processing and validating HTML forms that aims to simplify web development by automating validation of form inputs.</p>
+ title : The JForum Open Source Project on Open Hub
+ summary : <p>JForum is a complete, powerful, database-independent and multi-threaded forum software. Features include unlimited forums and categories, topic watching, email notification, private messages, user ranking, an advanced permission schema, and moderation options. It provides support for many languages and customizable templates per user.</p>

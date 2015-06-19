@@ -2,7 +2,7 @@
 fs = require('fs');
 
 
-var writeStream = fs.createWriteStream("./tmp.js")
+var writeStream = fs.createWriteStream("./tmp.js");
 
 function getWriteStream(){
 	return writeStream;
