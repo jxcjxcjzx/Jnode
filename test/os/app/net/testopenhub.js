@@ -7,9 +7,7 @@ var downloadContent = "";
 
 
 
- var comm = require('../../../../main/src/lib/Comm/Asynchronous.js');
- 
-  var comm2 = require('../../../../main/src/lib/Comm/Asynchronous2.js');
+  var comm = require('../../../../main/src/lib/Comm/Asynchronous2.js');
 	
 var needRedirect = false;	
 
@@ -73,7 +71,10 @@ function get(url,param,tmpfilename){
 // for Comm lib execution 
 function jobDone(){
 	
-	http.get({host:'127.0.0.1', port:1340, path:'/?taskbegin',agent:false},function(res) {});
+	// for debug only 
+	// console.log(" entering jobDone for next tick :) ");
+	// http.get({host:'127.0.0.1', port:1340, path:'/?taskbegin',agent:false},function(res) {});
+	comm.defer();
 	
 }
 
@@ -156,11 +157,11 @@ function main(){
 	
 	// 8---404
 	
-	var tmp = comm.Promise.first(getprocess,['www.openhub.net,/p/1199']).then(parsetitleprocess,null).then(parsesummaryprocess,null);
+	var tmp = comm.Promise.first(getprocess,['www.openhub.net,/p/3599']).then(parsetitleprocess,null).then(parsesummaryprocess,null);
 	
 	
 
-	for(var i=6361+0;i<6364;i++){
+	for(var i=18205+3000;i<18205+5000;i++){
 		
 		tmp = tmp.then(getprocess,['www.openhub.net,/p/'+i.toString()]).then(parsetitleprocess,null).then(parsesummaryprocess,null);
 	

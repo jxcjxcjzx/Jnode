@@ -41,24 +41,14 @@ var url = require('url');
 		}			
 	}	
 	function init(){	
-		// init with a server run to sync all the required actions 
-		http.createServer(function(req,res){
-		// has to be simple 
-			var requesturl = req.url;
-			var params = url.parse(requesturl);	
-			// for debug 
-			// console.log(" get request : "+requesturl);				
-			if(params.query == 'taskbegin')   // push the index html page
-			{				
-				// console.log(" get request , ready to execFunction ");
-					// exec the function
-					taskManager.execFunction();
-			}	
-		  }
-		).listen(1340);
-		// no need to console.log 
-		// console.log('Server running at http://you know the ip:1340/?testit');	
+		// well do nothing .
 	}		
+	
+	function defer(){
+		// trigger the next move 
+		taskManager.execFunction();
+	}
+	
 	var Promise = {	
 		first : function(Func,args){		
 			// for debug 
@@ -92,5 +82,6 @@ var url = require('url');
  // doSth().then(doSth2).then(doSth);
 module.exports = {
 	Promise : Promise,
-	init : init 	
+	init : init,
+	defer : defer 
 }
