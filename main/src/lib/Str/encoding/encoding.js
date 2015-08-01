@@ -26,3 +26,25 @@
 	
 	
  }
+ 
+ // reference from Qt 
+ function codeFromName(name){
+	// name sample : "GB2312"
+	
+ 
+ }
+ 
+ function setCodecForLocale(codec){
+ 
+ }
+ 
+ function setCodecForStrings(codec){
+ 
+ }
+ 
+ function setCodecForTr(codec){
+ 
+ }
+ 
+ 
+ 

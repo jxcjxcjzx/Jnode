@@ -10,12 +10,14 @@ module.exports = {
 	},
 	
 	onCreate : function(){
-	
+		conf.run();
 	}
 	
 	,
 
 	consts : require("./consts.js"),
+	
+	conf : require("./conf.js")
 	
 	// some other tools you will need to add 
 	

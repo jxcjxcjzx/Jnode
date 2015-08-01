@@ -1,0 +1,10 @@
+// some sample use :
+
+var julius  = new Julius();
+
+julius.onrecognition = function(sentence){
+	console.log(sentence);
+};
+
+// say "hello world"
+// console.log >>> hello world 

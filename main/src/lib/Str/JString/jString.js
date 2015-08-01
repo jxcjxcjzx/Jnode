@@ -161,6 +161,9 @@
 
 // the main functions will be provided :
 
+
+match_string // 匹配两个字符串的最长共有串 
+
 charAt
 
 lastIndexOf
