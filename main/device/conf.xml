@@ -1,0 +1,19 @@
+<!--
+	there are some many target platforms
+-->
+
+<platforms>
+	<item> Windows </item>
+	<item> Mac </item>
+	<item> Linux/X11 </item>
+	<item> Solaris </item>
+	<item> Embedded Linux </item>
+	<item> Windows Embedded </item>
+	<item> Android </item>	
+	<item> QNX </item>	
+	<item> VxWorks </item>	
+	<item> Embedded Android </item>	
+	<item> iOS </item>	
+	<item> BlackBerry </item>	
+	<item> Salfish </item>	
+</platforms>

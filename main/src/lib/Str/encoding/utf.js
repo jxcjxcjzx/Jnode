@@ -35,7 +35,7 @@ function utf8to16(str){
 	len = str.length;
 	i=0;
 	while(i<len){
-		c = str.charCodeAr(i++);
+		c = str.charCodeAt(i++);
 		switch(c>>4){
 			case 0:
 			case 1:
@@ -64,3 +64,11 @@ function utf8to16(str){
 	return out;
 }
 
+
+module.exports = {
+
+	utf16to8 : utf16to8,
+	
+	utf8to16 : utf8to16
+
+}
