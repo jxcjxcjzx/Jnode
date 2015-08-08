@@ -93,6 +93,9 @@
 	}());
 
 	
+	
+	
+	
 	var HashMap = (function(){
 		
 		function HashMap(){
@@ -158,6 +161,25 @@
 	
 	}());
 
+var String = {
+	
+	// if this is made reference from, use TRANSLATE tag 
+	function revstr(str){
+		// reverse the string 
+		var length = str.length;
+		var i,c;
+		for(i=0;i<length/2;i++){
+			c = str[i];
+			str[i] = str[length-i-1];	
+		}
+		// at here, the str finished with str reverse 
+	},
+
+	
+
+};	
+	
+	
 
 // the main functions will be provided :
 
