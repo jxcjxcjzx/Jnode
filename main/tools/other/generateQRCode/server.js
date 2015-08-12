@@ -109,6 +109,8 @@ function htmlpush_server(string_to_generate_QRCode){
 
 }
 
+// htmlpush_server("http://nodejs.org/dist/v0.10.30/docs/api/");
+
 
 module.exports = {
 

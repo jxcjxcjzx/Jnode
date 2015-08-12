@@ -2,8 +2,8 @@
 // reference from web 
 var utf = require("./utf.js");
 
+var base64EncodeChars="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
-var base64EncodeChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 var base64DecodeChars = new Array(
 -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
 -1,-1,-1,-1,
@@ -21,6 +21,8 @@ var base64DecodeChars = new Array(
 35,36,37,38,39,40,
 41,42,43,44,45,46,47,48,49,50,
 51,-1,-1,-1,-1,-1);
+
+
 
 // transformed to utf.js 
  function utf8toutf16(str){
@@ -52,6 +54,7 @@ var base64DecodeChars = new Array(
 		if(i == len){
 			out+=base64EncodeChars.charAt(c1>>2);
 			out+=base64EncodeChars.charAt(((c1&0x3)<<4)|((c2&0xF0)>>4));
+			out+=base64EncodeChars.charAt((c2&0xF)<<2);
 			out+="=";
 			break;
 		}
@@ -65,7 +68,10 @@ var base64DecodeChars = new Array(
 	
  }
  
- function decode(b64){
+ // temporarily the decode function 
+ // will not be provided , INNER means the function will not be provided 
+ 
+ function decode_INNER(b64){
 	var c1,c2,c3,c4;
 	var i,len,out;
 	
@@ -73,14 +79,14 @@ var base64DecodeChars = new Array(
 	i=0;
 	out="";
 	while(i<len){
-		/*c1*/
+		//c1
 		do{
 			c1 = base64DecodeChars[b64.charCodeAt(i++)&0xff];
 		}while(i<len&&c1 == -1);
 		if(c1 == -1)
 		break;
 		
-		/*c2*/
+		//c2
 		do{
 			c2 = base64DecodeChars[b64.charCodeAt(i++)&0xff];
 		}while(i<len&&c2 == -1);
@@ -89,24 +95,24 @@ var base64DecodeChars = new Array(
 		
 		out+=String.fromCharCode((c1<<2)|((c2&0x30)>>4));
 		
-		/*c3*/
+		//c3
 		do{
 			c3 = b64.charCodeAt(i++)&0xff;
 			if(c3 == 61)
 			return out;
-			c3 = base64EncodeChars[c3];
+			c3 = base64DecodeChars[c3];
 		}while(i<len&&c3 == -1);
 		if(c3 == -1)
 		break;
 		
 		out+=String.fromCharCode(((c2&0xF)<<4)|((c3&0x3C)>>2));
 		
-		/*c4*/
+		//c4
 		do{
 			c4 = b64.charCodeAt(i++)&0xff;
 			if(c4 == 61)
 			return out;
-			c4 = base64EncodeChars[c4];
+			c4 = base64DecodeChars[c4];
 		}while(i<len&&c4 == -1);
 		if(c4 == -1)
 		break;
@@ -115,17 +121,18 @@ var base64DecodeChars = new Array(
 	}
 	return out;
  }
- 
+
  
  function inner_test(){
  
-	var str = "simple test";
+	var str = "simpletest";
 	var sEncoded = encode(utf16toutf8(str));
-	var sDecoded = utf8toutf16(decode(sEncoded));
+	// var sDecoded = utf8toutf16(decode_INNER(sEncoded));
 	
 	// test if str === sDecoded
 	console.log(" before encode : "+str);
-	console.log(" after decode : "+sDecoded);
+	console.log(" after encode  : "+sEncoded)
+	// console.log(" after decode : "+sDecoded);
  }
  
  

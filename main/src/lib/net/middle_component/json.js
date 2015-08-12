@@ -6,8 +6,14 @@ var json_ref = require("../../ref/JSON-js-master/json.js");
 
 
 var WRAPPER = {
-
-
+	
+	stringify : function(value, replacer, space){	
+		return JSON.stringify(value, replacer, space); 
+	},
+	
+	parse : function(text, reviver){
+		return JSON.parse(text, reviver); 
+	},
 
 };
 
@@ -23,8 +29,19 @@ var DEFAULTS = {
 function inner_test(){
 	
 	console.log(" entering  inner_test in json  ");
-	console.log(module.parent.filename);
 	
+	// WRAPPER.stringify(null,null,null);
+	
+	/*
+	var text = "date-20150810";
+	var myData = text.parseJSON(function (key, value) {
+                return key.indexOf('date') >= 0 ? new Date(value) : value;
+            });
+	*/
+	
+
+	var text = WRAPPER.stringify(['e', {pluribus: 'unum'}], null, '\t');
+	console.log(text);
 }
 
 

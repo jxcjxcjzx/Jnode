@@ -1,6 +1,6 @@
 
-  var ArrayList = (function(){
-		
+var ArrayList = (function(){
+	
 	function Iterator(array){
 		var index=  0;
 		this.hasNext = function(){
@@ -13,9 +13,9 @@
 			array.slice(index,1);
 		};			
 	};		
-	
-	
-	
+
+
+
 	function ArrayList(a){
 		
 		var array;
@@ -88,83 +88,83 @@
 		
 		this.toArray = function(){};
 		
-		return array
-		
-	}());
+		return array;
+	}
+}());
 
+
+
+
+
+var HashMap = (function(){
 	
-	
-	
-	
-	var HashMap = (function(){
-		
 		function HashMap(){
-			if(arguments.length===1&&arguments[0] instanceof hashMap){
-				return arguments[0].clone();
-			}
-			
-			var initialCapiticy = arguments.length >0?arguments[0]:16;
-			var loadFactor = arguments.length>1?arguments[1]:0.75;
-			var buckets = [];
-			buckets.length = initialCapiticy;
-			var count = 0;
-			var hashMap = this;
-			
-			function getBucketIndex (key){
-				
-			}
-			function ensureLoad(){}
-			
-			function iterator(conversion,removeItem)(){
-				function findNext(){}
-				
-				this.hasNext = function(){};
-				
-				this.next = function(){};
-				
-				this.remove = function(){};
-				
-				findNext();
-			}
-			
-			function Set(conversion,isIn,removeItem){
-				this.clear = function(){};
-				this.contains = function(){};
-				this.containsAll = function(o){};
-				this.isEmpty = function(){};
-				this.iterator = function(){
-					return new Iterator(conversion,removeItem);
-				};
-				this.remove = function(){};
-				// ......
-				
-			}
-			
-			function Entry(pair){
-				this._isIn = function(map){
-					return map === hashMap&&(pair.remove===undef);
-				};
-				this.equals = function(){};
-				this.getKey = function(){};
-				this.getValue = function(){};
-				this.hashCode = function(){};
-				this.setValue = function(){};
-			}
-			
-			this.clear = function(){};
-			this.clone = function(){};
-			this.containsKey = function(){};
-			
-			this.entrySet = function(){};
-			this.keySet = function(){};
+		if(arguments.length===1&&arguments[0] instanceof hashMap){
+			return arguments[0].clone();
 		}
-	
-	}());
+		
+		var initialCapiticy = arguments.length >0?arguments[0]:16;
+		var loadFactor = arguments.length>1?arguments[1]:0.75;
+		var buckets = [];
+		buckets.length = initialCapiticy;
+		var count = 0;
+		var hashMap = this;
+		
+		function getBucketIndex (key){
+			
+		}
+		function ensureLoad(){}
+		
+		function iterator(conversion,removeItem)(){
+			function findNext(){}
+			
+			this.hasNext = function(){};
+			
+			this.next = function(){};
+			
+			this.remove = function(){};
+			
+			findNext();
+		}
+		
+		function Set(conversion,isIn,removeItem){
+			this.clear = function(){};
+			this.contains = function(){};
+			this.containsAll = function(o){};
+			this.isEmpty = function(){};
+			this.iterator = function(){
+				return new Iterator(conversion,removeItem);
+			};
+			this.remove = function(){};
+			// ......
+			
+		}
+		
+		function Entry(pair){
+			this._isIn = function(map){
+				return map === hashMap&&(pair.remove===undef);
+			};
+			this.equals = function(){};
+			this.getKey = function(){};
+			this.getValue = function(){};
+			this.hashCode = function(){};
+			this.setValue = function(){};
+		}
+		
+		this.clear = function(){};
+		this.clone = function(){};
+		this.containsKey = function(){};
+		
+		this.entrySet = function(){};
+		this.keySet = function(){};
+	}
+
+}());
 
 var String = {
-	
+
 	// if this is made reference from, use TRANSLATE tag 
-	function revstr(str){
+	this.revstr = function(str){
 		// reverse the string 
 		var length = str.length;
 		var i,c;
@@ -174,15 +174,17 @@ var String = {
 		}
 		// at here, the str finished with str reverse 
 	},
-
 	
+	
+
 
 };	
-	
-	
+
+
 
 // the main functions will be provided :
 
+/*
 
 match_string // 匹配两个字符串的最长共有串 
 
@@ -249,7 +251,7 @@ copy
 append
 
 
-
+*/
 
 
 
