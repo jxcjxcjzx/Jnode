@@ -1,0 +1,35 @@
+* 首先说说项目的构成：
+
+大致的目录如此： （当然，后期对于项目的结构会有所改变）
+
+Jnode
+
+* doc
+	 * api
+	 * guide
+	 * zh-rCN
+	 * about.markdown
+* main
+	 * cmd
+	  * explore
+	 * compile
+	 * device
+	 * explore
+	 * extension
+	 * res
+	 * src
+	 * tmp
+	 * tools
+* framework
+ * src
+ * res
+ * REAdME
+* sample
+* test
+* ToDo
+* basic,js
+* cmd.js
+* conf.js
+* consts.js
+* finder.js
+* main.js
