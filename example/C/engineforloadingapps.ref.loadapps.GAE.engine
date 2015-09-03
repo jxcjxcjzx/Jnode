@@ -1,0 +1,5 @@
+
+ var engine = init.from(engineaddr);
+ var appinstance = engine.load(appUtil.from(appname));
+ 
+ 

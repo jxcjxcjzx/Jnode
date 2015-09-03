@@ -1,0 +1,29 @@
+
+ char* trim *in	{
+	char* src, * dest 
+	int freeze = 0  // do not know why this is needed 
+	
+	src = dest = in 
+	
+	while(*src)
+		if *src == ""
+			freeze = ! freeze
+			
+		if freeze||*src!=''
+			*desc+= *src
+			
+		src++
+		
+	end of while
+	
+	*dest = 0
+	
+	return in 
+ }
+ 
+ 
+ 
+ 
+	
+
+	

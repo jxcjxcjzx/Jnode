@@ -1,0 +1,11 @@
+
+ pngread  function 
+	AVCodecContext ctx 
+	AVFrame frame
+	AVPacket pkt
+	
+	data = av_malloc size
+	...
+	
+	
+	

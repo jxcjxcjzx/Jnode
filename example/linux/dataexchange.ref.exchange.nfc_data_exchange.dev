@@ -1,0 +1,15 @@
+
+ function data_exchange (dev,target,buf)
+	pr_debug first 
+	device_lock dev
+	allocate space for dev 
+	transfer the data via dev using space allcated 
+	
+	
+	
+	
+ function dev_up (dev struct)
+	pr_debug first 
+	device_lock dev
+	dev-ops-dev_up // make a call then 
+	
