@@ -13,6 +13,36 @@
  
  }; 
 
+ {
+	// 建议中的实现方式 -- css语法
+	#color-example {
+		text-align ； center;
+	},
+	.red {
+		background-color : #e74c3c !important;
+	}
+	
+	.blue {
+		background-color : #3498db !important;
+	}
+	
+	.green {
+		background-color : #2ecc71 !important;
+	}
+ 
+	.violet {
+		background-color : #9b59b6 !important;
+	}
+	
+	.orange {
+		background-color : #e67e22 !important;
+	}
+
+ 
+ }
+ 
+ 
+ 
 
  var colors = {
  

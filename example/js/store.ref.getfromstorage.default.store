@@ -1,0 +1,20 @@
+
+ Store[id ? 'post' : 'hot' ].query(queryClause,successFunc,failFunc);
+ 
+ function successFunc(data){
+	if id {  
+		data.postid = id;
+		setup [data]
+	}
+	
+	if ! data.collections 
+		return failFunc
+ 
+	setup data.collections
+	
+	Store.save('collections',data)
+ }
+ 
+ function fail(err){
+	...
+ }

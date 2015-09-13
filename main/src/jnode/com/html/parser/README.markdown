@@ -13,6 +13,23 @@ the parser lib in this dir is the key, but as thought this is not
 implemented directly but wrapper function lib in os/com corresponding lib.   
 
 
+something about ref  to make 
+--
+
+there is one sample of using this html parsing lib, this is it :  
+
+	var htmlparser = require htmlparser
+	var rawHtml = xxx
+	var handler = new htmlparser.DefaultHandler(function(err,dom){
+		if err ...
+		else [..parse done, do something...]
+	})
+	var parser = new htmlparser.Parser(handler)
+	parser.parseComplete(rawHtml)
+	sys.put(sys.inspect(handler.dom,false,null))
+
+the above thing made from the NodeHtmlParser
+
 plus
 --
 

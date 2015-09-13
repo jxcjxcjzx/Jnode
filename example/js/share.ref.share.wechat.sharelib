@@ -1,0 +1,13 @@
+
+// 微信的分享使用方法
+ Wechat.share({
+		message: title,
+		description : description,
+		thumb : thumbnail ? thumbnail.uri_...
+		media : {
+			type : Wechat.Type.WEBPAGE,
+			webpageurl : post.url
+		}
+	},
+	scene : index
+ );

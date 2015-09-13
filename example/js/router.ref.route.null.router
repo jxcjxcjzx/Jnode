@@ -1,0 +1,19 @@
+
+
+ router.get('/db',showdatabsse ) 
+	-- 其中 showdatabsse 是一个方法
+	
+ router.route('/:resource')
+	.get(list)
+	.post(create)
+	
+ router.route('/:resource/:id')
+	.get(show)
+	.put(update)
+	.patch(update)
+	.delete(destory)
+	
+	
+ return router 	
+ 
+ 

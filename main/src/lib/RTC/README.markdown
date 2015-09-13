@@ -1,6 +1,8 @@
 
+The rtc project dir 
+===
 
-	make reference from webRTC project 
-	in the web.
+this is rtc fucntion dir, for more details, make reference from webRTC project in the web.
 	
-	and use html5 js lib to control camera
+
+one small tip :	and use html5 js lib to control camera

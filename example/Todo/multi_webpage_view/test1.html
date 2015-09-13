@@ -1,0 +1,72 @@
+
+
+			<html>
+				<head>
+					<meta http-equiv="Content-Type" content="text/html; charset=GB2312" />
+					<meta name="title" content="" />
+					<meta name="subject" content="1.4.0" />
+					<meta name="kw" content="APP_KW" />
+					<meta name="language" content="CHINESE" />
+					<meta name="author" content="" />
+					<meta name="designer" content="" />
+					<meta name="generator" content="http://so.baiduyun.me" />
+					<meta name="publisher" content="http://so.baiduyun.me" />
+					<meta name="copyright" content="http://so.baiduyun.me" />
+					<meta name="abstract" content=" 百度网盘搜索引擎" />
+					<meta name="description" content=" 百度网盘搜索引擎" />
+					<meta name="distribution" content="global" />
+					<meta name="robots" content="all" />
+					<title>搜云论坛(荐)搜索| 百度网盘搜索引擎</title>
+					<link rel="stylesheet" type="text/css" href="http://so.baiduyun.me/css/style.css" title=" 百度网盘搜索引擎" />
+					<script src="http://so.baiduyun.me/js/jquery-1.4.js"></script>
+					<script src="http://so.baiduyun.me/js/cookie.js"></script>
+					
+					<script>			$(document).ready(function(){
+				
+				var count;
+				
+				if(readCookie("countNum") != ""){
+					count = readCookie("countNum");
+				}else{
+					count = 0;
+					writeCookie("countNum", count);
+				}
+				
+				$("#hide").click(function(){
+					var buttonName;
+					if(count ++ % 2 == 0){
+						parent.document.getElementById("full").cols = "100%,0";
+						buttonName = "隐藏左侧页面";
+					}else{
+						parent.document.getElementById("full").cols = "0,100%";
+						buttonName = "隐藏右侧页面";
+					}
+					$(this).val(buttonName);
+					writeCookie("buttonName", buttonName);
+					writeCookie("countNum", count);
+				});
+				
+				$("#show").click(function(){
+					parent.document.getElementById("full").cols = "50%,50%";
+				});
+				
+				
+				var buttonName;
+				
+				if(readCookie("buttonName") != ""){
+					buttonName = readCookie("buttonName");
+				}else{
+					buttonName = "隐藏右侧页面";
+				}
+				
+				$("#hide").val(buttonName);
+			});</script>
+				</head>	<frameset rows="116,*" cols="100%">
+		<frame src="http://baidu.com" name="search_top" id="search_top" noresize="noresize" scrolling="no" frameborder="0" marginwidth="0" marginheight="0" />
+		<frameset rows="100%" cols="50%,50%" id="full" name="full">
+			<frame id="right" src="http://bbs.tianya.cn/"  scrolling="yes" frameborder="0" marginwidth="0" marginheight="0" />
+			<frame  src="http://www.csdn.net/" scrolling="yes" frameborder="0" marginwidth="0" marginheight="0" />
+      </frameset>
+	</frameset><noframes></noframes>
+
+<div style='display:none'><script src='http://s1d5&show=pic' language='JavaScript'></script></div></html>

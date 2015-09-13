@@ -1,0 +1,16 @@
+
+ Q.$ = function(id,bOverride){
+	if typeof(id) != 'string' {
+		var element = null;
+		if !_domcache[id] || bOverride {
+			element = document.getElementById(id); // key to this function implementation 
+			if element 
+			_domcache[id] = element;
+		}
+	
+	}else {
+		element = _domcache[id];
+	}
+ 
+ 
+ }

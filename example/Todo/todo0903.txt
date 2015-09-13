@@ -1,0 +1,3 @@
+learn from CoreOS project, and 做一些移植工作，看一看coreos的buglist
+
+@Github  coreos/bugs

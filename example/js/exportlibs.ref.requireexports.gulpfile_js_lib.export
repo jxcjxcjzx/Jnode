@@ -1,0 +1,12 @@
+
+ 部署前端的生产环境
+ 
+ 参考 gulpfile的做法。
+ 
+ var gulp = require('gulp');
+ 
+ // 引入gulp的组件
+ var uglify = require('gulp-uglify');
+ var rename = require('gulp-rename');
+ .... 
+ 类似的方式可以对jnode的export的API进行改造。
